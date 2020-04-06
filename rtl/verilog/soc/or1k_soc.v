@@ -275,7 +275,7 @@ module or1k_soc #(
   assign or1k_rst = wb_rst | or1k_dbg_rst;
 
   generate
-    for (t=0; t<CORES_PER_TILE; t=t+1) begin
+    for (t=0; t<CORES_PER_TILE; t=t+1) begin : mor1kx_generation
       mor1kx #(
         .FEATURE_DEBUGUNIT ("ENABLED"),
         .FEATURE_CMOV ("ENABLED"),
@@ -349,7 +349,7 @@ module or1k_soc #(
   //
   ////////////////////////////////////////////////////////////////////////
   generate
-    for (t=0; t<CORES_PER_TILE; t=t+1) begin
+    for (t=0; t<CORES_PER_TILE; t=t+1) begin : spram_generation
       mpsoc_wb_spram #(
         .DEPTH (MEM_SIZE/4)
       )

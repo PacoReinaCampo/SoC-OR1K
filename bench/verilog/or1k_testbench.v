@@ -22,7 +22,7 @@ module or1k_testbench;
   initial enable_jtag_vpi = $test$plusargs("enable_jtag_vpi");
 
   generate
-    for (t=0; t<CORES_PER_TILE; t=t+1) begin
+    for (t=0; t<CORES_PER_TILE; t=t+1) begin : vpi_generation
       jtag_vpi jtag_vpi0 (
         .tms       (tms [t] ),
         .tck       (tck [t] ),
@@ -39,11 +39,11 @@ module or1k_testbench;
   // ELF program loading
   //
   ////////////////////////////////////////////////////////////////////////
-  integer mem_words [CORES_PER_TILE-1:0];
+  integer mem_words;
   integer i;
 
-  reg [  31:0] mem_word [CORES_PER_TILE-1:0];
-  reg [1023:0] elf_file [CORES_PER_TILE-1:0];
+  reg [  31:0] mem_word;
+  reg [1023:0] elf_file;
 
   generate
     for (t=0; t<CORES_PER_TILE; t=t+1) begin
@@ -51,16 +51,16 @@ module or1k_testbench;
         if ($test$plusargs("clear_ram")) begin
           $display("Clearing RAM");
           for(i=0; i < MEM_SIZE/4; i = i+1) begin
-            or1k_testbench[t].dut.wb_bfm_memory0.ram0.mem[i] = 32'h00000000;
+            or1k_testbench.dut.spram_generation[t].wb_bfm_memory0.ram0.mem[i] = 32'h00000000;
           end
         end
-        if($value$plusargs("elf_load=%s", elf_file[t])) begin
-          $elf_load_file(elf_file[t]);
+        if($value$plusargs("elf_load=%s", elf_file)) begin
+          $elf_load_file(elf_file);
 
-          mem_words[t] = $elf_get_size/4;
-          $display("Loading %d words", mem_words[t]);
-          for(i=0; i < mem_words[t]; i = i+1) begin
-            or1k_testbench.dut[t].wb_bfm_memory0.ram0.mem[i] = $elf_read_32(i*4);
+          mem_words = $elf_get_size/4;
+          $display("Loading %d words", mem_words);
+          for(i=0; i < mem_words; i = i+1) begin
+            or1k_testbench.dut.spram_generation[t].wb_bfm_memory0.ram0.mem[i] = $elf_read_32(i*4);
           end
         end else
           $display("No ELF file specified");
