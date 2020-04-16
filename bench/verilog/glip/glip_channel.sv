@@ -1,4 +1,4 @@
-/* Copyright (c) 2015 by the author(s)
+/* Copyright (c) 2016 by the author(s)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -20,54 +20,30 @@
  *
  * =============================================================================
  *
- * Generic round robin arbiter.
- *
- * (c) 2011-2013 by the author(s)
+ * GLIP communication channel interface
  *
  * Author(s):
- *   Stefan Wallentowitz <stefan.wallentowitz@tum.de>
- *
+ *   Stefan Wallentowitz <stefan@wallentowitz.de>
  */
+interface glip_channel
+  #(parameter WIDTH=16)
+   (input clk);
 
-module lisnoc_arb_rr(/*AUTOARG*/
-   // Outputs
-   nxt_gnt,
-   // Inputs
-   req, gnt
-   );
+   logic [WIDTH-1:0] data;
+   logic             valid;
+   logic             ready;
 
-   parameter N = 2;
+   modport master(output data, output valid, input ready);
 
-   input [N-1:0] req;
-   input [N-1:0] gnt;
-   output [N-1:0] nxt_gnt;
+   modport slave(input data, input valid, output ready);
 
-   reg [N-1:0]      mask [0:N-1];
+   // a helper function to ease the assembly of interface signals
+   function logic assemble ( input logic [WIDTH-1:0] m_data,
+                             input logic m_valid
+                             );
+      data = m_data;
+      valid = m_valid;
+      return ready;
+   endfunction // assemble
 
-   integer            i,j;
-
-   always @(*) begin
-      for (i=0;i<N;i=i+1) begin
-         mask[i] = {N{1'b0}};
-         if(i>0)
-           mask[i][i-1] = ~gnt[i-1];
-         else
-           mask[i][N-1] = ~gnt[N-1];
-         for (j=2;j<N;j=j+1) begin
-            if (i-j>=0)
-              mask[i][i-j] = mask[i][i-j+1] & ~gnt[i-j];
-            else if(i-j+1>=0)
-              mask[i][i-j+N] = mask[i][i-j+1] & ~gnt[i-j+N];
-            else
-              mask[i][i-j+N] = mask[i][i-j+N+1] & ~gnt[i-j+N];
-         end
-      end
-   end // always @ (*)
-
-   genvar k;
-   generate
-      for (k=0;k<N;k=k+1) begin
-         assign nxt_gnt[k] = (~|(mask[k] & req) & req[k]) | (~|req & gnt[k]);
-      end
-   endgenerate
-endmodule // lisnoc_arb_rr
+endinterface // glip_channel
