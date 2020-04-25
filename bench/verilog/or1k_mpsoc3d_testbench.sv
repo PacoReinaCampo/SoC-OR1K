@@ -45,7 +45,7 @@ import opensocdebug::mor1kx_trace_exec;
 import optimsoc_config::*;
 import optimsoc_functions::*;
 
-module or1k_tile_testbench (
+module or1k_mpsoc3d_testbench (
   `ifdef verilator
   input clk,
   input rst
@@ -57,19 +57,20 @@ module or1k_tile_testbench (
   // Constans
   //
 
-  // Simulation parameters
-  parameter USE_DEBUG = 0;
-  parameter integer NUM_CORES = 1;
-  parameter integer LMEM_SIZE = 128*1024*1024;
+  parameter USE_DEBUG        = 0;
+  parameter ENABLE_VCHANNELS = 1*1;
+
+  parameter integer NUM_CORES = 1*1; // bug in verilator would give a warning
+  parameter integer LMEM_SIZE = 32*1024*1024;
 
   localparam base_config_t
-  BASE_CONFIG = '{NUMTILES: 1,
-                  NUMCTS: 1,
-                  CTLIST: {{63{16'hx}}, 16'h0},
+  BASE_CONFIG = '{NUMTILES: 8,
+                  NUMCTS: 8,
+                  CTLIST: {{60{16'hx}}, 16'h0, 16'h1, 16'h2, 16'h3},
                   CORES_PER_TILE: NUM_CORES,
                   GMEM_SIZE: 0,
-                  GMEM_TILE: 0,
-                  NOC_ENABLE_VCHANNELS: 0,
+                  GMEM_TILE: 'x,
+                  NOC_ENABLE_VCHANNELS: ENABLE_VCHANNELS,
                   LMEM_SIZE: LMEM_SIZE,
                   LMEM_STYLE: PLAIN,
                   ENABLE_BOOTROM: 0,
@@ -89,7 +90,7 @@ module or1k_tile_testbench (
                   USE_DEBUG: 1'(USE_DEBUG),
                   DEBUG_STM: 1,
                   DEBUG_CTM: 1,
-                  DEBUG_DEM_UART: 1,
+                  DEBUG_DEM_UART: 0,
                   DEBUG_SUBNET_BITS: 6,
                   DEBUG_LOCAL_SUBNET: 0,
                   DEBUG_ROUTER_BUFFER_SIZE: 4,
@@ -115,29 +116,13 @@ module or1k_tile_testbench (
   reg rst;
   `endif
 
-  wire [CONFIG.NOC_CHANNELS-1:0][CONFIG.NOC_FLIT_WIDTH-1:0] noc_in_flit;
-  wire [CONFIG.NOC_CHANNELS-1:0]                            noc_in_last;
-  wire [CONFIG.NOC_CHANNELS-1:0]                            noc_in_valid;
-  wire [CONFIG.NOC_CHANNELS-1:0]                            noc_in_ready;
-  wire [CONFIG.NOC_CHANNELS-1:0][CONFIG.NOC_FLIT_WIDTH-1:0] noc_out_flit;
-  wire [CONFIG.NOC_CHANNELS-1:0]                            noc_out_last;
-  wire [CONFIG.NOC_CHANNELS-1:0]                            noc_out_valid;
-  wire [CONFIG.NOC_CHANNELS-1:0]                            noc_out_ready;
+  logic com_rst;
+  logic logic_rst;
+
+  wire [CONFIG.NUMCTS*CONFIG.CORES_PER_TILE-1:0] termination;
 
   // Monitor system behavior in simulation
-  mor1kx_trace_exec [NUM_CORES-1:0] trace;
-
-  logic [31:0] trace_r3 [0:NUM_CORES-1];
-
-  wire [NUM_CORES-1:0] termination;
-
-  // OSD-based debug system
-  dii_flit [1:0] debug_ring_in;
-  dii_flit [1:0] debug_ring_out;
-
-  logic [1:0] debug_ring_in_ready;
-  logic [1:0] debug_ring_out_ready;
-
+  genvar t;
   genvar i;
 
   ////////////////////////////////////////////////////////////////
@@ -147,130 +132,80 @@ module or1k_tile_testbench (
 
   assign cpu_stall = 0;
 
-  assign noc_in_flit   = {CONFIG.NOC_FLIT_WIDTH*CONFIG.NOC_CHANNELS{1'bx}};
-  assign noc_in_last   = {CONFIG.NOC_CHANNELS{1'bx}};
-  assign noc_in_valid  = {CONFIG.NOC_CHANNELS{1'b0}};
-  assign noc_out_ready = {CONFIG.NOC_CHANNELS{1'b0}};
-
-  // Monitor system behavior in simulation
-  assign trace = u_compute_tile.trace;
-
-  generate
-    for (i = 0; i < NUM_CORES; i = i + 1) begin
-      r3_checker u_r3_checker (
-        .clk(clk),
-        .valid (trace[i].valid),
-        .we    (trace[i].wben),
-        .addr  (trace[i].wbreg),
-        .data  (trace[i].wbdata),
-        .r3    (trace_r3[i])
-      );
-
-      trace_monitor #(
-        .STDOUT_FILENAME    ({"stdout.",index2string(i)}),
-        .TRACEFILE_FILENAME ({"trace.",index2string(i)}),
-        .ENABLE_TRACE       (0),
-        .ID                 (i),
-        .TERM_CROSS_NUM     (NUM_CORES)
-      )
-      u_mon0(
-        .termination            (termination[i]),
-        .clk                    (clk),
-        .enable                 (trace[i].valid),
-        .wb_pc                  (trace[i].pc),
-        .wb_insn                (trace[i].insn),
-        .r3                     (trace_r3[i]),
-        .termination_all        (termination)
-      );
-    end
-  endgenerate
-
-  generate
-    if (CONFIG.USE_DEBUG == 1) begin
-      glip_channel c_glip_in  (.*);
-      glip_channel c_glip_out (.*);
-
-      logic com_rst;
-      logic logic_rst;
-
-      // TCP communication interface (simulation only)
-      glip_tcp_toplevel u_glip (
-        .*,
-        .clk_io    (clk),
-        .clk_logic (clk),
-        .fifo_in   (c_glip_in),
-        .fifo_out  (c_glip_out)
-      );
-
-      // System Interface
-      debug_interface #(
-        .SYSTEM_VENDOR_ID         (2),
-        .SYSTEM_DEVICE_ID         (1),
-        .NUM_MODULES              (CONFIG.DEBUG_NUM_MODS),
-        .SUBNET_BITS              (CONFIG.DEBUG_SUBNET_BITS),
-        .LOCAL_SUBNET             (CONFIG.DEBUG_LOCAL_SUBNET),
-        .MAX_PKT_LEN              (CONFIG.DEBUG_MAX_PKT_LEN),
-        .DEBUG_ROUTER_BUFFER_SIZE (CONFIG.DEBUG_ROUTER_BUFFER_SIZE)
-      )
-      u_debuginterface (
-        .clk           (clk),
-        .rst           (rst),
-
-        .sys_rst       (rst_sys),
-        .cpu_rst       (rst_cpu),
-
-        .glip_in       (c_glip_in),
-        .glip_out      (c_glip_out),
-
-        .ring_out       (debug_ring_in),
-        .ring_out_ready (debug_ring_in_ready),
-        .ring_in        (debug_ring_out),
-        .ring_in_ready  (debug_ring_out_ready)
-      );
-    end
-  endgenerate
-
   // Reset signals
   // In simulations with debug system, these signals can be triggered through
   // the host software. In simulations without debug systems, we only rely on
   // the global reset signal.
   generate
-    if (USE_DEBUG == 0) begin
+    if (CONFIG.USE_DEBUG == 0) begin : gen_use_debug_rst
       assign rst_sys = rst;
       assign rst_cpu = rst;
     end
   endgenerate
 
+  glip_channel c_glip_in  (.*);
+  glip_channel c_glip_out (.*);
 
-  // The actual system: a single compute tile
-  or1k_tile #(
-    .CONFIG       (CONFIG),
-    .ID           (0),
-    .MEM_FILE     ("ct.vmem"),
-    .DEBUG_BASEID ((CONFIG.DEBUG_LOCAL_SUBNET << (16 - CONFIG.DEBUG_SUBNET_BITS)) + 1)
+  if (CONFIG.USE_DEBUG == 1) begin : gen_use_debug_glip
+    // TCP communication interface (simulation only)
+    glip_tcp_toplevel u_glip (
+      .*,
+      .clk_io    (clk),
+      .clk_logic (clk),
+      .fifo_in   (c_glip_in),
+      .fifo_out  (c_glip_out)
+    );
+  end
+  generate
+    for (t = 0; t < CONFIG.NUMCTS; t = t + 1) begin : gen_tracemon_ct
+
+      logic [31:0] trace_r3 [0:CONFIG.CORES_PER_TILE-1];
+      mor1kx_trace_exec [CONFIG.CORES_PER_TILE-1:0] trace;
+      assign trace = u_system.gen_ct[t].u_ct.trace;
+
+      for (i = 0; i < CONFIG.CORES_PER_TILE; i = i + 1) begin : gen_tracemon_core
+        r3_checker u_r3_checker (
+          .clk   (clk),
+          .valid (trace[i].valid),
+          .we    (trace[i].wben),
+          .addr  (trace[i].wbreg),
+          .data  (trace[i].wbdata),
+          .r3    (trace_r3[i])
+        );
+
+        trace_monitor #(
+          .STDOUT_FILENAME    ({"stdout.",index2string((t*CONFIG.CORES_PER_TILE)+i)}),
+          .TRACEFILE_FILENAME ({"trace.",index2string((t*CONFIG.CORES_PER_TILE)+i)}),
+          .ENABLE_TRACE       (0),
+          .ID                 ((t*CONFIG.CORES_PER_TILE)+i),
+          .TERM_CROSS_NUM     (CONFIG.NUMCTS*CONFIG.CORES_PER_TILE)
+        )
+        u_mon0 (
+          .termination            (termination[(t*CONFIG.CORES_PER_TILE)+i]),
+          .clk                    (clk),
+          .enable                 (trace[i].valid),
+          .wb_pc                  (trace[i].pc),
+          .wb_insn                (trace[i].insn),
+          .r3                     (trace_r3[i]),
+          .termination_all        (termination)
+        );
+      end
+    end
+  endgenerate
+
+  or1k_mpsoc3d #(
+    .CONFIG (CONFIG)
   )
-  u_compute_tile (
-    // Debug ring ports
-    .debug_ring_in        (debug_ring_in),
-    .debug_ring_in_ready  (debug_ring_in_ready),
-    .debug_ring_out       (debug_ring_out),
-    .debug_ring_out_ready (debug_ring_out_ready),
-    // Outputs
-    .noc_in_ready      (noc_in_ready),
-    .noc_out_flit      (noc_out_flit),
-    .noc_out_last      (noc_out_last),
-    .noc_out_valid     (noc_out_valid),
-    // Inputs
-    .clk               (clk),
-    .rst_cpu           (rst_cpu),
-    .rst_sys           (rst_sys),
-    .rst_dbg           (rst),
-    .noc_in_flit       (noc_in_flit),
-    .noc_in_last       (noc_in_last),
-    .noc_in_valid      (noc_in_valid),
-    .noc_out_ready     (noc_out_ready),
+  u_system (
+    .clk        (clk),
+    .rst        (rst | logic_rst),
+    .c_glip_in  (c_glip_in),
+    .c_glip_out (c_glip_out),
 
-    // Unused
+    .wb_ext_ack_o ('x),
+    .wb_ext_err_o ('x),
+    .wb_ext_rty_o ('x),
+    .wb_ext_dat_o ('x),
     .wb_ext_adr_i (),
     .wb_ext_cyc_i (),
     .wb_ext_dat_i (),
@@ -279,11 +214,7 @@ module or1k_tile_testbench (
     .wb_ext_we_i  (),
     .wb_ext_cab_i (),
     .wb_ext_cti_i (),
-    .wb_ext_bte_i (),
-    .wb_ext_ack_o ('0),
-    .wb_ext_rty_o ('0),
-    .wb_ext_err_o ('0),
-    .wb_ext_dat_o ('0)
+    .wb_ext_bte_i ()
   );
 
   // Generate testbench signals.
