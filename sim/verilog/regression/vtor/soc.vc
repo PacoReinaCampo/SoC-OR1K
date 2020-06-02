@@ -111,7 +111,7 @@
 ../../../../pu/rtl/verilog/module/or1k_module.sv
 ../../../../rtl/verilog/soc/adapter/networkadapter_conf.sv
 ../../../../rtl/verilog/soc/adapter/networkadapter_ct.sv
-../../../../rtl/verilog/soc/bootrom/bootrom.v
+../../../../rtl/verilog/soc/bootrom/bootrom.sv
 ../../../../rtl/verilog/soc/interconnection/bus/wb_bus_b3.sv
 ../../../../rtl/verilog/soc/interconnection/decode/wb_decode.sv
 ../../../../rtl/verilog/soc/interconnection/mux/wb_mux.sv
@@ -121,7 +121,7 @@
 ../../../../rtl/verilog/soc/spram/wb2sram.sv
 ../../../../rtl/verilog/soc/or1k_tile.sv
 ../../../../bench/verilog/glip/glip_tcp_toplevel.sv
-../../../../bench/verilog/monitor/r3_checker.v
+../../../../bench/verilog/monitor/r3_checker.sv
 ../../../../bench/verilog/monitor/trace_monitor.sv
 ../../../../bench/verilog/or1k_tile_testbench.sv
 --top-module or1k_tile_testbench
