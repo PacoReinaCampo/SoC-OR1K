@@ -73,7 +73,7 @@ module bootrom #(
 
    always @(*) begin
       case(wb_adr_i[7:2])
-        `include "bootrom_code.v"
+        `include "bootrom_code.sv"
         default: wb_dat_o = 32'hx;
       endcase
    end
