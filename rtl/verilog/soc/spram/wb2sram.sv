@@ -102,24 +102,24 @@ module wb2sram #(
 
   wire [WORD_AW-1:0] word_addr_in;
 
-  reg [WORD_AW-1:0]         word_addr_reg;
-  reg [WORD_AW-1:0]         word_addr;
+  reg  [WORD_AW-1:0] word_addr_reg;
+  reg  [WORD_AW-1:0] word_addr;
 
   // Register to indicate if the cycle is a Wishbone B3-registered feedback
   // type access
-  reg                  wb_b3_trans;
-  wire                 wb_b3_trans_start, wb_b3_trans_stop;
+  reg                wb_b3_trans;
+  wire               wb_b3_trans_start, wb_b3_trans_stop;
 
   // Register to use for counting the addresses when doing burst accesses
-  reg [WORD_AW-1:0]    burst_adr_counter;
-  reg [        2:0]    wb_cti_i_r;
-  reg [        1:0]    wb_bte_i_r;
-  wire                 using_burst_adr;
-  wire                 burst_access_wrong_wb_adr;
+  reg  [WORD_AW-1:0] burst_adr_counter;
+  reg  [        2:0] wb_cti_i_r;
+  reg  [        1:0] wb_bte_i_r;
+  wire               using_burst_adr;
+  wire               burst_access_wrong_wb_adr;
 
   // Ack Logic
-  reg  wb_ack;
-  reg  nxt_wb_ack;
+  reg     wb_ack;
+  reg nxt_wb_ack;
 
   ////////////////////////////////////////////////////////////////
   //
