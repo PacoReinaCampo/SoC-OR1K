@@ -446,7 +446,7 @@ A PU cache is a hardware cache used by the PU to reduce the average cost (time o
 | `derr`  |    1   |   Output  | Bus Cycle Error Output          |
 | `dint`  |    1   |   Output  | Interrupt Signal Output         |
 
-## 2.3. Soc-OR1K
+## 2.3. SoC-OR1K
 
 ### 2.3.1. MPSoC-DBG
 
@@ -526,17 +526,17 @@ sudo make install
 ```
 
 ```
-cd sim/verilog/regression/wb/verilator
+cd sim/verilog/tests/wb/verilator
 source SIMULATE-IT
 ```
 
 ```
-cd sim/verilog/regression/ahb3/verilator
+cd sim/verilog/tests/ahb3/verilator
 source SIMULATE-IT
 ```
 
 ```
-cd sim/verilog/regression/axi4/verilator
+cd sim/verilog/tests/axi4/verilator
 source SIMULATE-IT
 ```
 
@@ -600,17 +600,17 @@ sudo make install
 ```
 
 ```
-cd sim/verilog/regression/wb/iverilog
+cd sim/verilog/tests/wb/iverilog
 source SIMULATE-IT
 ```
 
 ```
-cd sim/verilog/regression/ahb3/iverilog
+cd sim/verilog/tests/ahb3/iverilog
 source SIMULATE-IT
 ```
 
 ```
-cd sim/verilog/regression/axi4/iverilog
+cd sim/verilog/tests/axi4/iverilog
 source SIMULATE-IT
 ```
 
@@ -627,17 +627,17 @@ sudo make install
 ```
 
 ```
-cd sim/vhdl/regression/wb/ghdl
+cd sim/vhdl/tests/wb/ghdl
 source SIMULATE-IT
 ```
 
 ```
-cd sim/vhdl/regression/ahb3/ghdl
+cd sim/vhdl/tests/ahb3/ghdl
 source SIMULATE-IT
 ```
 
 ```
-cd sim/vhdl/regression/axi4/ghdl
+cd sim/vhdl/tests/axi4/ghdl
 source SIMULATE-IT
 ```
 
