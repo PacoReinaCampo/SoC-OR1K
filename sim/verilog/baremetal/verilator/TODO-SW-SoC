@@ -1,6 +1,2 @@
-rm -rf stdout.*
-
-./Vor1k_tile_testbench --meminit=../../../../software/baremetal/heat_mpsimple/c/heat_mpsimple.vmem
-./Vor1k_tile_testbench --meminit=../../../../software/baremetal/hello/c/hello.vmem
-./Vor1k_tile_testbench --meminit=../../../../software/baremetal/hello_mp/c/hello_mp.vmem
-./Vor1k_tile_testbench --meminit=../../../../software/baremetal/hello_mpsimple/c/hello_mpsimple.vmem
+make clean
+make software-tile
