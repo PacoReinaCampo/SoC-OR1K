@@ -1,5 +1,0 @@
-sc work ../../../../bench/cpp/glip/glip_tcp_dpi.cpp
-sc work ../../../../bench/cpp/glip/GlipTcp.cpp
-sc work ../../../../bench/cpp/or1k_tile_testbench.cpp
-sc work ../../../../bench/cpp/verilator/src/OptionsParser.cpp
-sc work ../../../../bench/cpp/verilator/src/VerilatedControl.cpp

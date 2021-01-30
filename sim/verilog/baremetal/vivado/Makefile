@@ -45,8 +45,8 @@
 all: build simulate
 
 build:
-	xvlog -prj system_sv.prj
-	xsc -prj system_sc.prj
+	xvlog -prj system.sv.prj
+	xsc -prj system.sc.prj
 
 simulate:
 	xelab test
