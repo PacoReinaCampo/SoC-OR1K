@@ -108,7 +108,3 @@ sv work ../../../../rtl/verilog/soc/spram/sram_sp.sv
 sv work ../../../../rtl/verilog/soc/spram/wb_sram_sp.sv
 sv work ../../../../rtl/verilog/soc/spram/wb2sram.sv
 sv work ../../../../rtl/verilog/soc/or1k_tile.sv
-sv work ../../../../bench/verilog/glip/glip_tcp_toplevel.sv
-sv work ../../../../bench/verilog/monitor/r3_checker.sv
-sv work ../../../../bench/verilog/monitor/trace_monitor.sv
-sv work ../../../../bench/verilog/or1k_tile_testbench.sv
