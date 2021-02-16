@@ -45,11 +45,14 @@
 all: build simulate
 
 build:
-	xvlog -prj system.sv.prj
-	xsc -prj system.sc.prj
+	xvlog -prj soc.prj \
+	-i ../../../../pu/rtl/verilog/pkg \
+	-i ../../../../rtl/verilog/soc/bootrom \
+	-i ../../../../dma/rtl/verilog/wb/pkg
 
 simulate:
-	xelab test
+	xelab or1k_tile
+	xsim -R or1k_tile
 
 clean:
 	rm -rf .Xil *.dir *.jou *.log *.pb

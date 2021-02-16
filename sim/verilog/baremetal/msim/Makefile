@@ -5,7 +5,7 @@ build:
 	vlog -sv -f soc.vc
 
 simulate:
-	vsim -c -do run.do work.or1k_tile_testbench
+	vsim -c -do run.do work.or1k_tile
 
 clean:
 	rm -rf work transcript

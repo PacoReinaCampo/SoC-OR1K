@@ -1,8 +1,0 @@
-+incdir+../../../../bench/cpp/verilator/inc
-+incdir+../../../../bench/cpp/glip
-
-../../../../bench/cpp/glip/glip_tcp_dpi.cpp
-../../../../bench/cpp/glip/GlipTcp.cpp
-../../../../bench/cpp/or1k_tile_testbench.cpp
-../../../../bench/cpp/verilator/src/OptionsParser.cpp
-../../../../bench/cpp/verilator/src/VerilatedControl.cpp
