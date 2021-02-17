@@ -108,3 +108,5 @@ sv work ../../../../rtl/verilog/soc/spram/sram_sp.sv
 sv work ../../../../rtl/verilog/soc/spram/wb_sram_sp.sv
 sv work ../../../../rtl/verilog/soc/spram/wb2sram.sv
 sv work ../../../../rtl/verilog/soc/or1k_tile.sv
+
+sv work ../../../../bench/verilog/soc_or1k_testbench.sv

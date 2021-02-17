@@ -1,0 +1,4021 @@
+m255
+K4
+z2
+!s11f vlog 2020.1_3 2020.04, Apr 27 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/us1/github/SoC-OR1K/sim/verilog/baremetal/msim
+varb_rr
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1613521892
+!i10b 1
+!s100 j=T^QO4I=o9dcg:f5TRhP3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IQiz45N3dBlBHa<061VOO=1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1613498304
+8../../../../rtl/verilog/pkg/arbiter/arb_rr.sv
+F../../../../rtl/verilog/pkg/arbiter/arb_rr.sv
+!i122 0
+L0 45 58
+Z6 OV;L;2020.1_3;71
+r1
+!s85 0
+31
+Z7 !s108 1613521892.000000
+!s107 ../../../../rtl/verilog/soc/bootrom/bootrom_code.sv|../../../../pu/rtl/verilog/pkg/or1k_utils.sv|../../../../pu/rtl/verilog/pkg/or1k_defines.sv|../../../../dma/rtl/verilog/wb/pkg/mpsoc_dma_pkg.sv|../../../../bench/verilog/soc_or1k_testbench.sv|../../../../rtl/verilog/soc/or1k_tile.sv|../../../../rtl/verilog/soc/spram/wb2sram.sv|../../../../rtl/verilog/soc/spram/wb_sram_sp.sv|../../../../rtl/verilog/soc/spram/sram_sp.sv|../../../../rtl/verilog/soc/spram/sram_sp_impl_plain.sv|../../../../rtl/verilog/soc/interconnection/mux/wb_mux.sv|../../../../rtl/verilog/soc/interconnection/decode/wb_decode.sv|../../../../rtl/verilog/soc/interconnection/bus/wb_bus_b3.sv|../../../../rtl/verilog/soc/bootrom/bootrom.sv|../../../../rtl/verilog/soc/adapter/networkadapter_ct.sv|../../../../rtl/verilog/soc/adapter/networkadapter_conf.sv|../../../../pu/rtl/verilog/module/or1k_module.sv|../../../../pu/rtl/verilog/memory/or1k_true_dpram_sclk.sv|../../../../pu/rtl/verilog/memory/or1k_simple_dpram_sclk.sv|../../../../pu/rtl/verilog/core/or1k_decode_execute_cappuccino.sv|../../../../pu/rtl/verilog/core/or1k_cpu.sv|../../../../pu/rtl/verilog/core/or1k_cpu_cappuccino.sv|../../../../pu/rtl/verilog/core/or1k_core.sv|../../../../pu/rtl/verilog/core/or1k_bus_if_wb32.sv|../../../../pu/rtl/verilog/core/or1k_branch_predictor_simple.sv|../../../../pu/rtl/verilog/core/or1k_branch_predictor_saturation_counter.sv|../../../../pu/rtl/verilog/core/or1k_branch_predictor_gshare.sv|../../../../pu/rtl/verilog/core/or1k_branch_prediction.sv|../../../../pu/rtl/verilog/core/memory/or1k_store_buffer.sv|../../../../pu/rtl/verilog/core/memory/or1k_lsu_cappuccino.sv|../../../../pu/rtl/verilog/core/memory/or1k_dmmu.sv|../../../../pu/rtl/verilog/core/memory/or1k_dcache.sv|../../../../pu/rtl/verilog/core/fetch/or1k_immu.sv|../../../../pu/rtl/verilog/core/fetch/or1k_icache.sv|../../../../pu/rtl/verilog/core/fetch/or1k_fetch_cappuccino.sv|../../../../pu/rtl/verilog/core/fetch/or1k_cache_lru.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_top.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_rnd.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_muldiv.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_i2f.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_f2i.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_cmp.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_addsub.sv|../../../../pu/rtl/verilog/core/execute/or1k_wb_mux_cappuccino.sv|../../../../pu/rtl/verilog/core/execute/or1k_rf_cappuccino.sv|../../../../pu/rtl/verilog/core/execute/or1k_execute_ctrl_cappuccino.sv|../../../../pu/rtl/verilog/core/execute/or1k_execute_alu.sv|../../../../pu/rtl/verilog/core/decode/or1k_decode.sv|../../../../pu/rtl/verilog/core/control/or1k_ticktimer.sv|../../../../pu/rtl/verilog/core/control/or1k_pic.sv|../../../../pu/rtl/verilog/core/control/or1k_pcu.sv|../../../../pu/rtl/verilog/core/control/or1k_ctrl_cappuccino.sv|../../../../pu/rtl/verilog/core/control/or1k_cfgrs.sv|../../../../noc/rtl/verilog/topology/noc_mesh2d.sv|../../../../noc/rtl/verilog/router/noc_router_output.sv|../../../../noc/rtl/verilog/router/noc_router_lookup_slice.sv|../../../../noc/rtl/verilog/router/noc_router_lookup.sv|../../../../noc/rtl/verilog/router/noc_router_input.sv|../../../../noc/rtl/verilog/router/noc_router.sv|../../../../noc/rtl/verilog/core/noc_vchannel_mux.sv|../../../../noc/rtl/verilog/core/noc_mux.sv|../../../../noc/rtl/verilog/core/noc_demux.sv|../../../../noc/rtl/verilog/core/noc_buffer.sv|../../../../mpi/rtl/verilog/wb/wb/mpi_wb.sv|../../../../mpi/rtl/verilog/wb/core/mpi_buffer_endpoint.sv|../../../../mpi/rtl/verilog/wb/core/mpi_buffer.sv|../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_top.sv|../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_target.sv|../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_interface.sv|../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_initiator_req.sv|../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_initiator_nocres.sv|../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_initiator.sv|../../../../dma/rtl/verilog/wb/core/mpsoc_dma_request_table.sv|../../../../dma/rtl/verilog/wb/core/mpsoc_dma_packet_buffer.sv|../../../../dma/rtl/verilog/wb/core/mpsoc_dma_initiator_nocreq.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router_mux.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router_mux_rr.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router_gateway.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router_gateway_mux.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router_gateway_demux.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router_demux.sv|../../../../dbg/rtl/soc/verilog/interconnect/debug_ring.sv|../../../../dbg/rtl/soc/verilog/interconnect/debug_ring_expand.sv|../../../../dbg/rtl/soc/verilog/modules/dem_uart/osd_dem_uart_wb.sv|../../../../dbg/rtl/soc/verilog/modules/dem_uart/osd_dem_uart_16550.sv|../../../../dbg/rtl/soc/verilog/modules/dem_uart/osd_dem_uart.sv|../../../../dbg/rtl/soc/verilog/blocks/timestamp/osd_timestamp.sv|../../../../dbg/rtl/soc/verilog/modules/stm/or1k/mor1kx/osd_stm_mor1kx.sv|../../../../dbg/rtl/soc/verilog/modules/stm/common/osd_stm.sv|../../../../dbg/rtl/soc/verilog/modules/scm/osd_scm.sv|../../../../dbg/rtl/soc/verilog/blocks/tracesample/osd_tracesample.sv|../../../../dbg/rtl/soc/verilog/blocks/regaccess/osd_regaccess.sv|../../../../dbg/rtl/soc/verilog/blocks/regaccess/osd_regaccess_layer.sv|../../../../dbg/rtl/soc/verilog/blocks/regaccess/osd_regaccess_demux.sv|../../../../dbg/rtl/soc/verilog/blocks/eventpacket/osd_event_packetization.sv|../../../../dbg/rtl/soc/verilog/modules/mam/common/osd_mam.sv|../../../../dbg/rtl/soc/verilog/modules/mam/wishbone/osd_mam_wb.sv|../../../../dbg/rtl/soc/verilog/modules/mam/wishbone/osd_mam_wb_if.sv|../../../../dbg/rtl/soc/verilog/modules/mam/wishbone/mam_wb_adapter.sv|../../../../dbg/rtl/soc/verilog/modules/him/osd_him.sv|../../../../dbg/rtl/soc/verilog/blocks/eventpacket/osd_event_packetization_fixedwidth.sv|../../../../dbg/rtl/soc/verilog/modules/ctm/or1k/mor1kx/osd_ctm_mor1kx.sv|../../../../dbg/rtl/soc/verilog/modules/ctm/common/osd_ctm.sv|../../../../dbg/rtl/soc/verilog/blocks/buffer/osd_fifo.sv|../../../../dbg/rtl/soc/verilog/blocks/buffer/dii_buffer.sv|../../../../dbg/rtl/soc/verilog/debug_interface.sv|../../../../dbg/rtl/soc/verilog/interfaces/common/dii_channel.sv|../../../../dbg/rtl/soc/verilog/interfaces/common/dii_channel_flat.sv|../../../../bench/verilog/glip/glip_channel.sv|../../../../dbg/rtl/soc/verilog/interfaces/or1k/mor1kx_trace_exec.sv|../../../../rtl/verilog/pkg/constants/optimsoc_constants.sv|../../../../rtl/verilog/pkg/config/optimsoc_config.sv|../../../../rtl/verilog/pkg/functions/optimsoc_functions.sv|../../../../rtl/verilog/pkg/arbiter/arb_rr.sv|
+Z8 !s90 -sv|-f|soc.vc|
+!i113 1
+o-sv
+Z9 !s92 -sv +incdir+../../../../pu/rtl/verilog/pkg +incdir+../../../../rtl/verilog/soc/bootrom +incdir+../../../../bench/cpp/verilator/inc +incdir+../../../../bench/cpp/glip +incdir+../../../../dma/rtl/verilog/wb/pkg
+Z10 tCvgOpt 0
+varecip_lut
+R1
+Z11 !s110 1613521893
+!i10b 1
+!s100 YA3k]Y1=;Eeh`Fn?T3GSb1
+R3
+I3UP9W;^YhQj2j;DPHW^If2
+R4
+S1
+R0
+Z12 w1613498333
+Z13 8../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_muldiv.sv
+Z14 F../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_muldiv.sv
+!i122 0
+L0 647 137
+R6
+r1
+!s85 0
+31
+R7
+Z15 !s107 ../../../../rtl/verilog/soc/bootrom/bootrom_code.sv|../../../../pu/rtl/verilog/pkg/or1k_utils.sv|../../../../pu/rtl/verilog/pkg/or1k_defines.sv|../../../../dma/rtl/verilog/wb/pkg/mpsoc_dma_pkg.sv|../../../../bench/verilog/soc_or1k_testbench.sv|../../../../rtl/verilog/soc/or1k_tile.sv|../../../../rtl/verilog/soc/spram/wb2sram.sv|../../../../rtl/verilog/soc/spram/wb_sram_sp.sv|../../../../rtl/verilog/soc/spram/sram_sp.sv|../../../../rtl/verilog/soc/spram/sram_sp_impl_plain.sv|../../../../rtl/verilog/soc/interconnection/mux/wb_mux.sv|../../../../rtl/verilog/soc/interconnection/decode/wb_decode.sv|../../../../rtl/verilog/soc/interconnection/bus/wb_bus_b3.sv|../../../../rtl/verilog/soc/bootrom/bootrom.sv|../../../../rtl/verilog/soc/adapter/networkadapter_ct.sv|../../../../rtl/verilog/soc/adapter/networkadapter_conf.sv|../../../../pu/rtl/verilog/module/or1k_module.sv|../../../../pu/rtl/verilog/memory/or1k_true_dpram_sclk.sv|../../../../pu/rtl/verilog/memory/or1k_simple_dpram_sclk.sv|../../../../pu/rtl/verilog/core/or1k_decode_execute_cappuccino.sv|../../../../pu/rtl/verilog/core/or1k_cpu.sv|../../../../pu/rtl/verilog/core/or1k_cpu_cappuccino.sv|../../../../pu/rtl/verilog/core/or1k_core.sv|../../../../pu/rtl/verilog/core/or1k_bus_if_wb32.sv|../../../../pu/rtl/verilog/core/or1k_branch_predictor_simple.sv|../../../../pu/rtl/verilog/core/or1k_branch_predictor_saturation_counter.sv|../../../../pu/rtl/verilog/core/or1k_branch_predictor_gshare.sv|../../../../pu/rtl/verilog/core/or1k_branch_prediction.sv|../../../../pu/rtl/verilog/core/memory/or1k_store_buffer.sv|../../../../pu/rtl/verilog/core/memory/or1k_lsu_cappuccino.sv|../../../../pu/rtl/verilog/core/memory/or1k_dmmu.sv|../../../../pu/rtl/verilog/core/memory/or1k_dcache.sv|../../../../pu/rtl/verilog/core/fetch/or1k_immu.sv|../../../../pu/rtl/verilog/core/fetch/or1k_icache.sv|../../../../pu/rtl/verilog/core/fetch/or1k_fetch_cappuccino.sv|../../../../pu/rtl/verilog/core/fetch/or1k_cache_lru.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_top.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_rnd.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_muldiv.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_i2f.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_f2i.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_cmp.sv|../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_addsub.sv|../../../../pu/rtl/verilog/core/execute/or1k_wb_mux_cappuccino.sv|../../../../pu/rtl/verilog/core/execute/or1k_rf_cappuccino.sv|../../../../pu/rtl/verilog/core/execute/or1k_execute_ctrl_cappuccino.sv|../../../../pu/rtl/verilog/core/execute/or1k_execute_alu.sv|../../../../pu/rtl/verilog/core/decode/or1k_decode.sv|../../../../pu/rtl/verilog/core/control/or1k_ticktimer.sv|../../../../pu/rtl/verilog/core/control/or1k_pic.sv|../../../../pu/rtl/verilog/core/control/or1k_pcu.sv|../../../../pu/rtl/verilog/core/control/or1k_ctrl_cappuccino.sv|../../../../pu/rtl/verilog/core/control/or1k_cfgrs.sv|../../../../noc/rtl/verilog/topology/noc_mesh2d.sv|../../../../noc/rtl/verilog/router/noc_router_output.sv|../../../../noc/rtl/verilog/router/noc_router_lookup_slice.sv|../../../../noc/rtl/verilog/router/noc_router_lookup.sv|../../../../noc/rtl/verilog/router/noc_router_input.sv|../../../../noc/rtl/verilog/router/noc_router.sv|../../../../noc/rtl/verilog/core/noc_vchannel_mux.sv|../../../../noc/rtl/verilog/core/noc_mux.sv|../../../../noc/rtl/verilog/core/noc_demux.sv|../../../../noc/rtl/verilog/core/noc_buffer.sv|../../../../mpi/rtl/verilog/wb/wb/mpi_wb.sv|../../../../mpi/rtl/verilog/wb/core/mpi_buffer_endpoint.sv|../../../../mpi/rtl/verilog/wb/core/mpi_buffer.sv|../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_top.sv|../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_target.sv|../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_interface.sv|../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_initiator_req.sv|../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_initiator_nocres.sv|../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_initiator.sv|../../../../dma/rtl/verilog/wb/core/mpsoc_dma_request_table.sv|../../../../dma/rtl/verilog/wb/core/mpsoc_dma_packet_buffer.sv|../../../../dma/rtl/verilog/wb/core/mpsoc_dma_initiator_nocreq.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router_mux.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router_mux_rr.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router_gateway.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router_gateway_mux.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router_gateway_demux.sv|../../../../dbg/rtl/soc/verilog/interconnect/ring_router_demux.sv|../../../../dbg/rtl/soc/verilog/interconnect/debug_ring.sv|../../../../dbg/rtl/soc/verilog/interconnect/debug_ring_expand.sv|../../../../dbg/rtl/soc/verilog/modules/dem_uart/osd_dem_uart_wb.sv|../../../../dbg/rtl/soc/verilog/modules/dem_uart/osd_dem_uart_16550.sv|../../../../dbg/rtl/soc/verilog/modules/dem_uart/osd_dem_uart.sv|../../../../dbg/rtl/soc/verilog/blocks/timestamp/osd_timestamp.sv|../../../../dbg/rtl/soc/verilog/modules/stm/or1k/mor1kx/osd_stm_mor1kx.sv|../../../../dbg/rtl/soc/verilog/modules/stm/common/osd_stm.sv|../../../../dbg/rtl/soc/verilog/modules/scm/osd_scm.sv|../../../../dbg/rtl/soc/verilog/blocks/tracesample/osd_tracesample.sv|../../../../dbg/rtl/soc/verilog/blocks/regaccess/osd_regaccess.sv|../../../../dbg/rtl/soc/verilog/blocks/regaccess/osd_regaccess_layer.sv|../../../../dbg/rtl/soc/verilog/blocks/regaccess/osd_regaccess_demux.sv|../../../../dbg/rtl/soc/verilog/blocks/eventpacket/osd_event_packetization.sv|../../../../dbg/rtl/soc/verilog/modules/mam/common/osd_mam.sv|../../../../dbg/rtl/soc/verilog/modules/mam/wishbone/osd_mam_wb.sv|../../../../dbg/rtl/soc/verilog/modules/mam/wishbone/osd_mam_wb_if.sv|../../../../dbg/rtl/soc/verilog/modules/mam/wishbone/mam_wb_adapter.sv|../../../../dbg/rtl/soc/verilog/modules/him/osd_him.sv|../../../../dbg/rtl/soc/verilog/blocks/eventpacket/osd_event_packetization_fixedwidth.sv|../../../../dbg/rtl/soc/verilog/modules/ctm/or1k/mor1kx/osd_ctm_mor1kx.sv|../../../../dbg/rtl/soc/verilog/modules/ctm/common/osd_ctm.sv|../../../../dbg/rtl/soc/verilog/blocks/buffer/osd_fifo.sv|../../../../dbg/rtl/soc/verilog/blocks/buffer/dii_buffer.sv|../../../../dbg/rtl/soc/verilog/debug_interface.sv|../../../../dbg/rtl/soc/verilog/interfaces/common/dii_channel.sv|../../../../dbg/rtl/soc/verilog/interfaces/common/dii_channel_flat.sv|../../../../bench/verilog/glip/glip_channel.sv|../../../../dbg/rtl/soc/verilog/interfaces/or1k/mor1kx_trace_exec.sv|../../../../rtl/verilog/pkg/constants/optimsoc_constants.sv|../../../../rtl/verilog/pkg/config/optimsoc_config.sv|../../../../rtl/verilog/pkg/functions/optimsoc_functions.sv|../../../../rtl/verilog/pkg/arbiter/arb_rr.sv|
+R8
+!i113 1
+o-sv
+R9
+R10
+vbootrom
+R1
+R11
+!i10b 1
+!s100 2[Qme96C_Jh7oZ[@if]?N2
+R3
+I5ki^EkP5=^6Q@1<mgJ`KB3
+R4
+S1
+R0
+R5
+8../../../../rtl/verilog/soc/bootrom/bootrom.sv
+F../../../../rtl/verilog/soc/bootrom/bootrom.sv
+F../../../../rtl/verilog/soc/bootrom/bootrom_code.sv
+!i122 0
+L0 43 117
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vdebug_interface
+R1
+Z16 DXx4 work 11 dii_package 0 22 WL;2n58hg@E6gj0^Z@Xe82
+DXx4 work 23 debug_interface_sv_unit 0 22 7=]:MPXQOfM>NVK=gXW>M2
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 hRmHfZfFTR6n?O@9Rf?=i2
+I^bHNCf;PLZRcZOlMWgD3T1
+!s105 debug_interface_sv_unit
+S1
+R0
+R12
+Z17 8../../../../dbg/rtl/soc/verilog/debug_interface.sv
+Z18 F../../../../dbg/rtl/soc/verilog/debug_interface.sv
+!i122 0
+L0 46 126
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xdebug_interface_sv_unit
+R1
+R16
+R2
+V7=]:MPXQOfM>NVK=gXW>M2
+r1
+!s85 0
+!i10b 1
+!s100 D9@K0l_DI2XA=@Sj35AmH3
+I7=]:MPXQOfM>NVK=gXW>M2
+!i103 1
+S1
+R0
+R12
+R17
+R18
+!i122 0
+Z19 L0 44 0
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vdebug_ring
+R1
+R16
+DXx4 work 18 debug_ring_sv_unit 0 22 YkZ^S<fzbL<9G[6mm9bQL0
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 cPmN9W:c5ETR5YEKfhjJZ0
+IOQHeobbSIFh38M[a=;8UF0
+!s105 debug_ring_sv_unit
+S1
+R0
+R12
+Z20 8../../../../dbg/rtl/soc/verilog/interconnect/debug_ring.sv
+Z21 F../../../../dbg/rtl/soc/verilog/interconnect/debug_ring.sv
+!i122 0
+L0 46 45
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vdebug_ring_expand
+R1
+R16
+DXx4 work 25 debug_ring_expand_sv_unit 0 22 <h2hj=YFkJI]nJM=4:b850
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 @I13[=jzf3N:SA7GbI@db1
+I7amXIih`ZIaaFJkHS]dJa2
+!s105 debug_ring_expand_sv_unit
+S1
+R0
+R12
+Z22 8../../../../dbg/rtl/soc/verilog/interconnect/debug_ring_expand.sv
+Z23 F../../../../dbg/rtl/soc/verilog/interconnect/debug_ring_expand.sv
+!i122 0
+L0 46 62
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xdebug_ring_expand_sv_unit
+R1
+R16
+R2
+V<h2hj=YFkJI]nJM=4:b850
+r1
+!s85 0
+!i10b 1
+!s100 fhEBna9z_8S<fU24kM0YP0
+I<h2hj=YFkJI]nJM=4:b850
+!i103 1
+S1
+R0
+R12
+R22
+R23
+!i122 0
+R19
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xdebug_ring_sv_unit
+R1
+R16
+R2
+VYkZ^S<fzbL<9G[6mm9bQL0
+r1
+!s85 0
+!i10b 1
+!s100 =nET[50i:lH>k^=iZ?6hh3
+IYkZ^S<fzbL<9G[6mm9bQL0
+!i103 1
+S1
+R0
+R12
+R20
+R21
+!i122 0
+R19
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vdii_buffer
+R1
+R16
+DXx4 work 18 dii_buffer_sv_unit 0 22 ASZCXB8:Y>L7cg^fF<b=G1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 V0g]KYQ6F2=H18M48n5GK0
+IN05Ec4]C8zJ`ghVA2MSH73
+!s105 dii_buffer_sv_unit
+S1
+R0
+R12
+Z24 8../../../../dbg/rtl/soc/verilog/blocks/buffer/dii_buffer.sv
+Z25 F../../../../dbg/rtl/soc/verilog/blocks/buffer/dii_buffer.sv
+!i122 0
+L0 47 96
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xdii_buffer_sv_unit
+R1
+R16
+R2
+VASZCXB8:Y>L7cg^fF<b=G1
+r1
+!s85 0
+!i10b 1
+!s100 Bj3I2ffkJ6[J:dG=QD1HX2
+IASZCXB8:Y>L7cg^fF<b=G1
+!i103 1
+S1
+R0
+R12
+R24
+R25
+!i122 0
+R19
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Ydii_channel_flat
+R1
+R2
+!i10b 1
+!s100 bXG<fXUR5QgM0aU1z715B2
+R3
+I]M3Md^I<FOLchV=MAECVZ1
+R4
+S1
+R0
+R12
+8../../../../dbg/rtl/soc/verilog/interfaces/common/dii_channel_flat.sv
+F../../../../dbg/rtl/soc/verilog/interfaces/common/dii_channel_flat.sv
+!i122 0
+R19
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xdii_package
+R1
+R2
+!i10b 1
+!s100 [Fg3g3lDMFD@DeNbkXQ9i1
+R3
+IWL;2n58hg@E6gj0^Z@Xe82
+VWL;2n58hg@E6gj0^Z@Xe82
+S1
+R0
+R12
+8../../../../dbg/rtl/soc/verilog/interfaces/common/dii_channel.sv
+F../../../../dbg/rtl/soc/verilog/interfaces/common/dii_channel.sv
+!i122 0
+R19
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Yglip_channel
+R1
+R2
+!i10b 1
+!s100 VVYWe]6AoPo`T_PzKJZ[M1
+R3
+Ii[^<2KbZeRCIfX<3jQm@30
+R4
+S1
+R0
+R5
+8../../../../bench/verilog/glip/glip_channel.sv
+F../../../../bench/verilog/glip/glip_channel.sv
+!i122 0
+L0 29 0
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vmam_wb_adapter
+R1
+Z26 DXx4 work 18 optimsoc_functions 0 22 bLiB07DQ3[Slec?Fz]iaM0
+DXx4 work 22 mam_wb_adapter_sv_unit 0 22 ggAdUWciZ<XBLBWbd68Bd3
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 2MbeJ9QAkHBLhM;RkGa;]3
+IVbWHFKokY[J<OLMb8gmb01
+!s105 mam_wb_adapter_sv_unit
+S1
+R0
+R12
+Z27 8../../../../dbg/rtl/soc/verilog/modules/mam/wishbone/mam_wb_adapter.sv
+Z28 F../../../../dbg/rtl/soc/verilog/modules/mam/wishbone/mam_wb_adapter.sv
+!i122 0
+L0 45 194
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xmam_wb_adapter_sv_unit
+R1
+R26
+R2
+VggAdUWciZ<XBLBWbd68Bd3
+r1
+!s85 0
+!i10b 1
+!s100 FGODZJZD0n:;Dn8_WBd`D3
+IggAdUWciZ<XBLBWbd68Bd3
+!i103 1
+S1
+R0
+R12
+R27
+R28
+!i122 0
+Z29 L0 43 0
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vmpi_buffer
+R1
+R11
+!i10b 1
+!s100 OJSQ29n07LE4_FRkRHJ[<1
+R3
+I>QVAY3]=mYM[N4]QC`Z>[2
+R4
+S1
+R0
+R12
+8../../../../mpi/rtl/verilog/wb/core/mpi_buffer.sv
+F../../../../mpi/rtl/verilog/wb/core/mpi_buffer.sv
+!i122 0
+L0 46 104
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vmpi_buffer_endpoint
+R1
+R11
+!i10b 1
+!s100 =4[[UJN^;mHG6_^ABNG541
+R3
+I[GV4K3ZVRZl?8iJhC03M20
+R4
+S1
+R0
+R12
+8../../../../mpi/rtl/verilog/wb/core/mpi_buffer_endpoint.sv
+F../../../../mpi/rtl/verilog/wb/core/mpi_buffer_endpoint.sv
+!i122 0
+L0 46 504
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vmpi_wb
+R1
+R11
+!i10b 1
+!s100 3FP[FQMSR0m3<WnK<NW<H3
+R3
+I^2>i]66MCY>_TYiMCjcIn2
+R4
+S1
+R0
+R12
+8../../../../mpi/rtl/verilog/wb/wb/mpi_wb.sv
+F../../../../mpi/rtl/verilog/wb/wb/mpi_wb.sv
+!i122 0
+L0 44 89
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vmpsoc_dma_initiator_nocreq
+R1
+R11
+!i10b 1
+!s100 J;L;?]HJ;ZM`O3fM_QNA_1
+R3
+I:jz4:fR_Z>@LkXQZT;7R:0
+R4
+S1
+R0
+R12
+8../../../../dma/rtl/verilog/wb/core/mpsoc_dma_initiator_nocreq.sv
+F../../../../dma/rtl/verilog/wb/core/mpsoc_dma_initiator_nocreq.sv
+!i122 0
+L0 48 377
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vmpsoc_dma_packet_buffer
+R1
+R11
+!i10b 1
+!s100 i@>29i==nU@FlCaiTn]Zk3
+R3
+ICV3DRJjcDTiDL`aCA][`_0
+R4
+S1
+R0
+R12
+8../../../../dma/rtl/verilog/wb/core/mpsoc_dma_packet_buffer.sv
+F../../../../dma/rtl/verilog/wb/core/mpsoc_dma_packet_buffer.sv
+!i122 0
+Z30 L0 48 136
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vmpsoc_dma_request_table
+R1
+R11
+!i10b 1
+!s100 T;9WBR=Am>EPUi9MCC6O?1
+R3
+I]7m7D?46R^dg6;e>Cjh?A2
+R4
+S1
+R0
+R12
+8../../../../dma/rtl/verilog/wb/core/mpsoc_dma_request_table.sv
+F../../../../dma/rtl/verilog/wb/core/mpsoc_dma_request_table.sv
+!i122 0
+L0 48 108
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vmpsoc_dma_wb_initiator
+R1
+R11
+!i10b 1
+!s100 >IjkfmQ0ToKdon`Pf?2Kf2
+R3
+I2BOZ<H6d5YmY>0QMRYX^l2
+R4
+S1
+R0
+R12
+8../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_initiator.sv
+F../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_initiator.sv
+!i122 0
+L0 46 157
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vmpsoc_dma_wb_initiator_nocres
+R1
+R11
+!i10b 1
+!s100 =C4e6NU_9RJP4ZbQX4VIa0
+R3
+I^=[;U[5Y2lXUCP_Ga;F<_2
+R4
+S1
+R0
+R12
+8../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_initiator_nocres.sv
+F../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_initiator_nocres.sv
+!i122 0
+L0 46 204
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vmpsoc_dma_wb_initiator_req
+R1
+R11
+!i10b 1
+!s100 c?aicNLFDL54@V<_lc^]43
+R3
+IklhjFI36JBK:a2ZUnDN1z2
+R4
+S1
+R0
+R12
+8../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_initiator_req.sv
+F../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_initiator_req.sv
+!i122 0
+L0 46 263
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vmpsoc_dma_wb_interface
+R1
+R11
+!i10b 1
+!s100 ^VlU;83[@UFT3@hSl`6az3
+R3
+I]KZciX9[O1XL>NZVXgDRk1
+R4
+S1
+R0
+R12
+8../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_interface.sv
+F../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_interface.sv
+!i122 0
+L0 46 76
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vmpsoc_dma_wb_target
+R1
+R11
+!i10b 1
+!s100 a:ShZhSl]WigAzCn1TR?51
+R3
+ImEhJo[]N1==_I13oO2TN_2
+R4
+S1
+R0
+R12
+8../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_target.sv
+F../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_target.sv
+!i122 0
+L0 46 523
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vmpsoc_dma_wb_top
+R1
+R11
+!i10b 1
+!s100 YF6lC4Z5nU7@gD19hVaT31
+R3
+I[P]jmLLL8kHW14B==I]QO1
+R4
+S1
+R0
+R12
+8../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_top.sv
+F../../../../dma/rtl/verilog/wb/wb/mpsoc_dma_wb_top.sv
+!i122 0
+L0 47 373
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vnetworkadapter_conf
+R1
+R26
+Z31 DXx4 work 15 optimsoc_config 0 22 zo`fB;a:PXgo[UfeQj>[=1
+DXx4 work 27 networkadapter_conf_sv_unit 0 22 WmQ[0IPZh5;J39;mUmQeg2
+R11
+R4
+r1
+!s85 0
+!i10b 1
+!s100 @nB_D3GIl_IbQ8k_=aRYi0
+IG8gkEfMNk9B8_fIRjVVM@2
+!s105 networkadapter_conf_sv_unit
+S1
+R0
+R5
+Z32 8../../../../rtl/verilog/soc/adapter/networkadapter_conf.sv
+Z33 F../../../../rtl/verilog/soc/adapter/networkadapter_conf.sv
+!i122 0
+L0 83 192
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xnetworkadapter_conf_sv_unit
+R1
+R26
+R31
+R11
+VWmQ[0IPZh5;J39;mUmQeg2
+r1
+!s85 0
+!i10b 1
+!s100 mgfc<FXjo@=YV5znNf8o01
+IWmQ[0IPZh5;J39;mUmQeg2
+!i103 1
+S1
+R0
+R5
+R32
+R33
+!i122 0
+L0 81 0
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vnetworkadapter_ct
+R1
+R26
+R31
+DXx4 work 25 networkadapter_ct_sv_unit 0 22 EleHPW8VBM?5QK1lKa6[;3
+R11
+R4
+r1
+!s85 0
+!i10b 1
+!s100 ^dc8bK1L6LJC?5<I7=_LR1
+I?_ZIPd870M9SQb[PkeLRa2
+!s105 networkadapter_ct_sv_unit
+S1
+R0
+R5
+Z34 8../../../../rtl/verilog/soc/adapter/networkadapter_ct.sv
+Z35 F../../../../rtl/verilog/soc/adapter/networkadapter_ct.sv
+!i122 0
+L0 45 422
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xnetworkadapter_ct_sv_unit
+R1
+R26
+R31
+R11
+VEleHPW8VBM?5QK1lKa6[;3
+r1
+!s85 0
+!i10b 1
+!s100 C;l7j:Q8L0AU0SfdcaB]m3
+IEleHPW8VBM?5QK1lKa6[;3
+!i103 1
+S1
+R0
+R5
+R34
+R35
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vnoc_buffer
+R1
+R11
+!i10b 1
+!s100 UfzG[LV?b73dB[4UcRe2@0
+R3
+IGaX4i<@MbV1e@2z2V76_J0
+R4
+S1
+R0
+R12
+8../../../../noc/rtl/verilog/core/noc_buffer.sv
+F../../../../noc/rtl/verilog/core/noc_buffer.sv
+!i122 0
+R30
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vnoc_demux
+R1
+R11
+!i10b 1
+!s100 `fSFWBFT4>mz[Ii<o?WQ=0
+R3
+I?AL5M?Bj:ZhlR3aW1HM:`3
+R4
+S1
+R0
+R12
+8../../../../noc/rtl/verilog/core/noc_demux.sv
+F../../../../noc/rtl/verilog/core/noc_demux.sv
+!i122 0
+L0 45 89
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vnoc_mesh2d
+R1
+R11
+!i10b 1
+!s100 AgaS0[NRW83VDMkI71SCA0
+R3
+I[B>]RUJLg;c55QoZn@M_51
+R4
+S1
+R0
+R12
+8../../../../noc/rtl/verilog/topology/noc_mesh2d.sv
+F../../../../noc/rtl/verilog/topology/noc_mesh2d.sv
+!i122 0
+L0 45 339
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vnoc_mux
+R1
+R11
+!i10b 1
+!s100 :ELPNSX@YVBCGlIPlCbXl0
+R3
+IBLl_G>]NCFS6R1AQ7`V`V2
+R4
+S1
+R0
+R12
+8../../../../noc/rtl/verilog/core/noc_mux.sv
+F../../../../noc/rtl/verilog/core/noc_mux.sv
+!i122 0
+L0 46 97
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vnoc_router
+R1
+R11
+!i10b 1
+!s100 nS6dM;4HQ0OOLj[MdH2;j1
+R3
+IYgPhZ]^?Pk`:@i[@]A<Wo1
+R4
+S1
+R0
+R12
+8../../../../noc/rtl/verilog/router/noc_router.sv
+F../../../../noc/rtl/verilog/router/noc_router.sv
+!i122 0
+Z36 L0 45 120
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vnoc_router_input
+R1
+R11
+!i10b 1
+!s100 H>I3JE:8Ta73SSd^S5no42
+R3
+I8f6Mh>>]9X066_kWbASFW0
+R4
+S1
+R0
+R12
+8../../../../noc/rtl/verilog/router/noc_router_input.sv
+F../../../../noc/rtl/verilog/router/noc_router_input.sv
+!i122 0
+Z37 L0 45 88
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vnoc_router_lookup
+R1
+R11
+!i10b 1
+!s100 L3F;F]dA;^fEDzgY_2kT43
+R3
+IkAEM8]EJCc]64nOkZOMUH0
+R4
+S1
+R0
+R12
+8../../../../noc/rtl/verilog/router/noc_router_lookup.sv
+F../../../../noc/rtl/verilog/router/noc_router_lookup.sv
+!i122 0
+L0 45 107
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vnoc_router_lookup_slice
+R1
+R11
+!i10b 1
+!s100 `0;zejI][M?Y1CGH7=^SR2
+R3
+IAZKVNDWDHNHEFGD=fBb3T0
+R4
+S1
+R0
+R12
+8../../../../noc/rtl/verilog/router/noc_router_lookup_slice.sv
+F../../../../noc/rtl/verilog/router/noc_router_lookup_slice.sv
+!i122 0
+L0 45 83
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vnoc_router_output
+R1
+R11
+!i10b 1
+!s100 hAHjHfn?KjI01Y`hP:=aK1
+R3
+IVle2l?U7chQSL4:O4^cDC2
+R4
+S1
+R0
+R12
+8../../../../noc/rtl/verilog/router/noc_router_output.sv
+F../../../../noc/rtl/verilog/router/noc_router_output.sv
+!i122 0
+L0 45 114
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vnoc_vchannel_mux
+R1
+R11
+!i10b 1
+!s100 fohI:KZLfJ`P81AJ7lU=81
+R3
+I:oRTDZnZEDdQ^czCDJ:lM2
+R4
+S1
+R0
+R12
+8../../../../noc/rtl/verilog/core/noc_vchannel_mux.sv
+F../../../../noc/rtl/verilog/core/noc_vchannel_mux.sv
+!i122 0
+L0 45 65
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xopensocdebug
+R1
+R2
+!i10b 1
+!s100 hCKS=a84`ZGbgCg0n]Rln2
+R3
+IWA5ReZjG_Jn1jFzh?=LJM3
+VWA5ReZjG_Jn1jFzh?=LJM3
+S1
+R0
+R12
+8../../../../dbg/rtl/soc/verilog/interfaces/or1k/mor1kx_trace_exec.sv
+F../../../../dbg/rtl/soc/verilog/interfaces/or1k/mor1kx_trace_exec.sv
+!i122 0
+R29
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xoptimsoc_config
+R1
+R26
+R2
+!i10b 1
+!s100 :<15Xjf]27gS<[9X`dAU;1
+R3
+Izo`fB;a:PXgo[UfeQj>[=1
+Vzo`fB;a:PXgo[UfeQj>[=1
+S1
+R0
+R5
+8../../../../rtl/verilog/pkg/config/optimsoc_config.sv
+F../../../../rtl/verilog/pkg/config/optimsoc_config.sv
+!i122 0
+Z38 L0 45 0
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xoptimsoc_constants
+R1
+R2
+!i10b 1
+!s100 jn^Ni[D;ZKjXRNhM7mJCQ3
+R3
+IKh8>Vi>Wh?Di9l5=]_OL:3
+VKh8>Vi>Wh?Di9l5=]_OL:3
+S1
+R0
+R5
+8../../../../rtl/verilog/pkg/constants/optimsoc_constants.sv
+F../../../../rtl/verilog/pkg/constants/optimsoc_constants.sv
+!i122 0
+R38
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xoptimsoc_functions
+R1
+R2
+!i10b 1
+!s100 E7U<im=Q8clU`mDHefb?J2
+R3
+IbLiB07DQ3[Slec?Fz]iaM0
+VbLiB07DQ3[Slec?Fz]iaM0
+S1
+R0
+R5
+8../../../../rtl/verilog/pkg/functions/optimsoc_functions.sv
+F../../../../rtl/verilog/pkg/functions/optimsoc_functions.sv
+!i122 0
+L0 46 0
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_branch_prediction
+R1
+R11
+!i10b 1
+!s100 QeF6G6;T7G82nF0BOd^b^2
+R3
+I9^dIMaT_H_mSUV:QRRcN40
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/or1k_branch_prediction.sv
+F../../../../pu/rtl/verilog/core/or1k_branch_prediction.sv
+!i122 0
+L0 45 90
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_branch_predictor_gshare
+R1
+R11
+!i10b 1
+!s100 KUeL=ofUGO=7dH?B;:3BQ0
+R3
+Ic8iEHZ0LeA3Uz3l^;6D^93
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/or1k_branch_predictor_gshare.sv
+F../../../../pu/rtl/verilog/core/or1k_branch_predictor_gshare.sv
+!i122 0
+L0 45 91
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_branch_predictor_saturation_counter
+R1
+R11
+!i10b 1
+!s100 ==TFFcJVdSdHB_777bHjB2
+R3
+IMT;QPUS=]:3=21KV@<4d11
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/or1k_branch_predictor_saturation_counter.sv
+F../../../../pu/rtl/verilog/core/or1k_branch_predictor_saturation_counter.sv
+!i122 0
+L0 45 66
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_branch_predictor_simple
+R1
+R11
+!i10b 1
+!s100 i^iQ^PM96[[JVfWLSc43O3
+R3
+I_T:oCnRhWd_`A@3GW_93o1
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/or1k_branch_predictor_simple.sv
+F../../../../pu/rtl/verilog/core/or1k_branch_predictor_simple.sv
+!i122 0
+L0 45 12
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_bus_if_wb32
+R1
+R11
+!i10b 1
+!s100 LQgcScW7WhGFI]4a9KbAM1
+R3
+IV4eDPNj5Z>zc8nB_hE=Rn0
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/or1k_bus_if_wb32.sv
+F../../../../pu/rtl/verilog/core/or1k_bus_if_wb32.sv
+!i122 0
+L0 45 147
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_cache_lru
+R1
+R11
+!i10b 1
+!s100 fGn60QLVQOzOG`LD<`Z9B3
+R3
+IPD4GBFBgo;^R937JRIJZB1
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/fetch/or1k_cache_lru.sv
+F../../../../pu/rtl/verilog/core/fetch/or1k_cache_lru.sv
+!i122 0
+L0 43 186
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_cfgrs
+R1
+R11
+!i10b 1
+!s100 NC:I]2bj?kMHEf@``Zm`M3
+R3
+IOhLV`^61AYCn0T:k>KZ;D1
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/control/or1k_cfgrs.sv
+F../../../../pu/rtl/verilog/core/control/or1k_cfgrs.sv
+!i122 0
+L0 45 202
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_core
+R1
+R11
+!i10b 1
+!s100 d?1K]3Wo0iCLmh`T1oaM13
+R3
+IRJ9djIYFG@ZNOc=TnUR;m3
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/or1k_core.sv
+F../../../../pu/rtl/verilog/core/or1k_core.sv
+!i122 0
+L0 45 395
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_cpu
+R1
+R11
+!i10b 1
+!s100 dfFlC8nYHLVBFiAJdk15N3
+R3
+IXK:Hzl02R34=H1O?S9n:03
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/or1k_cpu.sv
+F../../../../pu/rtl/verilog/core/or1k_cpu.sv
+Z39 F../../../../pu/rtl/verilog/pkg/or1k_utils.sv
+!i122 0
+L0 45 498
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_cpu_cappuccino
+R1
+R11
+!i10b 1
+!s100 <?A_8Z@ZcAALm;1I_K^Oj1
+R3
+Il;<3[cNXJkVTm3e<MI2zN1
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/or1k_cpu_cappuccino.sv
+F../../../../pu/rtl/verilog/core/or1k_cpu_cappuccino.sv
+R39
+!i122 0
+L0 45 1384
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_ctrl_cappuccino
+R1
+R11
+!i10b 1
+!s100 j?W2>aNoiELE=Jz@6N]OV3
+R3
+INBH7dHo9S3ShRgeFbWk7@2
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/control/or1k_ctrl_cappuccino.sv
+F../../../../pu/rtl/verilog/core/control/or1k_ctrl_cappuccino.sv
+!i122 0
+L0 45 1516
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_dcache
+R1
+R11
+!i10b 1
+!s100 Q>L7;iJ<D<BMLF97KTn^H2
+R3
+I1Aj?JBm0bg`>NKCNd57ne1
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/memory/or1k_dcache.sv
+F../../../../pu/rtl/verilog/core/memory/or1k_dcache.sv
+!i122 0
+L0 45 640
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_decode
+R1
+R11
+!i10b 1
+!s100 >`eIGZD@kP<K365=NK3KU2
+R3
+IdCi>]MnzC80NHQ5fk2[Bd1
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/decode/or1k_decode.sv
+F../../../../pu/rtl/verilog/core/decode/or1k_decode.sv
+!i122 0
+L0 45 448
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_decode_execute_cappuccino
+R1
+R11
+!i10b 1
+!s100 kc2`AjP[c7RcW9[`UjO@H2
+R3
+IE7zT=Hi_Gm71NenY^`0n?1
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/or1k_decode_execute_cappuccino.sv
+F../../../../pu/rtl/verilog/core/or1k_decode_execute_cappuccino.sv
+!i122 0
+L0 45 588
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_dmmu
+R1
+R11
+!i10b 1
+!s100 Ac6OQlOJG?J9J0W=;R=Te1
+R3
+IP?JJdN_FQ7=?;iVna`JdY1
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/memory/or1k_dmmu.sv
+F../../../../pu/rtl/verilog/core/memory/or1k_dmmu.sv
+!i122 0
+L0 45 421
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_execute_alu
+R1
+R11
+!i10b 1
+!s100 z`DAYjg^A8o[mC[NkZ:I_0
+R3
+Ifd9n5gQi=?JWL;N<BQFFz3
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/execute/or1k_execute_alu.sv
+F../../../../pu/rtl/verilog/core/execute/or1k_execute_alu.sv
+!i122 0
+L0 45 800
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_execute_ctrl_cappuccino
+R1
+R11
+!i10b 1
+!s100 Ej8YzaoNozII;cbfAg<dS0
+R3
+IY6RUOjNZ>76WaZ`9>[iQD0
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/execute/or1k_execute_ctrl_cappuccino.sv
+F../../../../pu/rtl/verilog/core/execute/or1k_execute_ctrl_cappuccino.sv
+!i122 0
+L0 45 386
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_fetch_cappuccino
+R1
+R11
+!i10b 1
+!s100 FPk?160cElPh]j?aIeF<J0
+R3
+I;TQ8N7[@9_[H4nkh>2n`E3
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/fetch/or1k_fetch_cappuccino.sv
+F../../../../pu/rtl/verilog/core/fetch/or1k_fetch_cappuccino.sv
+!i122 0
+L0 45 602
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_icache
+R1
+R11
+!i10b 1
+!s100 Pf4kPz;7@JZb_BoUNB>4m2
+R3
+IS@VS34olMVILVlgEZ]?oi0
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/fetch/or1k_icache.sv
+F../../../../pu/rtl/verilog/core/fetch/or1k_icache.sv
+!i122 0
+L0 45 425
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_immu
+R1
+R11
+!i10b 1
+!s100 Ee]BDda1dlZbC_T0Q9amS3
+R3
+IOM_E:VjgP?0R^>9G]kK0E2
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/fetch/or1k_immu.sv
+F../../../../pu/rtl/verilog/core/fetch/or1k_immu.sv
+!i122 0
+L0 45 436
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_lsu_cappuccino
+R1
+R11
+!i10b 1
+!s100 TDcElQMWFX`hiKU^KHC421
+R3
+IkJF]<EP`ZMiW^5S7TA=LJ3
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/memory/or1k_lsu_cappuccino.sv
+F../../../../pu/rtl/verilog/core/memory/or1k_lsu_cappuccino.sv
+!i122 0
+L0 45 810
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_module
+R1
+Z40 DXx4 work 12 opensocdebug 0 22 WA5ReZjG_Jn1jFzh?=LJM3
+DXx4 work 19 or1k_module_sv_unit 0 22 DJQY82K@IV5A4enneZAS^0
+R11
+R4
+r1
+!s85 0
+!i10b 1
+!s100 ZKzU10H]N4UX_T4VkY8SZ2
+I^n^QmKQ3CVkH;@jS:POGV2
+!s105 or1k_module_sv_unit
+S1
+R0
+R12
+Z41 8../../../../pu/rtl/verilog/module/or1k_module.sv
+Z42 F../../../../pu/rtl/verilog/module/or1k_module.sv
+!i122 0
+L0 45 150
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xor1k_module_sv_unit
+R1
+R40
+R11
+VDJQY82K@IV5A4enneZAS^0
+r1
+!s85 0
+!i10b 1
+!s100 ^WMZ0I0>TADccMhl[@SW52
+IDJQY82K@IV5A4enneZAS^0
+!i103 1
+S1
+R0
+R12
+R41
+R42
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_pcu
+R1
+R11
+!i10b 1
+!s100 P;f;=30Fz9[JeWR;[ZDP@2
+R3
+I]P=O<oVdoZPB:<4@16EOI2
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/control/or1k_pcu.sv
+F../../../../pu/rtl/verilog/core/control/or1k_pcu.sv
+!i122 0
+R36
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_pic
+R1
+R11
+!i10b 1
+!s100 X@PoD@oeoiFa^QMfAV=Wc1
+R3
+I;lKAZUkLLIf?k5QhQh@kS2
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/control/or1k_pic.sv
+F../../../../pu/rtl/verilog/core/control/or1k_pic.sv
+!i122 0
+L0 45 109
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_rf_cappuccino
+R1
+R11
+!i10b 1
+!s100 46GBZ6D:`P]0ol2RLoJI^3
+R3
+I_g7EL9hW6^7A1>cH?Vh603
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/execute/or1k_rf_cappuccino.sv
+F../../../../pu/rtl/verilog/core/execute/or1k_rf_cappuccino.sv
+R39
+!i122 0
+L0 45 474
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_simple_dpram_sclk
+R1
+R11
+!i10b 1
+!s100 7gPEFKhT:O==^3VWIQh9@3
+R3
+IVe<FN<T=2Me:P`HNPL9>U3
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/memory/or1k_simple_dpram_sclk.sv
+F../../../../pu/rtl/verilog/memory/or1k_simple_dpram_sclk.sv
+!i122 0
+L0 43 60
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_store_buffer
+R1
+R11
+!i10b 1
+!s100 K;TGNKjeOEgE:>2A:^HiV3
+R3
+I>^HWc;?a_RN1<HeiAbD?m3
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/memory/or1k_store_buffer.sv
+F../../../../pu/rtl/verilog/core/memory/or1k_store_buffer.sv
+!i122 0
+Z43 L0 45 71
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_ticktimer
+R1
+R11
+!i10b 1
+!s100 5VN7ck`H_WW:iT8bKbkR20
+R3
+IOfM^DBUbWokFaFZ;kd3<A0
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/control/or1k_ticktimer.sv
+F../../../../pu/rtl/verilog/core/control/or1k_ticktimer.sv
+!i122 0
+L0 45 70
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_tile
+R1
+R16
+R40
+R26
+R31
+DXx4 work 17 or1k_tile_sv_unit 0 22 1KD_Z0H1<IDdJn2L@kB^A0
+R11
+R4
+r1
+!s85 0
+!i10b 1
+!s100 5c:]F]0fX@FD^8hmfaR4F3
+IiCjVHfBf=kUjP7]GGW?jj1
+!s105 or1k_tile_sv_unit
+S1
+R0
+R5
+Z44 8../../../../rtl/verilog/soc/or1k_tile.sv
+Z45 F../../../../rtl/verilog/soc/or1k_tile.sv
+!i122 0
+L0 48 666
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xor1k_tile_sv_unit
+R1
+R16
+R40
+R26
+R31
+R11
+V1KD_Z0H1<IDdJn2L@kB^A0
+r1
+!s85 0
+!i10b 1
+!s100 >`<`<kG0J@00TL583?ZlJ3
+I1KD_Z0H1<IDdJn2L@kB^A0
+!i103 1
+S1
+R0
+R5
+R44
+R45
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_true_dpram_sclk
+R1
+R11
+!i10b 1
+!s100 ]JaU3TRa>d`ig6SzbYHGk1
+R3
+Ij8B@PkL=g5R]?U16aHCY62
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/memory/or1k_true_dpram_sclk.sv
+F../../../../pu/rtl/verilog/memory/or1k_true_dpram_sclk.sv
+!i122 0
+L0 43 46
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vor1k_wb_mux_cappuccino
+R1
+R11
+!i10b 1
+!s100 ?RbgM2XVHBo3jWdP<o82T1
+R3
+I[5klTe<j1XW[oPcCW=2WK0
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/execute/or1k_wb_mux_cappuccino.sv
+F../../../../pu/rtl/verilog/core/execute/or1k_wb_mux_cappuccino.sv
+!i122 0
+L0 45 37
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_ctm
+R1
+R16
+DXx4 work 15 osd_ctm_sv_unit 0 22 [0AjmLfMch3Hh@YUQFc`;0
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 bUY8;UbgRikm[6<Yk]bAa2
+IFck6hNki?AHmCFF1?j[H`3
+!s105 osd_ctm_sv_unit
+S1
+R0
+R12
+Z46 8../../../../dbg/rtl/soc/verilog/modules/ctm/common/osd_ctm.sv
+Z47 F../../../../dbg/rtl/soc/verilog/modules/ctm/common/osd_ctm.sv
+!i122 0
+L0 45 174
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_ctm_mor1kx
+R1
+R16
+R40
+DXx4 work 22 osd_ctm_mor1kx_sv_unit 0 22 dDSb<M5Xh8h1<kU7ZdFG03
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 6FK;Bkl7mZYG]8D=h=]LP2
+Io@AX712MACBi;^QkA8Ozb2
+!s105 osd_ctm_mor1kx_sv_unit
+S1
+R0
+R12
+Z48 8../../../../dbg/rtl/soc/verilog/modules/ctm/or1k/mor1kx/osd_ctm_mor1kx.sv
+Z49 F../../../../dbg/rtl/soc/verilog/modules/ctm/or1k/mor1kx/osd_ctm_mor1kx.sv
+!i122 0
+L0 46 66
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_ctm_mor1kx_sv_unit
+R1
+R16
+R40
+R2
+VdDSb<M5Xh8h1<kU7ZdFG03
+r1
+!s85 0
+!i10b 1
+!s100 :H3o@BzzcBYnKE9P]j9QZ1
+IdDSb<M5Xh8h1<kU7ZdFG03
+!i103 1
+S1
+R0
+R12
+R48
+R49
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_ctm_sv_unit
+R1
+R16
+R2
+V[0AjmLfMch3Hh@YUQFc`;0
+r1
+!s85 0
+!i10b 1
+!s100 >>?04feYDMF;Ti@Z>]6@20
+I[0AjmLfMch3Hh@YUQFc`;0
+!i103 1
+S1
+R0
+R12
+R46
+R47
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_dem_uart
+R1
+R16
+DXx4 work 20 osd_dem_uart_sv_unit 0 22 cm8b[`0]5akVLf_?zOh]?1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 Xb22CgNEMe2Wo:eiE27?b3
+IbI^CBln]H]WAA]4PE0kC^0
+!s105 osd_dem_uart_sv_unit
+S1
+R0
+R12
+Z50 8../../../../dbg/rtl/soc/verilog/modules/dem_uart/osd_dem_uart.sv
+Z51 F../../../../dbg/rtl/soc/verilog/modules/dem_uart/osd_dem_uart.sv
+!i122 0
+L0 45 183
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_dem_uart_16550
+R1
+R16
+DXx4 work 26 osd_dem_uart_16550_sv_unit 0 22 8B`MR3c76_1=[n1ze?hYR2
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 5G4M6IOlC4zLK^N6UbS9[0
+Ioc=Vjoi=ziH[d^]Q5LYH@1
+!s105 osd_dem_uart_16550_sv_unit
+S1
+R0
+R12
+Z52 8../../../../dbg/rtl/soc/verilog/modules/dem_uart/osd_dem_uart_16550.sv
+Z53 F../../../../dbg/rtl/soc/verilog/modules/dem_uart/osd_dem_uart_16550.sv
+!i122 0
+L0 46 217
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_dem_uart_16550_sv_unit
+R1
+R16
+R2
+V8B`MR3c76_1=[n1ze?hYR2
+r1
+!s85 0
+!i10b 1
+!s100 i^jfP^FhM@PWBl:c5gRJA1
+I8B`MR3c76_1=[n1ze?hYR2
+!i103 1
+S1
+R0
+R12
+R52
+R53
+!i122 0
+R19
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_dem_uart_sv_unit
+R1
+R16
+R2
+Vcm8b[`0]5akVLf_?zOh]?1
+r1
+!s85 0
+!i10b 1
+!s100 S55aBV4W3:_DO11;_G0790
+Icm8b[`0]5akVLf_?zOh]?1
+!i103 1
+S1
+R0
+R12
+R50
+R51
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_dem_uart_wb
+R1
+R16
+DXx4 work 23 osd_dem_uart_wb_sv_unit 0 22 <CT>7ZN]LfePKe7E<5ebU1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 ^EZFF]KS`Um>0HjSJSDZm2
+IPYQzGE;Lnj`V[X4lI=3Nl2
+!s105 osd_dem_uart_wb_sv_unit
+S1
+R0
+R12
+Z54 8../../../../dbg/rtl/soc/verilog/modules/dem_uart/osd_dem_uart_wb.sv
+Z55 F../../../../dbg/rtl/soc/verilog/modules/dem_uart/osd_dem_uart_wb.sv
+!i122 0
+Z56 L0 45 104
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_dem_uart_wb_sv_unit
+R1
+R16
+R2
+V<CT>7ZN]LfePKe7E<5ebU1
+r1
+!s85 0
+!i10b 1
+!s100 4>T?6kQ4H@@B3VRdSPbMj1
+I<CT>7ZN]LfePKe7E<5ebU1
+!i103 1
+S1
+R0
+R12
+R54
+R55
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_event_packetization
+R1
+R16
+DXx4 work 31 osd_event_packetization_sv_unit 0 22 GKbGKO>K=gdXDegaT1Sm_3
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 lM=jUKKZ>0LYBJ8V4m@lL1
+I4Ni3HDo5dleMNed][cV9Y1
+!s105 osd_event_packetization_sv_unit
+S1
+R0
+R12
+Z57 8../../../../dbg/rtl/soc/verilog/blocks/eventpacket/osd_event_packetization.sv
+Z58 F../../../../dbg/rtl/soc/verilog/blocks/eventpacket/osd_event_packetization.sv
+!i122 0
+L0 46 196
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_event_packetization_fixedwidth
+R1
+R16
+DXx4 work 42 osd_event_packetization_fixedwidth_sv_unit 0 22 2jZE<MGZOjZQ7OWYn?`1F1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 W:dD7;^KRE<lQmo37oWga1
+IQbTaFkFP2R50d<A1J2Zi^0
+!s105 osd_event_packetization_fixedwidth_sv_unit
+S1
+R0
+R12
+Z59 8../../../../dbg/rtl/soc/verilog/blocks/eventpacket/osd_event_packetization_fixedwidth.sv
+Z60 F../../../../dbg/rtl/soc/verilog/blocks/eventpacket/osd_event_packetization_fixedwidth.sv
+!i122 0
+L0 60 88
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_event_packetization_fixedwidth_sv_unit
+R1
+R16
+R2
+V2jZE<MGZOjZQ7OWYn?`1F1
+r1
+!s85 0
+!i10b 1
+!s100 iE]cXio2W1:[;1n6ifoIG2
+I2jZE<MGZOjZQ7OWYn?`1F1
+!i103 1
+S1
+R0
+R12
+R59
+R60
+!i122 0
+L0 58 0
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_event_packetization_sv_unit
+R1
+R16
+R2
+VGKbGKO>K=gdXDegaT1Sm_3
+r1
+!s85 0
+!i10b 1
+!s100 dJ2_:lR=of04TQOP]J8X31
+IGKbGKO>K=gdXDegaT1Sm_3
+!i103 1
+S1
+R0
+R12
+R57
+R58
+!i122 0
+R19
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_fifo
+R1
+R2
+!i10b 1
+!s100 o`GTjOOzNV1=X[CZJ_VPB3
+R3
+IJlaML[h2RYzHiKD2^7U6i3
+R4
+S1
+R0
+R12
+8../../../../dbg/rtl/soc/verilog/blocks/buffer/osd_fifo.sv
+F../../../../dbg/rtl/soc/verilog/blocks/buffer/osd_fifo.sv
+!i122 0
+L0 44 76
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_him
+R1
+R16
+DXx4 work 15 osd_him_sv_unit 0 22 eViQGcO<UjcKRGhKl0aWL1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 m0GCVg5U_gfU7`KlY=K3[3
+I9[LGC3=`JcOEd9hd5E?fR0
+!s105 osd_him_sv_unit
+S1
+R0
+R12
+Z61 8../../../../dbg/rtl/soc/verilog/modules/him/osd_him.sv
+Z62 F../../../../dbg/rtl/soc/verilog/modules/him/osd_him.sv
+!i122 0
+L0 45 127
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_him_sv_unit
+R1
+R16
+R2
+VeViQGcO<UjcKRGhKl0aWL1
+r1
+!s85 0
+!i10b 1
+!s100 d1ObME@<BW:VZ;`k`VFe60
+IeViQGcO<UjcKRGhKl0aWL1
+!i103 1
+S1
+R0
+R12
+R61
+R62
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_mam
+R1
+R16
+DXx4 work 15 osd_mam_sv_unit 0 22 Q7lT9agoc?EiAo:n<oA>Q2
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 [Z210XDKaGcmzYX4M?0zc1
+IXfmMFo:`5>W`ebm[[Y0Pz1
+!s105 osd_mam_sv_unit
+S1
+R0
+R12
+Z63 8../../../../dbg/rtl/soc/verilog/modules/mam/common/osd_mam.sv
+Z64 F../../../../dbg/rtl/soc/verilog/modules/mam/common/osd_mam.sv
+!i122 0
+L0 45 545
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_mam_sv_unit
+R1
+R16
+R2
+VQ7lT9agoc?EiAo:n<oA>Q2
+r1
+!s85 0
+!i10b 1
+!s100 cDSE1haefd@D1`VS88FR82
+IQ7lT9agoc?EiAo:n<oA>Q2
+!i103 1
+S1
+R0
+R12
+R63
+R64
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_mam_wb
+R1
+R16
+DXx4 work 18 osd_mam_wb_sv_unit 0 22 fWm1i3VQAOj6TP8mm5Gk71
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 gX<03[zmbEVHWJ2QD^LMl2
+Ic:VT>K=0`cZnEU9cmS`HM1
+!s105 osd_mam_wb_sv_unit
+S1
+R0
+R12
+Z65 8../../../../dbg/rtl/soc/verilog/modules/mam/wishbone/osd_mam_wb.sv
+Z66 F../../../../dbg/rtl/soc/verilog/modules/mam/wishbone/osd_mam_wb.sv
+!i122 0
+L0 45 106
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_mam_wb_if
+R1
+R2
+!i10b 1
+!s100 j1Ni5bjXi8[f[L<;mMn?j0
+R3
+I^l0>kamFHLVWbJf3i4HbU3
+R4
+S1
+R0
+R12
+8../../../../dbg/rtl/soc/verilog/modules/mam/wishbone/osd_mam_wb_if.sv
+F../../../../dbg/rtl/soc/verilog/modules/mam/wishbone/osd_mam_wb_if.sv
+!i122 0
+L0 43 235
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_mam_wb_sv_unit
+R1
+R16
+R2
+VfWm1i3VQAOj6TP8mm5Gk71
+r1
+!s85 0
+!i10b 1
+!s100 ?L`Ron]632[kVaOMjTg`[0
+IfWm1i3VQAOj6TP8mm5Gk71
+!i103 1
+S1
+R0
+R12
+R65
+R66
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_regaccess
+R1
+R16
+DXx4 work 21 osd_regaccess_sv_unit 0 22 kkTT^QVRkA_QmjL_iDVdN1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 mY[;BdN3Bg^i0Z3o9zYhP3
+IOA7>A1ljQiDD4ABR4fY7H2
+!s105 osd_regaccess_sv_unit
+S1
+R0
+R12
+Z67 8../../../../dbg/rtl/soc/verilog/blocks/regaccess/osd_regaccess.sv
+Z68 F../../../../dbg/rtl/soc/verilog/blocks/regaccess/osd_regaccess.sv
+!i122 0
+L0 47 375
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_regaccess_demux
+R1
+R16
+DXx4 work 27 osd_regaccess_demux_sv_unit 0 22 T>m[793Gf@I`3GNA:z6Qg1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 eNd73HiXhI?MdIE:8hhcP3
+I6<iJA8hgYCKQl3z:WlMm91
+!s105 osd_regaccess_demux_sv_unit
+S1
+R0
+R12
+Z69 8../../../../dbg/rtl/soc/verilog/blocks/regaccess/osd_regaccess_demux.sv
+Z70 F../../../../dbg/rtl/soc/verilog/blocks/regaccess/osd_regaccess_demux.sv
+!i122 0
+L0 45 133
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_regaccess_demux_sv_unit
+R1
+R16
+R2
+VT>m[793Gf@I`3GNA:z6Qg1
+r1
+!s85 0
+!i10b 1
+!s100 aCT3Qz[R1MfQ@eFN[;jgb3
+IT>m[793Gf@I`3GNA:z6Qg1
+!i103 1
+S1
+R0
+R12
+R69
+R70
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_regaccess_layer
+R1
+R16
+DXx4 work 27 osd_regaccess_layer_sv_unit 0 22 WAZKMi^jk9jYM09d7_UJA0
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 >:0o]VF=9:oci8>=Pf?Yj2
+IRB0Nk<b@2<V:;=IL;>YE[2
+!s105 osd_regaccess_layer_sv_unit
+S1
+R0
+R12
+Z71 8../../../../dbg/rtl/soc/verilog/blocks/regaccess/osd_regaccess_layer.sv
+Z72 F../../../../dbg/rtl/soc/verilog/blocks/regaccess/osd_regaccess_layer.sv
+!i122 0
+L0 45 85
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_regaccess_layer_sv_unit
+R1
+R16
+R2
+VWAZKMi^jk9jYM09d7_UJA0
+r1
+!s85 0
+!i10b 1
+!s100 bhPT_DbOg?nWR5JPajEAZ2
+IWAZKMi^jk9jYM09d7_UJA0
+!i103 1
+S1
+R0
+R12
+R71
+R72
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_regaccess_sv_unit
+R1
+R16
+R2
+VkkTT^QVRkA_QmjL_iDVdN1
+r1
+!s85 0
+!i10b 1
+!s100 Z`]0z7eTB]Gi4YiXa1gc<3
+IkkTT^QVRkA_QmjL_iDVdN1
+!i103 1
+S1
+R0
+R12
+R67
+R68
+!i122 0
+R38
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_scm
+R1
+R16
+DXx4 work 15 osd_scm_sv_unit 0 22 z>Q[T;UbeZ:BZ^bLeKXb43
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 5b>HZokd5[jm_D=NkGDgM2
+ITokkPmSVEN5Oj2j:?PG>g0
+!s105 osd_scm_sv_unit
+S1
+R0
+R12
+Z73 8../../../../dbg/rtl/soc/verilog/modules/scm/osd_scm.sv
+Z74 F../../../../dbg/rtl/soc/verilog/modules/scm/osd_scm.sv
+!i122 0
+L0 45 72
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_scm_sv_unit
+R1
+R16
+R2
+Vz>Q[T;UbeZ:BZ^bLeKXb43
+r1
+!s85 0
+!i10b 1
+!s100 I?:TCXgW6fgPb1ljzC[cN0
+Iz>Q[T;UbeZ:BZ^bLeKXb43
+!i103 1
+S1
+R0
+R12
+R73
+R74
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_stm
+R1
+R16
+DXx4 work 15 osd_stm_sv_unit 0 22 G0fIK4e<Y<XGgAEhWaoEG1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 V>^?P4oK@ez8VQneTOVzo2
+I4mTE^hkC@0fz@8FQj:fn23
+!s105 osd_stm_sv_unit
+S1
+R0
+R12
+Z75 8../../../../dbg/rtl/soc/verilog/modules/stm/common/osd_stm.sv
+Z76 F../../../../dbg/rtl/soc/verilog/modules/stm/common/osd_stm.sv
+!i122 0
+L0 45 148
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_stm_mor1kx
+R1
+R16
+R40
+DXx4 work 22 osd_stm_mor1kx_sv_unit 0 22 mBM^MfiR_I[O@dRof3YFg2
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 M09]9]1moSmSIOI8<Dlk@3
+IIhW<9`WNHPTY2hn3:f9nc2
+!s105 osd_stm_mor1kx_sv_unit
+S1
+R0
+R12
+Z77 8../../../../dbg/rtl/soc/verilog/modules/stm/or1k/mor1kx/osd_stm_mor1kx.sv
+Z78 F../../../../dbg/rtl/soc/verilog/modules/stm/or1k/mor1kx/osd_stm_mor1kx.sv
+!i122 0
+L0 46 49
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_stm_mor1kx_sv_unit
+R1
+R16
+R40
+R2
+VmBM^MfiR_I[O@dRof3YFg2
+r1
+!s85 0
+!i10b 1
+!s100 @`HDLPeo9S19RJWSzHQjl1
+ImBM^MfiR_I[O@dRof3YFg2
+!i103 1
+S1
+R0
+R12
+R77
+R78
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xosd_stm_sv_unit
+R1
+R16
+R2
+VG0fIK4e<Y<XGgAEhWaoEG1
+r1
+!s85 0
+!i10b 1
+!s100 X]A<cO^?F]H`2b=lC0CW:3
+IG0fIK4e<Y<XGgAEhWaoEG1
+!i103 1
+S1
+R0
+R12
+R75
+R76
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_timestamp
+R1
+R2
+!i10b 1
+!s100 aY7IJ`onmGE@Y91iS0Em61
+R3
+I6:A^>RQR^;g3Z>_T[ccLR1
+R4
+S1
+R0
+R12
+8../../../../dbg/rtl/soc/verilog/blocks/timestamp/osd_timestamp.sv
+F../../../../dbg/rtl/soc/verilog/blocks/timestamp/osd_timestamp.sv
+!i122 0
+L0 43 18
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vosd_tracesample
+R1
+R2
+!i10b 1
+!s100 <_nODcd[?EhMiCHOAEGeM1
+R3
+IPiBkf9>[L722okna`M2Qh0
+R4
+S1
+R0
+R12
+8../../../../dbg/rtl/soc/verilog/blocks/tracesample/osd_tracesample.sv
+F../../../../dbg/rtl/soc/verilog/blocks/tracesample/osd_tracesample.sv
+!i122 0
+L0 44 51
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vpfpu32_addsub
+R1
+R11
+!i10b 1
+!s100 ;jMZM>mZ:Q5z][eK56CcE1
+R3
+IJ6XgDCkK_f2c<BYK33>iI1
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_addsub.sv
+F../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_addsub.sv
+!i122 0
+L0 45 279
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vpfpu32_f2i
+R1
+R11
+!i10b 1
+!s100 Ubl0lefSkk>z9zfRD^4in0
+R3
+IQBA`YmZgT]A0AZL>NoiW]1
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_f2i.sv
+F../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_f2i.sv
+!i122 0
+R43
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vpfpu32_fcmp
+R1
+R11
+!i10b 1
+!s100 kfXG_m4ebmXB>Q21DhDgJ1
+R3
+IjXmIoMId=QaYXmQgH:^TE1
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_cmp.sv
+F../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_cmp.sv
+!i122 0
+L0 47 143
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vpfpu32_i2f
+R1
+R11
+!i10b 1
+!s100 T4AzQBoh>5idXlh[Z7C6k1
+R3
+I:j7Md_<Kmk2anhE`gn^QU2
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_i2f.sv
+F../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_i2f.sv
+!i122 0
+L0 45 108
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vpfpu32_muldiv
+R1
+R11
+!i10b 1
+!s100 `[__Zh4bKjEROeA0zf3LO0
+R3
+IVaRKd0H^De_nTRfG^_6c?3
+R4
+S1
+R0
+R12
+R13
+R14
+!i122 0
+L0 45 600
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vpfpu32_rnd
+R1
+R11
+!i10b 1
+!s100 ^ZO^FUdZ6QbRo?5D7?FNl2
+R3
+IiPlN`9V_^Si5O6`nG<Nz`2
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_rnd.sv
+F../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_rnd.sv
+!i122 0
+L0 45 389
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vpfpu32_top
+R1
+R11
+!i10b 1
+!s100 zG`EkG:HXz68<Q:hLnLGG3
+R3
+I6eEGK8]h6:1TA=n<e87WI1
+R4
+S1
+R0
+R12
+8../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_top.sv
+F../../../../pu/rtl/verilog/core/execute/pfpu32/pfpu32_top.sv
+!i122 0
+L0 45 385
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vring_router
+R1
+R16
+DXx4 work 19 ring_router_sv_unit 0 22 MHCG9=^n:Oz^iXU3fQNjV0
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 7Kbfj2JHWfonEGYz^g0F^3
+I6U3bmMb@CW5k4INV4Tg3D2
+!s105 ring_router_sv_unit
+S1
+R0
+R12
+Z79 8../../../../dbg/rtl/soc/verilog/interconnect/ring_router.sv
+Z80 F../../../../dbg/rtl/soc/verilog/interconnect/ring_router.sv
+!i122 0
+R56
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vring_router_demux
+R1
+R16
+DXx4 work 25 ring_router_demux_sv_unit 0 22 DG;N^0>3@0oDjhcnNNKAo0
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 ldz<WhE5n[=19955Nba2f0
+I8bFDo:mNlRSofIH_XfMAH1
+!s105 ring_router_demux_sv_unit
+S1
+R0
+R12
+Z81 8../../../../dbg/rtl/soc/verilog/interconnect/ring_router_demux.sv
+Z82 F../../../../dbg/rtl/soc/verilog/interconnect/ring_router_demux.sv
+!i122 0
+L0 45 55
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xring_router_demux_sv_unit
+R1
+R16
+R2
+VDG;N^0>3@0oDjhcnNNKAo0
+r1
+!s85 0
+!i10b 1
+!s100 0H8;Q6fcTohH5?K;bU@SS1
+IDG;N^0>3@0oDjhcnNNKAo0
+!i103 1
+S1
+R0
+R12
+R81
+R82
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vring_router_gateway
+R1
+R16
+DXx4 work 27 ring_router_gateway_sv_unit 0 22 0D;@j`FA@GB1zJ7R^Eb?Z2
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 LQIZ5d`=N[nNNC<6=zdUb2
+IS@HJQFCG0CPcSK:O64TR^1
+!s105 ring_router_gateway_sv_unit
+S1
+R0
+R12
+Z83 8../../../../dbg/rtl/soc/verilog/interconnect/ring_router_gateway.sv
+Z84 F../../../../dbg/rtl/soc/verilog/interconnect/ring_router_gateway.sv
+!i122 0
+L0 46 132
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vring_router_gateway_demux
+R1
+R16
+DXx4 work 33 ring_router_gateway_demux_sv_unit 0 22 ]2F;WO4H>TajCWZ2Uk]T80
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 GB=^z_ai1gEFgUc]DH?820
+IP6C9P1HD5?RNRDaDzChS10
+!s105 ring_router_gateway_demux_sv_unit
+S1
+R0
+R12
+Z85 8../../../../dbg/rtl/soc/verilog/interconnect/ring_router_gateway_demux.sv
+Z86 F../../../../dbg/rtl/soc/verilog/interconnect/ring_router_gateway_demux.sv
+!i122 0
+L0 46 86
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xring_router_gateway_demux_sv_unit
+R1
+R16
+R2
+V]2F;WO4H>TajCWZ2Uk]T80
+r1
+!s85 0
+!i10b 1
+!s100 HX[3c=MIYTaaZNIC[Ad4M3
+I]2F;WO4H>TajCWZ2Uk]T80
+!i103 1
+S1
+R0
+R12
+R85
+R86
+!i122 0
+R19
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vring_router_gateway_mux
+R1
+R16
+DXx4 work 31 ring_router_gateway_mux_sv_unit 0 22 IIb<FkHPo2LQR]iHh:_K>0
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 DS7fHk0^H`iVZKg0]BBg>3
+I2hF?_oHE=SUI2EGSIMUkP3
+!s105 ring_router_gateway_mux_sv_unit
+S1
+R0
+R12
+Z87 8../../../../dbg/rtl/soc/verilog/interconnect/ring_router_gateway_mux.sv
+Z88 F../../../../dbg/rtl/soc/verilog/interconnect/ring_router_gateway_mux.sv
+!i122 0
+L0 46 99
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xring_router_gateway_mux_sv_unit
+R1
+R16
+R2
+VIIb<FkHPo2LQR]iHh:_K>0
+r1
+!s85 0
+!i10b 1
+!s100 @B2PfUM:6PP`J6_3g]Q]b1
+IIIb<FkHPo2LQR]iHh:_K>0
+!i103 1
+S1
+R0
+R12
+R87
+R88
+!i122 0
+R19
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xring_router_gateway_sv_unit
+R1
+R16
+R2
+V0D;@j`FA@GB1zJ7R^Eb?Z2
+r1
+!s85 0
+!i10b 1
+!s100 :QnBNoQ8I^HLP:2W9l`H@0
+I0D;@j`FA@GB1zJ7R^Eb?Z2
+!i103 1
+S1
+R0
+R12
+R83
+R84
+!i122 0
+R19
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vring_router_mux
+R1
+R16
+DXx4 work 23 ring_router_mux_sv_unit 0 22 R]jMoeJQ2:8T>>f@Q?Wc^3
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 HPLf97R^4H_9o?Rfl<@]L1
+I_E]?WkaUf=ceA`DO@=dUT0
+!s105 ring_router_mux_sv_unit
+S1
+R0
+R12
+Z89 8../../../../dbg/rtl/soc/verilog/interconnect/ring_router_mux.sv
+Z90 F../../../../dbg/rtl/soc/verilog/interconnect/ring_router_mux.sv
+!i122 0
+L0 45 77
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vring_router_mux_rr
+R1
+R16
+DXx4 work 26 ring_router_mux_rr_sv_unit 0 22 WzdBEV0S[`9XEl_eGEIRJ2
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 nXjSoYa9^gezH^KhKbIG32
+In7U8YR4H7@mzo<Bib02EQ3
+!s105 ring_router_mux_rr_sv_unit
+S1
+R0
+R12
+Z91 8../../../../dbg/rtl/soc/verilog/interconnect/ring_router_mux_rr.sv
+Z92 F../../../../dbg/rtl/soc/verilog/interconnect/ring_router_mux_rr.sv
+!i122 0
+Z93 L0 45 94
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xring_router_mux_rr_sv_unit
+R1
+R16
+R2
+VWzdBEV0S[`9XEl_eGEIRJ2
+r1
+!s85 0
+!i10b 1
+!s100 Cg>7BjgzI6EdYb2S[MEnh2
+IWzdBEV0S[`9XEl_eGEIRJ2
+!i103 1
+S1
+R0
+R12
+R91
+R92
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xring_router_mux_sv_unit
+R1
+R16
+R2
+VR]jMoeJQ2:8T>>f@Q?Wc^3
+r1
+!s85 0
+!i10b 1
+!s100 6920Y]Xl;5>@Q8Y_MFgcI0
+IR]jMoeJQ2:8T>>f@Q?Wc^3
+!i103 1
+S1
+R0
+R12
+R89
+R90
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xring_router_sv_unit
+R1
+R16
+R2
+VMHCG9=^n:Oz^iXU3fQNjV0
+r1
+!s85 0
+!i10b 1
+!s100 5:Cd:Z`iU=nUl=DYfX`FV1
+IMHCG9=^n:Oz^iXU3fQNjV0
+!i103 1
+S1
+R0
+R12
+R79
+R80
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vsoc_or1k_testbench
+R1
+R16
+R40
+R26
+R31
+DXx4 work 26 soc_or1k_testbench_sv_unit 0 22 fVbA7<ZdQBag?4g1h0jO61
+R11
+R4
+r1
+!s85 0
+!i10b 1
+!s100 `^]HLChB:<YH^Pm0T57C93
+IT;:lH1Q3B3ICBDQJf?Qg83
+!s105 soc_or1k_testbench_sv_unit
+S1
+R0
+Z94 w1613521891
+Z95 8../../../../bench/verilog/soc_or1k_testbench.sv
+Z96 F../../../../bench/verilog/soc_or1k_testbench.sv
+!i122 0
+L0 48 160
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xsoc_or1k_testbench_sv_unit
+R1
+R16
+R40
+R26
+R31
+R11
+VfVbA7<ZdQBag?4g1h0jO61
+r1
+!s85 0
+!i10b 1
+!s100 SThnAm6>36VnzaGHoo4<<2
+IfVbA7<ZdQBag?4g1h0jO61
+!i103 1
+S1
+R0
+R94
+R95
+R96
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vsram_sp
+R1
+R26
+DXx4 work 15 sram_sp_sv_unit 0 22 nWJUABjzGKJWTQ>75f`m52
+R11
+R4
+r1
+!s85 0
+!i10b 1
+!s100 b@R9nI62;YYe]8<e`R6OS3
+IBC0zUQ9M45TZQ>@OH>`O53
+!s105 sram_sp_sv_unit
+S1
+R0
+R5
+Z97 8../../../../rtl/verilog/soc/spram/sram_sp.sv
+Z98 F../../../../rtl/verilog/soc/spram/sram_sp.sv
+!i122 0
+R93
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vsram_sp_impl_plain
+R1
+R26
+DXx4 work 26 sram_sp_impl_plain_sv_unit 0 22 >ML4PI=[hIi>E2m@eKYQ:0
+R11
+R4
+r1
+!s85 0
+!i10b 1
+!s100 ]P[_S>gA^W6R^obXR2WAV1
+I6z`1n?amPaSaIAK@]1X`e1
+!s105 sram_sp_impl_plain_sv_unit
+S1
+R0
+R5
+Z99 8../../../../rtl/verilog/soc/spram/sram_sp_impl_plain.sv
+Z100 F../../../../rtl/verilog/soc/spram/sram_sp_impl_plain.sv
+!i122 0
+R37
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xsram_sp_impl_plain_sv_unit
+R1
+R26
+R11
+V>ML4PI=[hIi>E2m@eKYQ:0
+r1
+!s85 0
+!i10b 1
+!s100 d72?O]KG9;P7gm:[oaF7]3
+I>ML4PI=[hIi>E2m@eKYQ:0
+!i103 1
+S1
+R0
+R5
+R99
+R100
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xsram_sp_sv_unit
+R1
+R26
+R11
+VnWJUABjzGKJWTQ>75f`m52
+r1
+!s85 0
+!i10b 1
+!s100 ]FEX2N53oEjF5VNAR:a4j3
+InWJUABjzGKJWTQ>75f`m52
+!i103 1
+S1
+R0
+R5
+R97
+R98
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vwb2sram
+R1
+R26
+DXx4 work 15 wb2sram_sv_unit 0 22 ?4YMI2<5kN5d9W8`^K>HD2
+R11
+R4
+r1
+!s85 0
+!i10b 1
+!s100 ok8OSz5U;R^UkH:T_`b_T3
+I^:YVWVoSbQ1zM;MJKTK=a1
+!s105 wb2sram_sv_unit
+S1
+R0
+R5
+Z101 8../../../../rtl/verilog/soc/spram/wb2sram.sv
+Z102 F../../../../rtl/verilog/soc/spram/wb2sram.sv
+!i122 0
+L0 45 244
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xwb2sram_sv_unit
+R1
+R26
+R11
+V?4YMI2<5kN5d9W8`^K>HD2
+r1
+!s85 0
+!i10b 1
+!s100 5MlE7S2RfD[c]lAS]7U3^2
+I?4YMI2<5kN5d9W8`^K>HD2
+!i103 1
+S1
+R0
+R5
+R101
+R102
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vwb_bus_b3
+R1
+R11
+!i10b 1
+!s100 gQ4l?TWl0CJTFRzPJC:T03
+R3
+INW0:^@BYC<aYG7mF2U>160
+R4
+S1
+R0
+R5
+8../../../../rtl/verilog/soc/interconnection/bus/wb_bus_b3.sv
+F../../../../rtl/verilog/soc/interconnection/bus/wb_bus_b3.sv
+!i122 0
+L0 43 232
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vwb_decode
+R1
+R11
+!i10b 1
+!s100 _kT]c]mTeemecC_c2WBcC1
+R3
+IK;8h4cgl:F2fY=bhNLJP20
+R4
+S1
+R0
+R5
+8../../../../rtl/verilog/soc/interconnection/decode/wb_decode.sv
+F../../../../rtl/verilog/soc/interconnection/decode/wb_decode.sv
+!i122 0
+L0 43 159
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vwb_mux
+R1
+R11
+!i10b 1
+!s100 z]gWGiGG8z_=`JJZ4^EB51
+R3
+IZN8bYN=nk6YcTcEN7Uchf3
+R4
+S1
+R0
+R5
+8../../../../rtl/verilog/soc/interconnection/mux/wb_mux.sv
+F../../../../rtl/verilog/soc/interconnection/mux/wb_mux.sv
+!i122 0
+L0 43 152
+R6
+r1
+!s85 0
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+vwb_sram_sp
+R1
+R26
+DXx4 work 18 wb_sram_sp_sv_unit 0 22 fCLhSQ6AlT8Dmoc`ogGPL3
+R11
+R4
+r1
+!s85 0
+!i10b 1
+!s100 W<V>FdU<0^bMe`GfKMLGm2
+I@3JR01@6P[9P4X^YoaGf^0
+!s105 wb_sram_sp_sv_unit
+S1
+R0
+R5
+Z103 8../../../../rtl/verilog/soc/spram/wb_sram_sp.sv
+Z104 F../../../../rtl/verilog/soc/spram/wb_sram_sp.sv
+!i122 0
+L0 45 123
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10
+Xwb_sram_sp_sv_unit
+R1
+R26
+R11
+VfCLhSQ6AlT8Dmoc`ogGPL3
+r1
+!s85 0
+!i10b 1
+!s100 _G;@o[cO>]6ngbMo>]3lC2
+IfCLhSQ6AlT8Dmoc`ogGPL3
+!i103 1
+S1
+R0
+R5
+R103
+R104
+!i122 0
+R29
+R6
+31
+R7
+R15
+R8
+!i113 1
+o-sv
+R9
+R10

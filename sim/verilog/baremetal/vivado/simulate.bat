@@ -5,6 +5,6 @@ xvlog -prj soc.prj \
 -i ../../../../pu/rtl/verilog/pkg \
 -i ../../../../rtl/verilog/soc/bootrom \
 -i ../../../../dma/rtl/verilog/wb/pkg
-xelab or1k_tile
-xsim -R or1k_tile
+xelab soc_or1k_testbench
+xsim -R soc_or1k_testbench
 pause

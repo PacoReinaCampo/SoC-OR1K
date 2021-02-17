@@ -51,8 +51,8 @@ build:
 	-i ../../../../dma/rtl/verilog/wb/pkg
 
 simulate:
-	xelab or1k_tile
-	xsim -R or1k_tile
+	xelab soc_or1k_testbench
+	xsim -R soc_or1k_testbench
 
 clean:
 	rm -rf .Xil *.dir *.jou *.log *.pb
