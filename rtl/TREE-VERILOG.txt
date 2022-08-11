@@ -1,0 +1,32 @@
+verilog
+├── pkg
+│   ├── arbiter
+│   │   └── arb_rr.sv
+│   ├── config
+│   │   └── optimsoc_config.sv
+│   ├── constants
+│   │   └── optimsoc_constants.sv
+│   └── functions
+│       └── optimsoc_functions.sv
+└── soc
+    ├── adapter
+    │   ├── networkadapter_conf.sv
+    │   └── networkadapter_ct.sv
+    ├── bootrom
+    │   ├── bootrom_code.sv
+    │   └── bootrom.sv
+    ├── interconnection
+    │   ├── bus
+    │   │   └── wb_bus_b3.sv
+    │   ├── decode
+    │   │   └── wb_decode.sv
+    │   └── mux
+    │       └── wb_mux.sv
+    ├── or1k_tile.sv
+    └── spram
+        ├── sram_sp_impl_plain.sv
+        ├── sram_sp.sv
+        ├── wb2sram.sv
+        └── wb_sram_sp.sv
+
+13 directories, 16 files

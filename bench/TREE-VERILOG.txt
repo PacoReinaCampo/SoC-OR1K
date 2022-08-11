@@ -1,0 +1,11 @@
+verilog
+├── glip
+│   ├── glip_channel.sv
+│   └── glip_tcp_toplevel.sv
+├── monitor
+│   ├── r3_checker.sv
+│   └── trace_monitor.sv
+├── or1k_tile_testbench.sv
+└── soc_or1k_testbench.sv
+
+2 directories, 6 files
