@@ -1,4 +1,4 @@
-# MPSoC-OR1K
+# SoC-OR1K
 ## QueenField
 
 ![QueenField](../master/icon.jpg)
