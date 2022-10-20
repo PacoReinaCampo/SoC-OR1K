@@ -1,6 +1,6 @@
 ---
 title: 'SoC-OR1K'
-subtitle: 'QueenField ![](../../soc-or1k.svg){width=17cm}'
+subtitle: 'QueenField ![](../../icon.jpg)'
 
 author: Paco Reina Campo
 
