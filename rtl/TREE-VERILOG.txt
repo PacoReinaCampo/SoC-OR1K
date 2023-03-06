@@ -22,11 +22,12 @@ verilog
     │   │   └── wb_decode.sv
     │   └── mux
     │       └── wb_mux.sv
-    ├── or1k_tile.sv
+    ├── main
+    │   └── or1k_tile.sv
     └── spram
         ├── sram_sp_impl_plain.sv
         ├── sram_sp.sv
         ├── wb2sram.sv
         └── wb_sram_sp.sv
 
-13 directories, 16 files
+14 directories, 16 files

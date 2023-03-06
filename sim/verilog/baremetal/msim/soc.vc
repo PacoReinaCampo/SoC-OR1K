@@ -157,7 +157,6 @@
 ../../../../rtl/verilog/soc/spram/sram_sp.sv
 ../../../../rtl/verilog/soc/spram/wb_sram_sp.sv
 ../../../../rtl/verilog/soc/spram/wb2sram.sv
-../../../../rtl/verilog/soc/or1k_tile.sv
+../../../../rtl/verilog/soc/main/or1k_tile.sv
 
-../../../../bench/verilog/soc_or1k_testbench.sv
-
+../../../../bench/verilog/main/soc_or1k_testbench.sv
