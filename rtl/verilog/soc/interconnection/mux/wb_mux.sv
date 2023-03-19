@@ -53,43 +53,42 @@ module wb_mux #(
   /* Derived local parameters */
   // Width of byte select registers
   localparam SEL_WIDTH = DATA_WIDTH >> 3
-)
-  (
-    /* Ports */
-    input clk_i,
-    input rst_i,
+) (
+  /* Ports */
+  input clk_i,
+  input rst_i,
 
-    input      [MASTERS-1:0][ADDR_WIDTH-1:0] m_adr_i,
-    input      [MASTERS-1:0][DATA_WIDTH-1:0] m_dat_i,
-    input      [MASTERS-1:0]                 m_cyc_i,
-    input      [MASTERS-1:0]                 m_stb_i,
-    input      [MASTERS-1:0][SEL_WIDTH -1:0] m_sel_i,
-    input      [MASTERS-1:0]                 m_we_i,
-    input      [MASTERS-1:0][           2:0] m_cti_i,
-    input      [MASTERS-1:0][           1:0] m_bte_i,
+  input [MASTERS-1:0][ADDR_WIDTH-1:0] m_adr_i,
+  input [MASTERS-1:0][DATA_WIDTH-1:0] m_dat_i,
+  input [MASTERS-1:0]                 m_cyc_i,
+  input [MASTERS-1:0]                 m_stb_i,
+  input [MASTERS-1:0][SEL_WIDTH -1:0] m_sel_i,
+  input [MASTERS-1:0]                 m_we_i,
+  input [MASTERS-1:0][           2:0] m_cti_i,
+  input [MASTERS-1:0][           1:0] m_bte_i,
 
-    output reg [MASTERS-1:0][DATA_WIDTH-1:0] m_dat_o,
-    output reg [MASTERS-1:0]                 m_ack_o,
-    output reg [MASTERS-1:0]                 m_err_o,
-    output reg [MASTERS-1:0]                 m_rty_o,
+  output reg [MASTERS-1:0][DATA_WIDTH-1:0] m_dat_o,
+  output reg [MASTERS-1:0]                 m_ack_o,
+  output reg [MASTERS-1:0]                 m_err_o,
+  output reg [MASTERS-1:0]                 m_rty_o,
 
-    output reg              [ADDR_WIDTH-1:0] s_adr_o,
-    output reg              [DATA_WIDTH-1:0] s_dat_o,
-    output reg                               s_cyc_o,
-    output reg                               s_stb_o,
-    output reg              [SEL_WIDTH -1:0] s_sel_o,
-    output reg                               s_we_o,
-    output reg              [           2:0] s_cti_o,
-    output reg              [           1:0] s_bte_o,
+  output reg [ADDR_WIDTH-1:0] s_adr_o,
+  output reg [DATA_WIDTH-1:0] s_dat_o,
+  output reg                  s_cyc_o,
+  output reg                  s_stb_o,
+  output reg [SEL_WIDTH -1:0] s_sel_o,
+  output reg                  s_we_o,
+  output reg [           2:0] s_cti_o,
+  output reg [           1:0] s_bte_o,
 
-    input                   [DATA_WIDTH-1:0] s_dat_i,
-    input                                    s_ack_i,
-    input                                    s_err_i,
-    input                                    s_rty_i,
+  input [DATA_WIDTH-1:0] s_dat_i,
+  input                  s_ack_i,
+  input                  s_err_i,
+  input                  s_rty_i,
 
-    input                                    bus_hold,
-    output reg                               bus_hold_ack
-  );
+  input      bus_hold,
+  output reg bus_hold_ack
+);
 
   ////////////////////////////////////////////////////////////////
   //
@@ -97,9 +96,9 @@ module wb_mux #(
   //
 
   // The granted master is one hot encoded
-  wire [MASTERS-1:0]     grant;
+  wire [MASTERS-1:0] grant;
   // The granted master from previous cycle (register)
-  reg  [MASTERS-1:0]     prev_grant;
+  reg  [MASTERS-1:0] prev_grant;
 
   // This is a net that masks the actual requests. The arbiter
   // selects a different master each cycle. Therefore we need to
@@ -108,7 +107,7 @@ module wb_mux #(
   // mask out all other requests (be setting the requests to grant).
   // When the cycle signal is released, we set the request to all
   // masters cycle signals.
-  reg [MASTERS-1:0] m_req;
+  reg  [MASTERS-1:0] m_req;
 
   // This is the arbitration net from round robin
   wire [MASTERS-1:0] arb_grant;
@@ -128,8 +127,7 @@ module wb_mux #(
       // The bus is not released this cycle
       m_req        = prev_grant;
       bus_hold_ack = 1'b0;
-    end 
-    else begin
+    end else begin
       m_req        = m_cyc_i;
       bus_hold_ack = bus_hold;
     end
@@ -139,26 +137,24 @@ module wb_mux #(
   // fair arbitration (round robin)
   always @(posedge clk_i) begin
     if (rst_i) begin
-      prev_arb_grant <= {{MASTERS-1{1'b0}},1'b1};
-      prev_grant     <= {{MASTERS-1{1'b0}},1'b1};
-    end
-    else begin
+      prev_arb_grant <= {{MASTERS - 1{1'b0}}, 1'b1};
+      prev_grant     <= {{MASTERS - 1{1'b0}}, 1'b1};
+    end else begin
       prev_arb_grant <= arb_grant;
       prev_grant     <= grant;
     end
   end
 
   arb_rr #(
-    .N (MASTERS)
-  )
-  u_arbiter (
+    .N(MASTERS)
+  ) u_arbiter (
     // Outputs
-    .nxt_gnt (arb_grant),
+    .nxt_gnt(arb_grant),
 
     // Inputs
-    .en  (1'b1),
-    .req (m_req),
-    .gnt (prev_arb_grant)
+    .en (1'b1),
+    .req(m_req),
+    .gnt(prev_arb_grant)
   );
 
   // Mux the bus based on the grant signal which must be one hot!
@@ -183,7 +179,7 @@ module wb_mux #(
         s_adr_o = m_adr_i[i];
         s_dat_o = m_dat_i[i];
         s_sel_o = m_sel_i[i];
-        s_we_o  = m_we_i [i];
+        s_we_o  = m_we_i[i];
         s_cti_o = m_cti_i[i];
         s_bte_o = m_bte_i[i];
         s_cyc_o = m_cyc_i[i];

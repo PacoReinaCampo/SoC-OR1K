@@ -43,21 +43,20 @@
 module bootrom #(
   parameter AW = 32,
   parameter DW = 32
-)
-  (
-    input clk,
-    input rst,
+) (
+  input clk,
+  input rst,
 
-    input      [AW-1:0] wb_adr_i,
-    input      [DW-1:0] wb_dat_i,
-    input               wb_cyc_i,
-    input               wb_stb_i,
-    input      [   3:0] wb_sel_i,
-    output reg [DW-1:0] wb_dat_o,
-    output reg          wb_ack_o,
-    output              wb_err_o,
-    output              wb_rty_o
-  );
+  input      [AW-1:0] wb_adr_i,
+  input      [DW-1:0] wb_dat_i,
+  input               wb_cyc_i,
+  input               wb_stb_i,
+  input      [   3:0] wb_sel_i,
+  output reg [DW-1:0] wb_dat_o,
+  output reg          wb_ack_o,
+  output              wb_err_o,
+  output              wb_rty_o
+);
 
   ////////////////////////////////////////////////////////////////
   //
@@ -71,7 +70,7 @@ module bootrom #(
   assign wb_rty_o = 1'b0;
 
   always @(*) begin
-    case(wb_adr_i[7:2])
+    case (wb_adr_i[7:2])
       `include "bootrom_code.sv"
       default: wb_dat_o = 32'hx;
     endcase

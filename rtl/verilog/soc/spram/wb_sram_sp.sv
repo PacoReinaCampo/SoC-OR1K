@@ -57,9 +57,7 @@ module wb_sram_sp #(
   parameter DW = 32,
 
   // byte select width
-  localparam SW = (DW == 32) ? 4 :
-                  (DW == 16) ? 2 :
-                  (DW ==  8) ? 1 : 'hx,
+  localparam SW = (DW == 32) ? 4 : (DW == 16) ? 2 : (DW == 8) ? 1 : 'hx,
 
   // Allowed values:
   //   * PLAIN
@@ -74,26 +72,25 @@ module wb_sram_sp #(
    */
   localparam BYTE_AW = SW >> 1,
   localparam WORD_AW = AW - BYTE_AW
-)
-  (
-    // Wishbone SLAVE interface
-    input [AW-1:0]  wb_adr_i,
-    input [   1:0]  wb_bte_i,
-    input [   2:0]  wb_cti_i,
-    input           wb_cyc_i,
-    input [DW-1:0]  wb_dat_i,
-    input [SW-1:0]  wb_sel_i,
-    input           wb_stb_i,
-    input           wb_we_i,
+) (
+  // Wishbone SLAVE interface
+  input [AW-1:0] wb_adr_i,
+  input [   1:0] wb_bte_i,
+  input [   2:0] wb_cti_i,
+  input          wb_cyc_i,
+  input [DW-1:0] wb_dat_i,
+  input [SW-1:0] wb_sel_i,
+  input          wb_stb_i,
+  input          wb_we_i,
 
-    output          wb_ack_o,
-    output          wb_err_o,
-    output          wb_rty_o,
-    output [DW-1:0] wb_dat_o,
+  output          wb_ack_o,
+  output          wb_err_o,
+  output          wb_rty_o,
+  output [DW-1:0] wb_dat_o,
 
-    input           wb_clk_i,
-    input           wb_rst_i
-  );
+  input wb_clk_i,
+  input wb_rst_i
+);
 
   ////////////////////////////////////////////////////////////////
   //
@@ -101,12 +98,12 @@ module wb_sram_sp #(
   //
 
   // Beginning of automatic wires (for undeclared instantiated-module outputs)
-  wire [WORD_AW-1:0]   sram_waddr;             // From wb_ram of wb2sram.v
-  wire                 sram_ce;                // From wb_ram of wb2sram.v
-  wire [DW     -1:0]   sram_din;               // From wb_ram of wb2sram.v
-  wire [DW     -1:0]   sram_dout;              // From sp_ram of sram_sp.v
-  wire [SW     -1:0]   sram_sel;               // From wb_ram of wb2sram.v
-  wire                 sram_we;                // From wb_ram of wb2sram.v
+  wire [WORD_AW-1:0] sram_waddr;  // From wb_ram of wb2sram.v
+  wire               sram_ce;  // From wb_ram of wb2sram.v
+  wire [DW     -1:0] sram_din;  // From wb_ram of wb2sram.v
+  wire [DW     -1:0] sram_dout;  // From sp_ram of sram_sp.v
+  wire [SW     -1:0] sram_sel;  // From wb_ram of wb2sram.v
+  wire               sram_we;  // From wb_ram of wb2sram.v
   // End of automatics
 
   ////////////////////////////////////////////////////////////////
@@ -115,53 +112,51 @@ module wb_sram_sp #(
   //
 
   wb2sram #(
-    .AW (AW),
-    .DW (DW)
-   )
-  wb_ram (
+    .AW(AW),
+    .DW(DW)
+  ) wb_ram (
     // Outputs
-    .wb_ack_o                   (wb_ack_o),
-    .wb_err_o                   (wb_err_o),
-    .wb_rty_o                   (wb_rty_o),
-    .wb_dat_o                   (wb_dat_o[DW-1:0]),
-    .sram_ce                    (sram_ce),
-    .sram_we                    (sram_we),
-    .sram_waddr                 (sram_waddr),
-    .sram_din                   (sram_din[DW-1:0]),
-    .sram_sel                   (sram_sel[SW-1:0]),
+    .wb_ack_o  (wb_ack_o),
+    .wb_err_o  (wb_err_o),
+    .wb_rty_o  (wb_rty_o),
+    .wb_dat_o  (wb_dat_o[DW-1:0]),
+    .sram_ce   (sram_ce),
+    .sram_we   (sram_we),
+    .sram_waddr(sram_waddr),
+    .sram_din  (sram_din[DW-1:0]),
+    .sram_sel  (sram_sel[SW-1:0]),
     // Inputs
-    .wb_adr_i                   (wb_adr_i[AW-1:0]),
-    .wb_bte_i                   (wb_bte_i[1:0]),
-    .wb_cti_i                   (wb_cti_i[2:0]),
-    .wb_cyc_i                   (wb_cyc_i),
-    .wb_dat_i                   (wb_dat_i[DW-1:0]),
-    .wb_sel_i                   (wb_sel_i[SW-1:0]),
-    .wb_stb_i                   (wb_stb_i),
-    .wb_we_i                    (wb_we_i),
-    .wb_clk_i                   (wb_clk_i),
-    .wb_rst_i                   (wb_rst_i),
-    .sram_dout                  (sram_dout[DW-1:0])
+    .wb_adr_i  (wb_adr_i[AW-1:0]),
+    .wb_bte_i  (wb_bte_i[1:0]),
+    .wb_cti_i  (wb_cti_i[2:0]),
+    .wb_cyc_i  (wb_cyc_i),
+    .wb_dat_i  (wb_dat_i[DW-1:0]),
+    .wb_sel_i  (wb_sel_i[SW-1:0]),
+    .wb_stb_i  (wb_stb_i),
+    .wb_we_i   (wb_we_i),
+    .wb_clk_i  (wb_clk_i),
+    .wb_rst_i  (wb_rst_i),
+    .sram_dout (sram_dout[DW-1:0])
   );
 
   sram_sp #(
-    .DW            (DW),
-    .MEM_SIZE_BYTE (MEM_SIZE_BYTE),
-    .AW            (AW),
-    .WORD_AW       (WORD_AW),
-    .MEM_IMPL_TYPE (MEM_IMPL_TYPE),
-    .MEM_FILE      (MEM_FILE)
-  )
-  sp_ram (
+    .DW           (DW),
+    .MEM_SIZE_BYTE(MEM_SIZE_BYTE),
+    .AW           (AW),
+    .WORD_AW      (WORD_AW),
+    .MEM_IMPL_TYPE(MEM_IMPL_TYPE),
+    .MEM_FILE     (MEM_FILE)
+  ) sp_ram (
     // Outputs
-    .dout                      (sram_dout[DW-1:0]),
+    .dout (sram_dout[DW-1:0]),
     // Inputs
-    .clk                       (wb_clk_i),
-    .rst                       (wb_rst_i),
-    .ce                        (sram_ce),
-    .we                        (sram_we),
-    .oe                        (1'b1),
-    .waddr                     (sram_waddr),
-    .din                       (sram_din),
-    .sel                       (sram_sel)
+    .clk  (wb_clk_i),
+    .rst  (wb_rst_i),
+    .ce   (sram_ce),
+    .we   (sram_we),
+    .oe   (1'b1),
+    .waddr(sram_waddr),
+    .din  (sram_din),
+    .sel  (sram_sel)
   );
 endmodule

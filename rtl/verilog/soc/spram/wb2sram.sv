@@ -52,9 +52,7 @@ module wb2sram #(
   parameter AW = 32,
 
   // byte select width
-  localparam SW = (DW == 32) ? 4 :
-                  (DW == 16) ? 2 :
-                  (DW ==  8) ? 1 : 'hx,
+  localparam SW = (DW == 32) ? 4 : (DW == 16) ? 2 : (DW == 8) ? 1 : 'hx,
 
   /*
    * +--------------+--------------+
@@ -66,34 +64,33 @@ module wb2sram #(
 
   localparam BYTE_AW = SW >> 1,
   localparam WORD_AW = AW - BYTE_AW
-)
-  (
-    // Wishbone ports
-    input [AW-1:0]       wb_adr_i,
-    input [   1:0]       wb_bte_i,
-    input [   2:0]       wb_cti_i,
-    input                wb_cyc_i,
-    input [DW-1:0]       wb_dat_i,
-    input [SW-1:0]       wb_sel_i,
-    input                wb_stb_i,
-    input                wb_we_i,
+) (
+  // Wishbone ports
+  input [AW-1:0] wb_adr_i,
+  input [   1:0] wb_bte_i,
+  input [   2:0] wb_cti_i,
+  input          wb_cyc_i,
+  input [DW-1:0] wb_dat_i,
+  input [SW-1:0] wb_sel_i,
+  input          wb_stb_i,
+  input          wb_we_i,
 
-    output               wb_ack_o,
-    output               wb_err_o,
-    output               wb_rty_o,
-    output [DW-1:0]      wb_dat_o,
+  output          wb_ack_o,
+  output          wb_err_o,
+  output          wb_rty_o,
+  output [DW-1:0] wb_dat_o,
 
-    input                wb_clk_i,
-    input                wb_rst_i,
+  input wb_clk_i,
+  input wb_rst_i,
 
-    // generic RAM ports
-    output               sram_ce,
-    output               sram_we,
-    output [WORD_AW-1:0] sram_waddr,
-    output [     DW-1:0] sram_din,
-    output [     SW-1:0] sram_sel,
-    input  [     DW-1:0] sram_dout
-  );
+  // generic RAM ports
+  output               sram_ce,
+  output               sram_we,
+  output [WORD_AW-1:0] sram_waddr,
+  output [     DW-1:0] sram_din,
+  output [     SW-1:0] sram_sel,
+  input  [     DW-1:0] sram_dout
+);
 
   ////////////////////////////////////////////////////////////////
   //
@@ -108,7 +105,7 @@ module wb2sram #(
   // Register to indicate if the cycle is a Wishbone B3-registered feedback
   // type access
   reg                wb_b3_trans;
-  wire               wb_b3_trans_start, wb_b3_trans_stop;
+  wire wb_b3_trans_start, wb_b3_trans_stop;
 
   // Register to use for counting the addresses when doing burst accesses
   reg  [WORD_AW-1:0] burst_adr_counter;
@@ -118,38 +115,36 @@ module wb2sram #(
   wire               burst_access_wrong_wb_adr;
 
   // Ack Logic
-  reg     wb_ack;
-  reg nxt_wb_ack;
+  reg                wb_ack;
+  reg                nxt_wb_ack;
 
   ////////////////////////////////////////////////////////////////
   //
   // Module Body
   //
 
-  assign word_addr_in = wb_adr_i[AW-1:BYTE_AW];
+  assign word_addr_in      = wb_adr_i[AW-1:BYTE_AW];
 
   // assignments from wb to memory
-  assign sram_ce    = 1'b1;
-  assign sram_we    = wb_we_i & wb_ack_o;
-  assign sram_waddr = (wb_we_i) ? word_addr_reg : word_addr;
-  assign sram_din   = wb_dat_i;
-  assign sram_sel   = wb_sel_i;
+  assign sram_ce           = 1'b1;
+  assign sram_we           = wb_we_i & wb_ack_o;
+  assign sram_waddr        = (wb_we_i) ? word_addr_reg : word_addr;
+  assign sram_din          = wb_dat_i;
+  assign sram_sel          = wb_sel_i;
 
-  assign wb_dat_o = sram_dout;
+  assign wb_dat_o          = sram_dout;
 
   // Logic to detect if there's a burst access going on
-  assign wb_b3_trans_start = ((wb_cti_i == 3'b001)|(wb_cti_i == 3'b010)) & wb_stb_i & !wb_b3_trans;
+  assign wb_b3_trans_start = ((wb_cti_i == 3'b001) | (wb_cti_i == 3'b010)) & wb_stb_i & !wb_b3_trans;
 
-  assign  wb_b3_trans_stop = (wb_cti_i == 3'b111) & wb_stb_i & wb_b3_trans & wb_ack_o;
+  assign wb_b3_trans_stop  = (wb_cti_i == 3'b111) & wb_stb_i & wb_b3_trans & wb_ack_o;
 
   always @(posedge wb_clk_i) begin
     if (wb_rst_i) begin
       wb_b3_trans <= 0;
-    end
-    else if (wb_b3_trans_start) begin
+    end else if (wb_b3_trans_start) begin
       wb_b3_trans <= 1;
-    end
-    else if (wb_b3_trans_stop) begin
+    end else if (wb_b3_trans_stop) begin
       wb_b3_trans <= 0;
     end
   end
@@ -158,28 +153,25 @@ module wb2sram #(
   always @(*) begin
     if (wb_rst_i) begin
       burst_adr_counter = 0;
-    end
-    else begin
+    end else begin
       burst_adr_counter = word_addr_reg;
       if (wb_b3_trans_start) begin
         burst_adr_counter = word_addr_in;
-      end
-      else if ((wb_cti_i_r == 3'b010) & wb_ack_o & wb_b3_trans) begin
+      end else if ((wb_cti_i_r == 3'b010) & wb_ack_o & wb_b3_trans) begin
         // Incrementing burst
-        if (wb_bte_i_r == 2'b00) begin // Linear burst
+        if (wb_bte_i_r == 2'b00) begin  // Linear burst
           burst_adr_counter = word_addr_reg + 1;
         end
-        if (wb_bte_i_r == 2'b01) begin // 4-beat wrap burst
+        if (wb_bte_i_r == 2'b01) begin  // 4-beat wrap burst
           burst_adr_counter[1:0] = word_addr_reg[1:0] + 1;
         end
-        if (wb_bte_i_r == 2'b10) begin // 8-beat wrap burst
+        if (wb_bte_i_r == 2'b10) begin  // 8-beat wrap burst
           burst_adr_counter[2:0] = word_addr_reg[2:0] + 1;
         end
-        if (wb_bte_i_r == 2'b11) begin // 16-beat wrap burst
+        if (wb_bte_i_r == 2'b11) begin  // 16-beat wrap burst
           burst_adr_counter[3:0] = word_addr_reg[3:0] + 1;
         end
-      end
-      else if (!wb_ack_o & wb_b3_trans) begin
+      end else if (!wb_ack_o & wb_b3_trans) begin
         burst_adr_counter = word_addr_reg;
       end
     end
@@ -195,7 +187,7 @@ module wb2sram #(
     wb_cti_i_r <= wb_cti_i;
   end
 
-  assign using_burst_adr = wb_b3_trans;
+  assign using_burst_adr           = wb_b3_trans;
 
   assign burst_access_wrong_wb_adr = (using_burst_adr & (word_addr_reg != word_addr_in));
 
@@ -203,11 +195,9 @@ module wb2sram #(
   always @(*) begin
     if (using_burst_adr) begin
       word_addr = burst_adr_counter;
-    end
-    else if (wb_cyc_i & wb_stb_i) begin
+    end else if (wb_cyc_i & wb_stb_i) begin
       word_addr = word_addr_in;
-    end
-    else begin
+    end else begin
       word_addr = word_addr_reg;
     end
   end
@@ -216,8 +206,7 @@ module wb2sram #(
   always @(posedge wb_clk_i) begin
     if (wb_rst_i) begin
       word_addr_reg <= {WORD_AW{1'bx}};
-    end
-    else begin
+    end else begin
       word_addr_reg <= word_addr;
     end
   end
@@ -233,53 +222,42 @@ module wb2sram #(
         if (wb_stb_i) begin
           if (!wb_ack) begin
             nxt_wb_ack = 1;
-          end
-          else begin
+          end else begin
             nxt_wb_ack = 0;
           end
-        end
-        else begin
+        end else begin
           nxt_wb_ack = 0;
         end
-      end
-      else if ((wb_cti_i == 3'b001) ||
-               (wb_cti_i == 3'b010)) begin
+      end else if ((wb_cti_i == 3'b001) || (wb_cti_i == 3'b010)) begin
         // Increment/constant address bursts
         if (wb_stb_i) begin
           nxt_wb_ack = 1;
-        end
-        else begin
+        end else begin
           nxt_wb_ack = 0;
         end
-      end
-      else if (wb_cti_i == 3'b111) begin
+      end else if (wb_cti_i == 3'b111) begin
         // End of cycle
         if (wb_stb_i) begin
           if (!wb_ack) begin
             nxt_wb_ack = 1;
-          end
-          else begin
+          end else begin
             nxt_wb_ack = 0;
           end
-        end
-        else begin
+        end else begin
           nxt_wb_ack = 0;
         end
-      end
-      else begin
+      end else begin
         nxt_wb_ack = 0;
       end
-    end
-    else begin
+    end else begin
       nxt_wb_ack = 0;
     end
-  end // always @ begin
+  end  // always @ begin
 
   always @(posedge wb_clk_i) begin
     if (wb_rst_i) begin
       wb_ack <= 1'b0;
-    end
-    else begin
+    end else begin
       wb_ack <= nxt_wb_ack;
     end
   end
