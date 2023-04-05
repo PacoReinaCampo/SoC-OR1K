@@ -17,7 +17,7 @@ hardware-mpsoc4d:
 	make -f Vmpsoc4d_or1k_testbench.mk
 
 software-tile:
-	./Vsoc_or1k_tile_testbench --meminit=../../../../../../software/baremetal/heat_mpsimple/c/heat_mpsimple.vmem
+	./Vsoc_or1k_tile_testbench --meminit=../../../../../../software/baremetal/heat_mp_simple/c/heat_mp_simple.vmem
 	./Vsoc_or1k_tile_testbench --meminit=../../../../../../software/baremetal/hello/c/hello.vmem
 	./Vsoc_or1k_tile_testbench --meminit=../../../../../../software/baremetal/hello_mp/c/hello_mp.vmem
 	./Vsoc_or1k_tile_testbench --meminit=../../../../../../software/baremetal/hello_mp_simple/c/hello_mp_simple.vmem
