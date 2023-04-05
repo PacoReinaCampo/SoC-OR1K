@@ -20,22 +20,22 @@ software-tile:
 	./Vsoc_or1k_tile_testbench --meminit=../../../../../../software/baremetal/heat_mpsimple/c/heat_mpsimple.vmem
 	./Vsoc_or1k_tile_testbench --meminit=../../../../../../software/baremetal/hello/c/hello.vmem
 	./Vsoc_or1k_tile_testbench --meminit=../../../../../../software/baremetal/hello_mp/c/hello_mp.vmem
-	./Vsoc_or1k_tile_testbench --meminit=../../../../../../software/baremetal/hello_mpsimple/c/hello_mpsimple.vmem
+	./Vsoc_or1k_tile_testbench --meminit=../../../../../../software/baremetal/hello_mp_simple/c/hello_mp_simple.vmem
 
 software-mpsoc2d:
 	./Vmpsoc2d_or1k_testbench --meminit=../../../../../../software/baremetal/hello/c/hello.vmem
 	./Vmpsoc2d_or1k_testbench --meminit=../../../../../../software/baremetal/hello_mp/c/hello_mp.vmem
-	./Vmpsoc2d_or1k_testbench --meminit=../../../../../../software/baremetal/hello_mpsimple/c/hello_mpsimple.vmem
+	./Vmpsoc2d_or1k_testbench --meminit=../../../../../../software/baremetal/hello_mp_simple/c/hello_mp_simple.vmem
 
 software-mpsoc3d:
 	./Vmpsoc3d_or1k_testbench --meminit=../../../../../../software/baremetal/hello/c/hello.vmem
 	./Vmpsoc3d_or1k_testbench --meminit=../../../../../../software/baremetal/hello_mp/c/hello_mp.vmem
-	./Vmpsoc3d_or1k_testbench --meminit=../../../../../../software/baremetal/hello_mpsimple/c/hello_mpsimple.vmem
+	./Vmpsoc3d_or1k_testbench --meminit=../../../../../../software/baremetal/hello_mp_simple/c/hello_mp_simple.vmem
 
 software-mpsoc4d:
 	./Vmpsoc4d_or1k_testbench --meminit=../../../../../../software/baremetal/hello/c/hello.vmem
 	./Vmpsoc4d_or1k_testbench --meminit=../../../../../../software/baremetal/hello_mp/c/hello_mp.vmem
-	./Vmpsoc4d_or1k_testbench --meminit=../../../../../../software/baremetal/hello_mpsimple/c/hello_mpsimple.vmem
+	./Vmpsoc4d_or1k_testbench --meminit=../../../../../../software/baremetal/hello_mp_simple/c/hello_mp_simple.vmem
 
 clear:
 	rm -rf *.a *.cpp *.d *.dat *.h *.o *.mk
