@@ -40,7 +40,7 @@
  *   Paco Reina Campo <pacoreinacampo@queenfield.tech>
  */
 
-module wb_bus_b3 #(
+module soc_b3_wb #(
   /* User parameters */
   // Set the number of masters and slaves
   parameter MASTERS = 2,
@@ -155,7 +155,7 @@ module wb_bus_b3 #(
   // Module Body
   //
 
-  wb_mux #(
+  soc_mux_wb #(
     .MASTERS   (MASTERS),
     .ADDR_WIDTH(ADDR_WIDTH),
     .DATA_WIDTH(DATA_WIDTH)
@@ -195,7 +195,7 @@ module wb_bus_b3 #(
     .bus_hold    (bus_hold)
   );
 
-  wb_decode #(
+  soc_decode_wb #(
     .SLAVES        (SLAVES),
     .ADDR_WIDTH    (ADDR_WIDTH),
     .DATA_WIDTH    (DATA_WIDTH),

@@ -42,8 +42,8 @@
 
 import dii_package::dii_flit;
 import opensocdebug::mor1kx_trace_exec;
-import optimsoc_config::*;
-import optimsoc_functions::*;
+import soc_optimsoc_config::*;
+import soc_optimsoc_functions::*;
 
 module soc_or1k_testbench;
 
@@ -162,7 +162,7 @@ module soc_or1k_testbench;
   endgenerate
 
   // The actual system: a single compute tile
-  or1k_tile #(
+  soc_or1k_tile #(
     .CONFIG      (CONFIG),
     .ID          (0),
     .MEM_FILE    ("ct.vmem"),

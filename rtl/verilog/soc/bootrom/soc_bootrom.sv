@@ -40,99 +40,39 @@
  *   Paco Reina Campo <pacoreinacampo@queenfield.tech>
  */
 
-import optimsoc_functions::*;
-
-module sram_sp #(
-  parameter MEM_SIZE_BYTE = 'hx,
-
-  // address width
+module soc_bootrom #(
   parameter AW = 32,
+  parameter DW = 32
+) (
+  input clk,
+  input rst,
 
-  // data width (word size)
-  // Valid values: 32, 16 and 8
-  parameter DW = 32,
-
-  // type of the memory implementation
-  parameter MEM_IMPL_TYPE = "PLAIN",
-  // VMEM memory file to load in simulation
-  parameter MEM_FILE = "sram.vmem",
-
-  // byte select width (must be a power of two)
-  localparam SW = (DW == 32) ? 4 :
-                  (DW == 16) ? 2 :
-                  (DW ==  8) ? 1 : 'hx,
-
-  // word address width
-  parameter WORD_AW = AW - (SW >> 1)
-)
-  (
-    input                clk,   // Clock
-    input                rst,   // Reset
-    input                ce,    // Chip enable input
-    input                we,    // Write enable input
-    input                oe,    // Output enable input
-    input  [WORD_AW-1:0] waddr, // word address
-    input  [DW     -1:0] din,   // input data bus
-    input  [SW     -1:0] sel,   // select bytes
-    output [DW     -1:0] dout   // output data bus
-  );
+  input      [AW-1:0] wb_adr_i,
+  input      [DW-1:0] wb_dat_i,
+  input               wb_cyc_i,
+  input               wb_stb_i,
+  input      [   3:0] wb_sel_i,
+  output reg [DW-1:0] wb_dat_o,
+  output reg          wb_ack_o,
+  output              wb_err_o,
+  output              wb_rty_o
+);
 
   ////////////////////////////////////////////////////////////////
   //
   // Module Body
   //
-
-  // ensure that parameters are set to allowed values
-  initial begin
-    if (DW % 8 != 0) begin
-      $display("sram_sp: the data port width (parameter DW) must be a multiple of 8");
-      $stop;
-    end
-
-    if ((1 << $clog2(SW)) != SW) begin
-      $display("sram_sp: the byte select width (paramter SW = DW/8) must be a power of two");
-      $stop;
-    end
-  end
-
-  // validate the memory address (check if it's inside the memory size bounds)
-  `ifdef OPTIMSOC_SRAM_VALIDATE_ADDRESS
-  logic [AW-1:0] addr;
-  assign addr = {waddr, (AW - WORD_AW)'{1'b0}};
   always @(posedge clk) begin
-    if (addr > MEM_SIZE_BYTE) begin
-      $display("sram_sp: access to out-of-bounds memory address detected! Trying to access byte address 0x%x, MEM_SIZE_BYTE is %d bytes.", addr, MEM_SIZE_BYTE);
-      $stop;
-    end
+    wb_ack_o <= wb_stb_i & ~wb_ack_o;
   end
-  `endif
 
-  generate
-    if (MEM_IMPL_TYPE == "PLAIN") begin : gen_sram_sp_impl
-      sram_sp_impl_plain #(
-        .AW                       (AW),
-        .WORD_AW                  (WORD_AW),
-        .DW                       (DW),
-        .MEM_SIZE_BYTE            (MEM_SIZE_BYTE),
-        .MEM_FILE                 (MEM_FILE)
-      )
-      u_impl (
-        // Outputs
-        .dout                (dout[DW-1:0]),
-        // Inputs
-        .clk                 (clk),
-        .rst                 (rst),
-        .ce                  (ce),
-        .we                  (we),
-        .oe                  (oe),
-        .waddr               (waddr),
-        .din                 (din[DW-1:0]),
-        .sel                 (sel[SW-1:0])
-      );
-    end
-    else begin
-      // $display("Unsupported memory type: ", MEM_IMPL_TYPE);
-      // $stop;
-    end
-  endgenerate
+  assign wb_err_o = 1'b0;
+  assign wb_rty_o = 1'b0;
+
+  always @(*) begin
+    case (wb_adr_i[7:2])
+      `include "soc_bootrom_code.sv"
+      default: wb_dat_o = 32'hx;
+    endcase
+  end
 endmodule

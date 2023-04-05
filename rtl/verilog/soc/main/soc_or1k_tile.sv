@@ -42,10 +42,10 @@
 
 import dii_package::dii_flit;
 import opensocdebug::mor1kx_trace_exec;
-import optimsoc_config::*;
-import optimsoc_functions::*;
+import soc_optimsoc_config::*;
+import soc_optimsoc_functions::*;
 
-module or1k_tile #(
+module soc_or1k_tile #(
   parameter AW = 32,
   parameter DW = 32,
 
@@ -422,7 +422,7 @@ module or1k_tile #(
     end
   endgenerate
 
-  wb_bus_b3 #(
+  soc_b3_wb #(
     .MASTERS       (NR_MASTERS),
     .SLAVES        (NR_SLAVES),
     .S0_ENABLE     (CONFIG.ENABLE_DM),
@@ -576,7 +576,7 @@ module or1k_tile #(
 
   generate
     if ((CONFIG.ENABLE_DM) && (CONFIG.LMEM_STYLE == PLAIN)) begin : gen_sram
-      wb_sram_sp #(
+      soc_sram_sp_wb #(
         .DW           (32),
         .AW           (clog2_width(CONFIG.LMEM_SIZE)),
         .MEM_SIZE_BYTE(CONFIG.LMEM_SIZE),
@@ -617,7 +617,7 @@ module or1k_tile #(
     end
   endgenerate
 
-  networkadapter_ct #(
+  soc_network_adapter_ct #(
     .CONFIG  (CONFIG),
     .TILEID  (ID),
     .COREBASE(COREBASE)
@@ -672,8 +672,8 @@ module or1k_tile #(
   );
 
   generate
-    if (CONFIG.ENABLE_BOOTROM) begin : gen_bootrom
-      bootrom u_bootrom (
+    if (CONFIG.ENABLE_BOOTROM) begin : gen_soc_bootrom
+      soc_bootrom u_bootrom (
         .clk(clk),
         .rst(rst_sys),
 

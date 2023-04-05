@@ -9,13 +9,14 @@
 //                  |_|                                                       //
 //                                                                            //
 //                                                                            //
-//              MPSoC-OR1K CPU                                                //
+//              MPSoC-RISCV CPU                                               //
 //              Multi Processor System on Chip                                //
-//              Wishbone Bus Interface                                        //
+//              AMBA3 AHB-Lite Bus Interface                                  //
+//              WishBone Bus Interface                                        //
 //                                                                            //
 ////////////////////////////////////////////////////////////////////////////////
 
-/* Copyright (c) 2019-2020 by the author(s)
+/* Copyright (c) 2018-2019 by the author(s)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -37,42 +38,65 @@
  *
  * =============================================================================
  * Author(s):
+ *   Stefan Wallentowitz <stefan@wallentowitz.de>
  *   Paco Reina Campo <pacoreinacampo@queenfield.tech>
  */
 
-module bootrom #(
-  parameter AW = 32,
-  parameter DW = 32
-) (
-  input clk,
-  input rst,
+module soc_arbiter_rr #(
+  parameter N = 2
+)
+  (
+    input  [N-1:0] req,
+    input          en,
+    input  [N-1:0] gnt,
+    output [N-1:0] nxt_gnt
+  );
 
-  input      [AW-1:0] wb_adr_i,
-  input      [DW-1:0] wb_dat_i,
-  input               wb_cyc_i,
-  input               wb_stb_i,
-  input      [   3:0] wb_sel_i,
-  output reg [DW-1:0] wb_dat_o,
-  output reg          wb_ack_o,
-  output              wb_err_o,
-  output              wb_rty_o
-);
+  //////////////////////////////////////////////////////////////////
+  //
+  // Variables
+  //
 
-  ////////////////////////////////////////////////////////////////
+  // Mask net
+  reg [N-1:0] mask [0:N-1];
+
+  integer i,j;
+
+  genvar k;
+
+  //////////////////////////////////////////////////////////////////
   //
   // Module Body
   //
-  always @(posedge clk) begin
-    wb_ack_o <= wb_stb_i & ~wb_ack_o;
+
+  // Calculate the mask
+  always @(*) begin : calc_mask
+    for (i=0;i<N;i=i+1) begin
+      // Initialize mask as 0
+      mask[i] = {N{1'b0}};
+
+      if(i>0)
+        // For i=N:1 the next right is i-1
+        mask[i][i-1] = ~gnt[i-1];
+      else
+        // For i=0 the next right is N-1
+        mask[i][N-1] = ~gnt[N-1];
+
+      for (j=2;j<N;j=j+1) begin
+        if (i-j>=0)
+          mask[i][i-j] = mask[i][i-j+1] & ~gnt[i-j];
+        else if (i-j+1>=0)
+          mask[i][i-j+N] = mask[i][i-j+1] & ~gnt[i-j+N];
+        else
+          mask[i][i-j+N] = mask[i][i-j+N+1] & ~gnt[i-j+N];
+      end
+    end
   end
 
-  assign wb_err_o = 1'b0;
-  assign wb_rty_o = 1'b0;
-
-  always @(*) begin
-    case (wb_adr_i[7:2])
-      `include "bootrom_code.sv"
-      default: wb_dat_o = 32'hx;
-    endcase
-  end
+  // Calculate the nxt_gnt
+  generate
+    for (k=0;k<N;k=k+1) begin : gen_nxt_gnt         
+      assign nxt_gnt[k] = en ? (~|(mask[k] & req) & req[k]) | (~|req & gnt[k]) : gnt[k];
+    end
+  endgenerate
 endmodule

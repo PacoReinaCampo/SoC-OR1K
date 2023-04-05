@@ -40,7 +40,7 @@
  *   Paco Reina Campo <pacoreinacampo@queenfield.tech>
  */
 
-module wb_mux #(
+module soc_mux_wb #(
   /* User parameters */
   // Set the number of slaves
   parameter MASTERS = 1,
@@ -145,7 +145,7 @@ module wb_mux #(
     end
   end
 
-  arb_rr #(
+  soc_arbiter_rr #(
     .N(MASTERS)
   ) u_arbiter (
     // Outputs

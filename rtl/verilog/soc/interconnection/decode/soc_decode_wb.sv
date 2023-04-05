@@ -40,7 +40,7 @@
  *   Paco Reina Campo <pacoreinacampo@queenfield.tech>
  */
 
-module wb_decode #(
+module soc_decode_wb #(
   /* User parameters */
   // Set the number of slaves
   parameter SLAVES = 1,

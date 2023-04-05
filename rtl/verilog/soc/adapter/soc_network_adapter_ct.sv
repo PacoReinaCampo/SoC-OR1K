@@ -40,9 +40,9 @@
  *   Paco Reina Campo <pacoreinacampo@queenfield.tech>
  */
 
-import optimsoc_config::*;
+import soc_optimsoc_config::*;
 
-module networkadapter_ct #(
+module soc_network_adapter_ct #(
   parameter config_t CONFIG = 'x,
 
   parameter TILEID   = 'x,
@@ -159,7 +159,7 @@ module networkadapter_ct #(
   // Module Body
   //
 
-  wb_decode #(
+  soc_decode_wb #(
     .SLAVES        (3),
     .DATA_WIDTH    (32),
     .ADDR_WIDTH    (24),
@@ -202,7 +202,7 @@ module networkadapter_ct #(
     .s_rty_i(wbif_rty_o)
   );
 
-  networkadapter_conf #(
+  soc_network_adapter_configuration #(
     .CONFIG  (CONFIG),
     .TILEID  (TILEID),
     .COREBASE(COREBASE)

@@ -40,9 +40,9 @@
  *   Paco Reina Campo <pacoreinacampo@queenfield.tech>
  */
 
-import optimsoc_functions::*;
+import soc_optimsoc_functions::*;
 
-module wb_sram_sp #(
+module soc_sram_sp_wb #(
   // Memory size in bytes
   parameter MEM_SIZE_BYTE = 'hx,
 
@@ -98,12 +98,12 @@ module wb_sram_sp #(
   //
 
   // Beginning of automatic wires (for undeclared instantiated-module outputs)
-  wire [WORD_AW-1:0] sram_waddr;  // From wb_ram of wb2sram.v
-  wire               sram_ce;  // From wb_ram of wb2sram.v
-  wire [DW     -1:0] sram_din;  // From wb_ram of wb2sram.v
-  wire [DW     -1:0] sram_dout;  // From sp_ram of sram_sp.v
-  wire [SW     -1:0] sram_sel;  // From wb_ram of wb2sram.v
-  wire               sram_we;  // From wb_ram of wb2sram.v
+  wire [WORD_AW-1:0] sram_waddr;  // From wb_ram of soc_wb2sram.v
+  wire               sram_ce;  // From wb_ram of soc_wb2sram.v
+  wire [DW     -1:0] sram_din;  // From wb_ram of soc_wb2sram.v
+  wire [DW     -1:0] sram_dout;  // From sp_ram of soc_sram_sp.v
+  wire [SW     -1:0] sram_sel;  // From wb_ram of soc_wb2sram.v
+  wire               sram_we;  // From wb_ram of soc_wb2sram.v
   // End of automatics
 
   ////////////////////////////////////////////////////////////////
@@ -111,7 +111,7 @@ module wb_sram_sp #(
   // Module Body
   //
 
-  wb2sram #(
+  soc_wb2sram #(
     .AW(AW),
     .DW(DW)
   ) wb_ram (
@@ -139,7 +139,7 @@ module wb_sram_sp #(
     .sram_dout (sram_dout[DW-1:0])
   );
 
-  sram_sp #(
+  soc_sram_sp #(
     .DW           (DW),
     .MEM_SIZE_BYTE(MEM_SIZE_BYTE),
     .AW           (AW),
