@@ -42,7 +42,7 @@
  *   Paco Reina Campo <pacoreinacampo@queenfield.tech>
  */
 
-package soc_optimsoc_config;
+package soc_optimsoc_configuration;
 
   import soc_optimsoc_functions::*;
 

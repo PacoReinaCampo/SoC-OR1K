@@ -78,7 +78,7 @@
  * +----------------------------+
  */
 
-import soc_optimsoc_config::*;
+import soc_optimsoc_configuration::*;
 
 module soc_network_adapter_configuration #(
   parameter          DW       = 32,

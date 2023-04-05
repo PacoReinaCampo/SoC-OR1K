@@ -46,9 +46,8 @@ all: build simulate
 
 build:
 	xvlog -prj soc.prj \
-	-i ../../../../pu/rtl/verilog/pkg \
-	-i ../../../../rtl/verilog/soc/soc_bootrom \
-	-i ../../../../dma/rtl/verilog/wb/pkg
+	-i ../../../../../../pu/rtl/verilog/pkg \
+	-i ../../../../../../rtl/verilog/soc/bootrom
 
 simulate:
 	xelab soc_or1k_testbench
