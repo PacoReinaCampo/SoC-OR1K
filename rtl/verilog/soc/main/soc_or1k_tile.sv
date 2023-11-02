@@ -208,7 +208,7 @@ module soc_or1k_tile #(
   wire  [ NR_SLAVES-1:0]         bussl_err_o_flat;
   wire  [ NR_SLAVES-1:0][DW-1:0] bussl_dat_o_flat;
 
-  //MAM - WB adapter signals
+  // MAM - WB adapter signals
   logic                          mam_dm_stb_o;
   logic                          mam_dm_cyc_o;
   logic                          mam_dm_ack_i;
@@ -480,7 +480,7 @@ module soc_or1k_tile #(
   assign bussl_cab_i_flat = NR_SLAVES'(1'b0);
 
   if (CONFIG.USE_DEBUG == 1) begin : gen_mam_dm_wb
-    //MAM
+    // MAM
     peripheral_dbg_soc_osd_mam_wb #(
       .DATA_WIDTH (32),
       .MAX_PKT_LEN(CONFIG.DEBUG_MAX_PKT_LEN),
