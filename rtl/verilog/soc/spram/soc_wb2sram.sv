@@ -171,7 +171,6 @@ module soc_wb2sram #(
     end
   end
 
-
   // Register it locally
   always @(posedge wb_clk_i) begin
     wb_bte_i_r <= wb_bte_i;

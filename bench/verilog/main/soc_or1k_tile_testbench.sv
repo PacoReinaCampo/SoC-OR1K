@@ -234,7 +234,6 @@ module soc_or1k_tile_testbench (
     end
   endgenerate
 
-
   // The actual system: a single compute tile
   soc_or1k_tile #(
     .CONFIG      (CONFIG),
