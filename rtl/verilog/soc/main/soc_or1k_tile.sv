@@ -117,62 +117,62 @@ module soc_or1k_tile #(
   // Variables
   //////////////////////////////////////////////////////////////////////////////
 
-  peripheral_dbg_soc_mor1kx_trace_exec [                                        CONFIG.CORES_PER_TILE-1:0] trace;
+  peripheral_dbg_soc_mor1kx_trace_exec [CONFIG.CORES_PER_TILE-1:0] trace;
 
-  logic                                                                                 wb_mem_clk_i;
-  logic                                                                                 wb_mem_rst_i;
-  logic               [                         AW-1:0]                                 wb_mem_adr_i;
-  logic                                                                                 wb_mem_cyc_i;
-  logic               [                         DW-1:0]                                 wb_mem_dat_i;
-  logic               [                            3:0]                                 wb_mem_sel_i;
-  logic                                                                                 wb_mem_stb_i;
-  logic                                                                                 wb_mem_we_i;
-  logic                                                                                 wb_mem_cab_i;
-  logic               [                            2:0]                                 wb_mem_cti_i;
-  logic               [                            1:0]                                 wb_mem_bte_i;
-  logic                                                                                 wb_mem_ack_o;
-  logic                                                                                 wb_mem_rty_o;
-  logic                                                                                 wb_mem_err_o;
-  logic               [                         DW-1:0]                                 wb_mem_dat_o;
+  logic          wb_mem_clk_i;
+  logic          wb_mem_rst_i;
+  logic [AW-1:0] wb_mem_adr_i;
+  logic          wb_mem_cyc_i;
+  logic [DW-1:0] wb_mem_dat_i;
+  logic [   3:0] wb_mem_sel_i;
+  logic          wb_mem_stb_i;
+  logic          wb_mem_we_i;
+  logic          wb_mem_cab_i;
+  logic [   2:0] wb_mem_cti_i;
+  logic [   1:0] wb_mem_bte_i;
+  logic          wb_mem_ack_o;
+  logic          wb_mem_rty_o;
+  logic          wb_mem_err_o;
+  logic [DW-1:0] wb_mem_dat_o;
 
-  dii_flit          [                                  DEBUG_MODS_PER_TILE_NONZERO-1:0] dii_in;
-  dii_flit          [                                  DEBUG_MODS_PER_TILE_NONZERO-1:0] dii_out;
+  dii_flit [DEBUG_MODS_PER_TILE_NONZERO-1:0] dii_in;
+  dii_flit [DEBUG_MODS_PER_TILE_NONZERO-1:0] dii_out;
 
-  logic               [DEBUG_MODS_PER_TILE_NONZERO-1:0]                                 dii_in_ready;
-  logic               [DEBUG_MODS_PER_TILE_NONZERO-1:0]                                 dii_out_ready;
+  logic [DEBUG_MODS_PER_TILE_NONZERO-1:0] dii_in_ready;
+  logic [DEBUG_MODS_PER_TILE_NONZERO-1:0] dii_out_ready;
 
-  wire                [                         AW-1:0]                                 busms_adr_o   [           0:NR_MASTERS-1];
-  wire                                                                                  busms_cyc_o   [           0:NR_MASTERS-1];
-  wire                [                         DW-1:0]                                 busms_dat_o   [           0:NR_MASTERS-1];
-  wire                [                            3:0]                                 busms_sel_o   [           0:NR_MASTERS-1];
-  wire                                                                                  busms_stb_o   [           0:NR_MASTERS-1];
-  wire                                                                                  busms_we_o    [           0:NR_MASTERS-1];
-  wire                                                                                  busms_cab_o   [           0:NR_MASTERS-1];
-  wire                [                            2:0]                                 busms_cti_o   [           0:NR_MASTERS-1];
-  wire                [                            1:0]                                 busms_bte_o   [           0:NR_MASTERS-1];
-  wire                                                                                  busms_ack_i   [           0:NR_MASTERS-1];
-  wire                                                                                  busms_rty_i   [           0:NR_MASTERS-1];
-  wire                                                                                  busms_err_i   [           0:NR_MASTERS-1];
-  wire                [                         DW-1:0]                                 busms_dat_i   [           0:NR_MASTERS-1];
+  wire [AW-1:0] busms_adr_o [0:NR_MASTERS-1];
+  wire          busms_cyc_o [0:NR_MASTERS-1];
+  wire [DW-1:0] busms_dat_o [0:NR_MASTERS-1];
+  wire [   3:0] busms_sel_o [0:NR_MASTERS-1];
+  wire          busms_stb_o [0:NR_MASTERS-1];
+  wire          busms_we_o  [0:NR_MASTERS-1];
+  wire          busms_cab_o [0:NR_MASTERS-1];
+  wire [   2:0] busms_cti_o [0:NR_MASTERS-1];
+  wire [   1:0] busms_bte_o [0:NR_MASTERS-1];
+  wire          busms_ack_i [0:NR_MASTERS-1];
+  wire          busms_rty_i [0:NR_MASTERS-1];
+  wire          busms_err_i [0:NR_MASTERS-1];
+  wire [DW-1:0] busms_dat_i [0:NR_MASTERS-1];
 
-  wire                [                         AW-1:0]                                 bussl_adr_i   [            0:NR_SLAVES-1];
-  wire                                                                                  bussl_cyc_i   [            0:NR_SLAVES-1];
-  wire                [                         DW-1:0]                                 bussl_dat_i   [            0:NR_SLAVES-1];
-  wire                [                            3:0]                                 bussl_sel_i   [            0:NR_SLAVES-1];
-  wire                                                                                  bussl_stb_i   [            0:NR_SLAVES-1];
-  wire                                                                                  bussl_we_i    [            0:NR_SLAVES-1];
-  wire                                                                                  bussl_cab_i   [            0:NR_SLAVES-1];
-  wire                [                            2:0]                                 bussl_cti_i   [            0:NR_SLAVES-1];
-  wire                [                            1:0]                                 bussl_bte_i   [            0:NR_SLAVES-1];
-  wire                                                                                  bussl_ack_o   [            0:NR_SLAVES-1];
-  wire                                                                                  bussl_rty_o   [            0:NR_SLAVES-1];
-  wire                                                                                  bussl_err_o   [            0:NR_SLAVES-1];
-  wire                [                         DW-1:0]                                 bussl_dat_o   [            0:NR_SLAVES-1];
+  wire [AW-1:0] bussl_adr_i [0:NR_SLAVES-1];
+  wire          bussl_cyc_i [0:NR_SLAVES-1];
+  wire [DW-1:0] bussl_dat_i [0:NR_SLAVES-1];
+  wire [   3:0] bussl_sel_i [0:NR_SLAVES-1];
+  wire          bussl_stb_i [0:NR_SLAVES-1];
+  wire          bussl_we_i  [0:NR_SLAVES-1];
+  wire          bussl_cab_i [0:NR_SLAVES-1];
+  wire [   2:0] bussl_cti_i [0:NR_SLAVES-1];
+  wire [   1:0] bussl_bte_i [0:NR_SLAVES-1];
+  wire          bussl_ack_o [0:NR_SLAVES-1];
+  wire          bussl_rty_o [0:NR_SLAVES-1];
+  wire          bussl_err_o [0:NR_SLAVES-1];
+  wire [DW-1:0] bussl_dat_o [0:NR_SLAVES-1];
 
-  wire                                                                                  snoop_enable;
-  wire                [                           31:0]                                 snoop_adr;
+  wire          snoop_enable;
+  wire [  31:0] snoop_adr;
 
-  wire                [                           31:0]                                 pic_ints_i    [0:CONFIG.CORES_PER_TILE-1];
+  wire [  31:0] pic_ints_i [0:CONFIG.CORES_PER_TILE-1];
 
   genvar c, m, s;
 
