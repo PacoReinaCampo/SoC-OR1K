@@ -135,7 +135,7 @@ module soc_or1k_testbench;
 
   ////////////////////////////////////////////////////////////////
   //
-  // Module Body
+  // Body
   //
 
   assign cpu_stall     = 0;
