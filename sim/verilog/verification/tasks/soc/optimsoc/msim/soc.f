@@ -42,19 +42,19 @@
 ##                                                                               ##
 ###################################################################################
 
-+incdir+../../../../../../pu/rtl/verilog/pkg
-+incdir+../../../../../../rtl/verilog/soc/bootrom
++incdir+../../../../../../pu/rtl/verilog/pkg/optimsoc
++incdir+../../../../../../rtl/verilog/soc/optimsoc/bootrom
 +incdir+../../../../../../bench/cpp/verilator/inc
 +incdir+../../../../../../bench/cpp/glip
 
 ../../../../../../peripheral/dma/rtl/verilog/code/pkg/core/peripheral_dma_pkg.sv
 
-../../../../../../pu/rtl/verilog/pkg/peripheral_wb_pkg.sv
+../../../../../../pu/rtl/verilog/pkg/optimsoc/peripheral_wb_pkg.sv
 
-../../../../../../rtl/verilog/pkg/arbiter/soc_arbiter_rr.sv
-../../../../../../rtl/verilog/pkg/functions/soc_optimsoc_functions.sv
-../../../../../../rtl/verilog/pkg/configuration/soc_optimsoc_configuration.sv
-../../../../../../rtl/verilog/pkg/constants/soc_optimsoc_constants.sv
+../../../../../../rtl/verilog/pkg/optimsoc/arbiter/soc_arbiter_rr.sv
+../../../../../../rtl/verilog/pkg/optimsoc/functions/soc_optimsoc_functions.sv
+../../../../../../rtl/verilog/pkg/optimsoc/configuration/soc_optimsoc_configuration.sv
+../../../../../../rtl/verilog/pkg/optimsoc/constants/soc_optimsoc_constants.sv
 
 ../../../../../../peripheral/dbg/rtl/soc/verilog/code/peripheral/interfaces/common/peripheral_dbg_soc_dii_channel_flat.sv
 ../../../../../../peripheral/dbg/rtl/soc/verilog/code/peripheral/interfaces/common/peripheral_dbg_soc_dii_channel.sv
@@ -158,16 +158,16 @@
 ../../../../../../pu/rtl/verilog/memory/pu_or1k_true_dpram_sclk.sv
 ../../../../../../pu/rtl/verilog/module/pu_or1k_module.sv
 
-../../../../../../rtl/verilog/soc/adapter/soc_network_adapter_configuration.sv
-../../../../../../rtl/verilog/soc/adapter/soc_network_adapter_ct.sv
-../../../../../../rtl/verilog/soc/bootrom/soc_bootrom.sv
-../../../../../../rtl/verilog/soc/interconnection/bus/soc_b3_wb.sv
-../../../../../../rtl/verilog/soc/interconnection/decode/soc_decode_wb.sv
-../../../../../../rtl/verilog/soc/interconnection/mux/soc_mux_wb.sv
-../../../../../../rtl/verilog/soc/main/soc_or1k_tile.sv
-../../../../../../rtl/verilog/soc/spram/soc_sram_sp_impl_plain.sv
-../../../../../../rtl/verilog/soc/spram/soc_sram_sp.sv
-../../../../../../rtl/verilog/soc/spram/soc_sram_sp_wb.sv
-../../../../../../rtl/verilog/soc/spram/soc_wb2sram.sv
+../../../../../../rtl/verilog/soc/optimsoc/adapter/soc_network_adapter_configuration.sv
+../../../../../../rtl/verilog/soc/optimsoc/adapter/soc_network_adapter_ct.sv
+../../../../../../rtl/verilog/soc/optimsoc/bootrom/soc_bootrom.sv
+../../../../../../rtl/verilog/soc/optimsoc/interconnection/bus/soc_b3_wb.sv
+../../../../../../rtl/verilog/soc/optimsoc/interconnection/decode/soc_decode_wb.sv
+../../../../../../rtl/verilog/soc/optimsoc/interconnection/mux/soc_mux_wb.sv
+../../../../../../rtl/verilog/soc/optimsoc/main/soc_or1k_tile.sv
+../../../../../../rtl/verilog/soc/optimsoc/spram/soc_sram_sp_impl_plain.sv
+../../../../../../rtl/verilog/soc/optimsoc/spram/soc_sram_sp.sv
+../../../../../../rtl/verilog/soc/optimsoc/spram/soc_sram_sp_wb.sv
+../../../../../../rtl/verilog/soc/optimsoc/spram/soc_wb2sram.sv
 
 ../../../../../../bench/verilog/main/soc_or1k_testbench.sv

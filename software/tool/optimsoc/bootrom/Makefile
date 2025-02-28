@@ -68,8 +68,8 @@ bin2vmem: bin2vmem.c
 	gcc -Wall -o bin2vmem bin2vmem.c
 
 install:
-	rm -f ../../../soc/rtl/verilog/soc/bootrom/bootrom_code.sv
-	cp -i bootrom_code.sv ../../../soc/rtl/verilog/soc/bootrom/
+	rm -f ../../../soc/rtl/verilog/soc/optimsoc/bootrom/bootrom_code.sv
+	cp -i bootrom_code.sv ../../../soc/rtl/verilog/soc/optimsoc/bootrom/
 
 clean:
 	rm -f a.out bootrom.bin bootrom.hex bootrom_code.sv bin2vlogarray bin2vmem
