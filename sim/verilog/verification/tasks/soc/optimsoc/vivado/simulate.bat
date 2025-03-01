@@ -43,11 +43,11 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 @echo off
-call ../../../../../../settings64_vivado.bat
+call ../../../../../../../settings64_vivado.bat
 
 xvlog -prj soc.prj \
--i ../../../../../../pu/rtl/verilog/pkg/optimsoc \
--i ../../../../../../rtl/verilog/soc/optimsoc/soc_bootrom
+-i ../../../../../../../pu/rtl/verilog/pkg/optimsoc \
+-i ../../../../../../../rtl/verilog/soc/optimsoc/soc_bootrom
 xelab soc_or1k_testbench
 xsim -R soc_or1k_testbench
 pause
