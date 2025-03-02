@@ -165,4 +165,4 @@ sv work ../../../../../../../rtl/verilog/soc/optimsoc/spram/soc_sram_sp.sv
 sv work ../../../../../../../rtl/verilog/soc/optimsoc/spram/soc_sram_sp_wb.sv
 sv work ../../../../../../../rtl/verilog/soc/optimsoc/spram/soc_wb2sram.sv
 
-sv work ../../../../../../../bench/verilog/main/soc_or1k_testbench.sv
+sv work ../../../../../../../verification/tasks/library/verilog/optimsoc/main/soc_or1k_testbench.sv

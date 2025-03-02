@@ -44,8 +44,8 @@
 
 +incdir+../../../../../../../pu/rtl/verilog/pkg/optimsoc
 +incdir+../../../../../../../rtl/verilog/soc/optimsoc/bootrom
-+incdir+../../../../../../../bench/cpp/verilator/inc
-+incdir+../../../../../../../bench/cpp/glip
++incdir+../../../../../../../verification/tasks/library/cpp/verilator/inc
++incdir+../../../../../../../verification/tasks/library/cpp/glip
 
 ../../../../../../../peripheral/dma/rtl/verilog/code/pkg/core/peripheral_dma_pkg.sv
 
@@ -170,4 +170,4 @@
 ../../../../../../../rtl/verilog/soc/optimsoc/spram/soc_sram_sp_wb.sv
 ../../../../../../../rtl/verilog/soc/optimsoc/spram/soc_wb2sram.sv
 
-../../../../../../../bench/verilog/main/soc_or1k_testbench.sv
+../../../../../../../verification/tasks/library/verilog/optimsoc/main/soc_or1k_testbench.sv
