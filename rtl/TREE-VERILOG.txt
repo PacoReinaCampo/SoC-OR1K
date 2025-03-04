@@ -1,35 +1,43 @@
 verilog
 ├── pkg
-│   └── optimsoc
-│       ├── arbiter
-│       │   └── soc_arbiter_rr.sv
-│       ├── configuration
-│       │   └── soc_optimsoc_configuration.sv
-│       ├── constants
-│       │   └── soc_optimsoc_constants.sv
-│       └── functions
-│           └── soc_optimsoc_functions.sv
+│   ├── optimsoc
+│   │   ├── arbiter
+│   │   │   └── soc_arbiter_rr.sv
+│   │   ├── configuration
+│   │   │   └── soc_optimsoc_configuration.sv
+│   │   ├── constants
+│   │   │   └── soc_optimsoc_constants.sv
+│   │   └── functions
+│   │       └── soc_optimsoc_functions.sv
+│   └── standard
+│       ├── peripheral_wb_pkg.sv
+│       ├── pu_or1k_defines.sv
+│       └── pu_or1k_utils.sv
 └── soc
-    └── optimsoc
-        ├── adapter
-        │   ├── soc_network_adapter_configuration.sv
-        │   └── soc_network_adapter_ct.sv
-        ├── bootrom
-        │   ├── soc_bootrom_code.sv
-        │   └── soc_bootrom.sv
-        ├── interconnection
-        │   ├── bus
-        │   │   └── soc_b3_wb.sv
-        │   ├── decode
-        │   │   └── soc_decode_wb.sv
-        │   └── mux
-        │       └── soc_mux_wb.sv
-        ├── main
-        │   └── soc_or1k_tile.sv
-        └── spram
-            ├── soc_sram_sp_impl_plain.sv
-            ├── soc_sram_sp.sv
-            ├── soc_sram_sp_wb.sv
-            └── soc_wb2sram.sv
+    ├── optimsoc
+    │   ├── adapter
+    │   │   ├── soc_network_adapter_configuration.sv
+    │   │   └── soc_network_adapter_ct.sv
+    │   ├── bootrom
+    │   │   ├── soc_bootrom_code.sv
+    │   │   └── soc_bootrom.sv
+    │   ├── interconnection
+    │   │   ├── bus
+    │   │   │   └── soc_b3_wb.sv
+    │   │   ├── decode
+    │   │   │   └── soc_decode_wb.sv
+    │   │   └── mux
+    │   │       └── soc_mux_wb.sv
+    │   ├── main
+    │   │   └── soc_or1k_tile.sv
+    │   └── spram
+    │       ├── soc_sram_sp_impl_plain.sv
+    │       ├── soc_sram_sp.sv
+    │       ├── soc_sram_sp_wb.sv
+    │       └── soc_wb2sram.sv
+    └── standard
+        ├── pu
+        │   └── pu_or1k_wb.sv
+        └── top
 
-16 directories, 16 files
+20 directories, 20 files
