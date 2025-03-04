@@ -45,8 +45,8 @@
 --Mdir .
 --cc
 
-+incdir+../../../../../../../../pu/rtl/verilog/pkg/optimsoc
--CFLAGS -I../../../../../../../../pu/rtl/verilog/pkg/optimsoc
++incdir+../../../../../../../../pu/rtl/verilog/pkg
+-CFLAGS -I../../../../../../../../pu/rtl/verilog/pkg
 +incdir+../../../../../../../../rtl/verilog/soc/optimsoc/bootrom
 -CFLAGS -I../../../../../../../../rtl/verilog/soc/optimsoc/bootrom
 +incdir+../../../../../../../../verification/tasks/library/cpp/verilator/inc
@@ -56,7 +56,7 @@
 
 ../../../../../../../../peripheral/dma/rtl/verilog/code/pkg/core/peripheral_dma_pkg.sv
 
-../../../../../../../../pu/rtl/verilog/pkg/optimsoc/peripheral_wb_pkg.sv
+../../../../../../../../pu/rtl/verilog/pkg/peripheral_wb_pkg.sv
 
 ../../../../../../../../rtl/verilog/pkg/optimsoc/arbiter/soc_arbiter_rr.sv
 ../../../../../../../../rtl/verilog/pkg/optimsoc/functions/soc_optimsoc_functions.sv
@@ -67,7 +67,7 @@
 ../../../../../../../../peripheral/dbg/rtl/soc/verilog/code/peripheral/interfaces/common/peripheral_dbg_soc_dii_channel.sv
 ../../../../../../../../peripheral/dbg/rtl/soc/verilog/code/peripheral/interfaces/or1k/peripheral_dbg_soc_mor1kx_trace_exec.sv
 
-../../../../../../../../verification/tasks/library/verilog/glip/soc_glip_channel.sv
+../../../../../../../../verification/tasks/library/verilog/optimsoc/glip/soc_glip_channel.sv
 
 ../../../../../../../../peripheral/dbg/rtl/soc/verilog/code/peripheral/blocks/buffer/peripheral_dbg_soc_dii_buffer.sv
 ../../../../../../../../peripheral/dbg/rtl/soc/verilog/code/peripheral/blocks/buffer/peripheral_dbg_soc_osd_fifo.sv
@@ -116,16 +116,16 @@
 ../../../../../../../../peripheral/mpi/rtl/verilog/code/core/peripheral_mpi_buffer_endpoint.sv
 ../../../../../../../../peripheral/mpi/rtl/verilog/code/peripheral/wb/peripheral_mpi_wb.sv
 
-../../../../../../../../peripheral/noc/rtl/verilog/code/peripheral/main/peripheral_arbiter_rr.sv
-../../../../../../../../peripheral/noc/rtl/verilog/code/peripheral/main/peripheral_noc_buffer.sv
-../../../../../../../../peripheral/noc/rtl/verilog/code/peripheral/main/peripheral_noc_demux.sv
-../../../../../../../../peripheral/noc/rtl/verilog/code/peripheral/main/peripheral_noc_mux.sv
-../../../../../../../../peripheral/noc/rtl/verilog/code/peripheral/main/peripheral_noc_vchannel_mux.sv
-../../../../../../../../peripheral/noc/rtl/verilog/code/peripheral/router/peripheral_noc_router_input.sv
-../../../../../../../../peripheral/noc/rtl/verilog/code/peripheral/router/peripheral_noc_router_lookup_slice.sv
-../../../../../../../../peripheral/noc/rtl/verilog/code/peripheral/router/peripheral_noc_router_lookup.sv
-../../../../../../../../peripheral/noc/rtl/verilog/code/peripheral/router/peripheral_noc_router_output.sv
-../../../../../../../../peripheral/noc/rtl/verilog/code/peripheral/router/peripheral_noc_router.sv
+../../../../../../../../peripheral/noc/rtl/verilog/code/core/main/peripheral_arbiter_rr.sv
+../../../../../../../../peripheral/noc/rtl/verilog/code/core/main/peripheral_noc_buffer.sv
+../../../../../../../../peripheral/noc/rtl/verilog/code/core/main/peripheral_noc_demux.sv
+../../../../../../../../peripheral/noc/rtl/verilog/code/core/main/peripheral_noc_mux.sv
+../../../../../../../../peripheral/noc/rtl/verilog/code/core/main/peripheral_noc_vchannel_mux.sv
+../../../../../../../../peripheral/noc/rtl/verilog/code/core/router/peripheral_noc_router_input.sv
+../../../../../../../../peripheral/noc/rtl/verilog/code/core/router/peripheral_noc_router_lookup_slice.sv
+../../../../../../../../peripheral/noc/rtl/verilog/code/core/router/peripheral_noc_router_lookup.sv
+../../../../../../../../peripheral/noc/rtl/verilog/code/core/router/peripheral_noc_router_output.sv
+../../../../../../../../peripheral/noc/rtl/verilog/code/core/router/peripheral_noc_router.sv
 
 ../../../../../../../../pu/rtl/verilog/core/control/pu_or1k_cfgrs.sv
 ../../../../../../../../pu/rtl/verilog/core/control/pu_or1k_ctrl_cappuccino.sv
@@ -177,18 +177,18 @@
 ../../../../../../../../rtl/verilog/soc/optimsoc/spram/soc_sram_sp_wb.sv
 ../../../../../../../../rtl/verilog/soc/optimsoc/spram/soc_wb2sram.sv
 
-../../../../../../../../verification/tasks/library/verilog/glip/soc_glip_tcp_top.sv
-../../../../../../../../verification/tasks/library/verilog/monitor/soc_r3_checker.sv
-../../../../../../../../verification/tasks/library/verilog/monitor/soc_trace_monitor.sv
-../../../../../../../../verification/tasks/library/verilog/main/soc_or1k_tile_testbench.sv
+../../../../../../../../verification/tasks/library/verilog/optimsoc/glip/soc_glip_tcp_top.sv
+../../../../../../../../verification/tasks/library/verilog/optimsoc/monitor/soc_r3_checker.sv
+../../../../../../../../verification/tasks/library/verilog/optimsoc/monitor/soc_trace_monitor.sv
+../../../../../../../../verification/tasks/library/verilog/optimsoc/main/soc_or1k_tile_testbench.sv
 
 --top-module soc_or1k_tile_testbench
 --exe
 
-../../../../../../../../verification/tasks/library/cpp/glip/glip_tcp_dpi.cpp
-../../../../../../../../verification/tasks/library/cpp/glip/GlipTcp.cpp
-../../../../../../../../verification/tasks/library/cpp/main/soc_or1k_tile_testbench.cpp
-../../../../../../../../verification/tasks/library/cpp/verilator/src/OptionsParser.cpp
-../../../../../../../../verification/tasks/library/cpp/verilator/src/VerilatedControl.cpp
+../../../../../../../../verification/tasks/library/cpp/optimsoc/glip/glip_tcp_dpi.cpp
+../../../../../../../../verification/tasks/library/cpp/optimsoc/glip/GlipTcp.cpp
+../../../../../../../../verification/tasks/library/cpp/optimsoc/main/soc_or1k_tile_testbench.cpp
+../../../../../../../../verification/tasks/library/cpp/optimsoc/verilator/src/OptionsParser.cpp
+../../../../../../../../verification/tasks/library/cpp/optimsoc/verilator/src/VerilatedControl.cpp
 -GNUM_CORES=2
 -GUSE_DEBUG=1
