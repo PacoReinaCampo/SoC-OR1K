@@ -45,9 +45,9 @@
 TARGET               := pu_or1k_wb
 VPI_MODULES          := elf-loader.vpi jtag_vpi.vpi
 TOPLEVEL             := pu_or1k_testbench_wb
-IVERILOG_OPTIONS     := -DSIM -g2012
-HELLO_C              ?= +elf_load=../../../../../../../../software/baremetal/hello/c/hello_c.elf
-HELLO_CPP            ?= +elf_load=../../../../../../../../software/baremetal/hello/cpp/hello_cpp.elf
+IVERILOG_OPTIONS     := -DSIM
+HELLO_C              ?= +elf_load=../../../../../../../../../../software/baremetal/standard/hello/c/hello_c.elf
+HELLO_CPP            ?= +elf_load=../../../../../../../../../../software/baremetal/standard/hello/cpp/hello_cpp.elf
 
 all:
 	$(VPI_MODULES) $(TARGET)
@@ -62,18 +62,18 @@ run-hello_cpp: $(VPI_MODULES) $(TARGET)
 	vvp -n -M. -l log/or1k-hello_cpp.log $(patsubst %.vpi,-m%,$(VPI_MODULES)) $(TARGET) $(HELLO_CPP)
 
 elf-loader_LIBS := -lelf
-elf-loader_INCS := -I../../../../../../../software/elf-loader/
-elf-loader_SRCS := ../../../../../../../software/elf-loader/elf-loader.c \
-                   ../../../../../../../software/elf-loader/vpi_wrapper.c
+elf-loader_INCS := -I../../../../../../../../../../software/tool/standard/elf-loader/
+elf-loader_SRCS := ../../../../../../../../../../software/tool/standard/elf-loader/elf-loader.c \
+                   ../../../../../../../../../../software/tool/standard/elf-loader/vpi_wrapper.c
 
 elf-loader.vpi: $(elf-loader_SRCS)
 	iverilog-vpi --name=elf-loader $(elf-loader_LIBS) $(elf-loader_INCS) $?
 
 jtag_vpi_LIBS := 
-jtag_vpi_INCS := -I../../../../../../../peripheral/dbg/software/or1k/debug/
-jtag_vpi_SRCS := ../../../../../../../peripheral/dbg/software/or1k/debug/jtag_common.c \
-                 ../../../../../../../peripheral/dbg/software/or1k/debug/jtag_vpi.c \
-                 ../../../../../../../peripheral/dbg/verification/tasks/pu/or1k/verilog/code/tests/wb/debug/jtag_vpi/jtag_vpi.sv
+jtag_vpi_INCS := -I../../../../../../../../../../peripheral/dbg/software/or1k/debug/
+jtag_vpi_SRCS := ../../../../../../../../../../peripheral/dbg/software/or1k/debug/jtag_common.c \
+                 ../../../../../../../../../../peripheral/dbg/software/or1k/debug/jtag_vpi.c \
+                 ../../../../../../../../../../peripheral/dbg/verification/tasks/pu/or1k/verilog/code/tests/wb/debug/jtag_vpi/jtag_vpi.sv
 
 jtag_vpi.vpi: $(jtag_vpi_SRCS)
 	iverilog-vpi --name=jtag_vpi $(jtag_vpi_LIBS) $(jtag_vpi_INCS) $?
