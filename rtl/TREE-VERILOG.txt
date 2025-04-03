@@ -39,5 +39,6 @@ verilog
         ├── pu
         │   └── pu_or1k_wb.sv
         └── top
+            └── soc_or1k_wb.sv
 
-20 directories, 20 files
+20 directories, 21 files
