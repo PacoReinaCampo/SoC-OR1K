@@ -58,11 +58,11 @@
 
 ../../../../../../../../../../pu/peripheral/dbg/verification/tasks/pu/or1k/verilog/code/tests/apb4/debug/jtag_tap/tap_top.sv
 ../../../../../../../../../../pu/peripheral/dbg/verification/tasks/pu/or1k/verilog/code/tests/apb4/debug/jtag_vpi/jtag_vpi.sv
-../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_biu.sv
-../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_apb4_biu.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_tl.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_apb4_tl.sv
 ../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_bytefifo.sv
 ../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_crc32.sv
-../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_jsp_biu.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_jsp_tl.sv
 ../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_jsp_module.sv
 ../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_module.sv
 ../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_module_apb4.sv
