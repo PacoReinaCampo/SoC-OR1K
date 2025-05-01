@@ -1,0 +1,132 @@
+###################################################################################
+##                                            __ _      _     _                  ##
+##                                           / _(_)    | |   | |                 ##
+##                __ _ _   _  ___  ___ _ __ | |_ _  ___| | __| |                 ##
+##               / _` | | | |/ _ \/ _ \ '_ \|  _| |/ _ \ |/ _` |                 ##
+##              | (_| | |_| |  __/  __/ | | | | | |  __/ | (_| |                 ##
+##               \__, |\__,_|\___|\___|_| |_|_| |_|\___|_|\__,_|                 ##
+##                  | |                                                          ##
+##                  |_|                                                          ##
+##                                                                               ##
+##                                                                               ##
+##              Architecture                                                     ##
+##              QueenField                                                       ##
+##                                                                               ##
+###################################################################################
+
+###################################################################################
+##                                                                               ##
+## Copyright (c) 2019-2020 by the author(s)                                      ##
+##                                                                               ##
+## Permission is hereby granted, free of charge, to any person obtaining a copy  ##
+## of this software and associated documentation files (the "Software"), to deal ##
+## in the Software without restriction, including without limitation the rights  ##
+## to use, copy, modify, merge, publish, distribute, sublicense, and/or sell     ##
+## copies of the Software, and to permit persons to whom the Software is         ##
+## furnished to do so, subject to the following conditions:                      ##
+##                                                                               ##
+## The above copyright notice and this permission notice shall be included in    ##
+## all copies or substantial portions of the Software.                           ##
+##                                                                               ##
+## THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR    ##
+## IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,      ##
+## FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE   ##
+## AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER        ##
+## LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, ##
+## OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN     ##
+## THE SOFTWARE.                                                                 ##
+##                                                                               ##
+## ============================================================================= ##
+## Author(s):                                                                    ##
+##   Paco Reina Campo <pacoreinacampo@queenfield.tech>                           ##
+##                                                                               ##
+###################################################################################
+
++incdir+../../../../../../../../../../verification/tasks/library/verilog/standard
+
++incdir+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/pkg/wb
+
++incdir+../../../../../../../../../../pu/peripheral/uart/rtl/verilog/code/pkg/core
+
++incdir+../../../../../../../../../../pu/rtl/verilog/pkg
+
+../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_functions.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_monitor.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_tap_generator.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_testbench_utils.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_testbench_apb4.sv
+
+../../../../../../../../../../pu/peripheral/dbg/verification/tasks/pu/or1k/verilog/code/tests/apb4/debug/jtag_tap/tap_top.sv
+../../../../../../../../../../pu/peripheral/dbg/verification/tasks/pu/or1k/verilog/code/tests/apb4/debug/jtag_vpi/jtag_vpi.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_tl.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_apb4_tl.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_bytefifo.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_crc32.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_jsp_tl.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_jsp_module.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_module.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_module_apb4.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_status_reg.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_syncflop.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_syncreg.sv
+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/peripheral/apb4/peripheral_dbg_pu_or1k_top.sv
+
+../../../../../../../../../../pu/peripheral/msi/rtl/verilog/code/peripheral/apb4/arbiter/peripheral_msi_arbiter.sv
+../../../../../../../../../../pu/peripheral/msi/rtl/verilog/code/peripheral/apb4/cdc/peripheral_msi_cc561_apb4.sv
+../../../../../../../../../../pu/peripheral/msi/rtl/verilog/code/peripheral/apb4/cdc/peripheral_msi_cdc_apb4.sv
+../../../../../../../../../../pu/peripheral/msi/rtl/verilog/code/peripheral/apb4/cdc/peripheral_msi_sync2_pgen_apb4.sv
+../../../../../../../../../../pu/peripheral/msi/rtl/verilog/code/peripheral/apb4/main/peripheral_msi_arbiter_apb4.sv
+../../../../../../../../../../pu/peripheral/msi/rtl/verilog/code/peripheral/apb4/main/peripheral_msi_data_resize_apb4.sv
+../../../../../../../../../../pu/peripheral/msi/rtl/verilog/code/peripheral/apb4/main/peripheral_msi_interface_apb4.sv
+../../../../../../../../../../pu/peripheral/msi/rtl/verilog/code/peripheral/apb4/main/peripheral_msi_mux_apb4.sv
+
+../../../../../../../../../../pu/peripheral/spram/rtl/verilog/code/peripheral/apb4/peripheral_spram_generic_apb4.sv
+../../../../../../../../../../pu/peripheral/spram/rtl/verilog/code/peripheral/apb4/peripheral_spram_apb4.sv
+
+../../../../../../../../../../pu/peripheral/uart/rtl/verilog/code/peripheral/apb4/peripheral_raminfr_apb4.sv
+../../../../../../../../../../pu/peripheral/uart/rtl/verilog/code/peripheral/apb4/peripheral_uart_bridge_apb4.sv
+../../../../../../../../../../pu/peripheral/uart/rtl/verilog/code/peripheral/apb4/peripheral_uart_receiver_apb4.sv
+../../../../../../../../../../pu/peripheral/uart/rtl/verilog/code/peripheral/apb4/peripheral_uart_regs_apb4.sv
+../../../../../../../../../../pu/peripheral/uart/rtl/verilog/code/peripheral/apb4/peripheral_uart_rfifo_apb4.sv
+../../../../../../../../../../pu/peripheral/uart/rtl/verilog/code/peripheral/apb4/peripheral_uart_sync_flops_apb4.sv
+../../../../../../../../../../pu/peripheral/uart/rtl/verilog/code/peripheral/apb4/peripheral_uart_tfifo_apb4.sv
+../../../../../../../../../../pu/peripheral/uart/rtl/verilog/code/peripheral/apb4/peripheral_uart_transmitter_apb4.sv
+../../../../../../../../../../pu/peripheral/uart/rtl/verilog/code/peripheral/apb4/peripheral_uart_apb4.sv
+
+../../../../../../../../../../pu/rtl/verilog/core/control/pu_or1k_cfgrs.sv
+../../../../../../../../../../pu/rtl/verilog/core/control/pu_or1k_ctrl_cappuccino.sv
+../../../../../../../../../../pu/rtl/verilog/core/control/pu_or1k_pcu.sv
+../../../../../../../../../../pu/rtl/verilog/core/control/pu_or1k_pic.sv
+../../../../../../../../../../pu/rtl/verilog/core/control/pu_or1k_ticktimer.sv
+../../../../../../../../../../pu/rtl/verilog/core/decode/pu_or1k_decode.sv
+../../../../../../../../../../pu/rtl/verilog/core/execute/pu_or1k_execute_alu.sv
+../../../../../../../../../../pu/rtl/verilog/core/execute/pu_or1k_execute_ctrl_cappuccino.sv
+../../../../../../../../../../pu/rtl/verilog/core/execute/pu_or1k_rf_cappuccino.sv
+../../../../../../../../../../pu/rtl/verilog/core/execute/pu_or1k_apb4_mux_cappuccino.sv
+../../../../../../../../../../pu/rtl/verilog/core/fetch/pu_or1k_cache_lru.sv
+../../../../../../../../../../pu/rtl/verilog/core/fetch/pu_or1k_fetch_cappuccino.sv
+../../../../../../../../../../pu/rtl/verilog/core/fetch/pu_or1k_icache.sv
+../../../../../../../../../../pu/rtl/verilog/core/fetch/pu_or1k_immu.sv
+../../../../../../../../../../pu/rtl/verilog/core/main/pu_or1k_branch_prediction.sv
+../../../../../../../../../../pu/rtl/verilog/core/main/pu_or1k_branch_predictor_gshare.sv
+../../../../../../../../../../pu/rtl/verilog/core/main/pu_or1k_branch_predictor_saturation_counter.sv
+../../../../../../../../../../pu/rtl/verilog/core/main/pu_or1k_branch_predictor_simple.sv
+../../../../../../../../../../pu/rtl/verilog/core/main/pu_or1k_bus_if_apb432.sv
+../../../../../../../../../../pu/rtl/verilog/core/main/pu_or1k_core.sv
+../../../../../../../../../../pu/rtl/verilog/core/main/pu_or1k_cpu_cappuccino.sv
+../../../../../../../../../../pu/rtl/verilog/core/main/pu_or1k_cpu.sv
+../../../../../../../../../../pu/rtl/verilog/core/main/pu_or1k_decode_execute_cappuccino.sv
+../../../../../../../../../../pu/rtl/verilog/core/memory/pu_or1k_dcache.sv
+../../../../../../../../../../pu/rtl/verilog/core/memory/pu_or1k_dmmu.sv
+../../../../../../../../../../pu/rtl/verilog/core/memory/pu_or1k_lsu_cappuccino.sv
+../../../../../../../../../../pu/rtl/verilog/core/memory/pu_or1k_store_buffer.sv
+../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_addsub.sv
+../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_cmp.sv
+../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_f2i.sv
+../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_i2f.sv
+../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_muldiv.sv
+../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_rnd.sv
+../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_top.sv
+../../../../../../../../../../pu/rtl/verilog/memory/pu_or1k_simple_dpram_sclk.sv
+../../../../../../../../../../pu/rtl/verilog/memory/pu_or1k_true_dpram_sclk.sv
+../../../../../../../../../../pu/rtl/verilog/pu/pu_or1k_apb4.sv
