@@ -42,9 +42,9 @@
 ##                                                                               ##
 ###################################################################################
 
-TARGET               := pu_or1k_wb
+TARGET               := soc_or1k_wb
 VPI_MODULES          := elf-loader.vpi jtag_vpi.vpi
-TOPLEVEL             := pu_or1k_testbench_wb
+TOPLEVEL             := soc_or1k_testbench_wb
 IVERILOG_OPTIONS     := -DSIM
 LINUX                ?= +elf_load=../../../../../../../../../../software/os/standard/linux/vmlinux
 

@@ -46,10 +46,10 @@ all: hardware software
 
 hardware:
 	verilator -f system.vc --trace -Wno-fatal -Wno-lint -Wno-UNOPTFLAT -Wno-COMBDLY -CFLAGS "-std=c++11" -LDFLAGS "-pthread"
-	make -f Vpu_or1k_wb.mk
+	make -f Vsoc_or1k_wb.mk
 
 software:
-	./Vpu_or1k_wb --elf-load=../../../../../../../../../../software/os/standard/linux/vmlinux
+	./Vsoc_or1k_wb --elf-load=../../../../../../../../../../software/os/standard/linux/vmlinux
 
 clean:
-	rm -rf *.a *.cpp *.d *.dat *.h *.o *.mk Vpu_or1k_* stdout.*
+	rm -rf *.a *.cpp *.d *.dat *.h *.o *.mk Vsoc_or1k_* stdout.*

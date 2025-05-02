@@ -42,7 +42,7 @@
 ##                                                                               ##
 ###################################################################################
 
-+incdir+../../../../../../../../../../verification/tasks/library/verilog/standard
++incdir+../../../../../../../../../../verification/tasks/library/verilog/standard/soc
 
 +incdir+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/pkg/wb
 
@@ -50,11 +50,11 @@
 
 +incdir+../../../../../../../../../../pu/rtl/verilog/pkg
 
-../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_functions.sv
-../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_monitor.sv
-../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_tap_generator.sv
-../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_testbench_utils.sv
-../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_testbench_ahb4.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/soc/soc_or1k_functions.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/soc/soc_or1k_monitor.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/soc/soc_or1k_tap_generator.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/soc/soc_or1k_testbench_utils.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/soc/soc_or1k_testbench_ahb4.sv
 
 ../../../../../../../../../../pu/peripheral/dbg/verification/tasks/pu/or1k/verilog/code/tests/ahb4/debug/jtag_tap/tap_top.sv
 ../../../../../../../../../../pu/peripheral/dbg/verification/tasks/pu/or1k/verilog/code/tests/ahb4/debug/jtag_vpi/jtag_vpi.sv
@@ -129,4 +129,5 @@
 ../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_top.sv
 ../../../../../../../../../../pu/rtl/verilog/memory/pu_or1k_simple_dpram_sclk.sv
 ../../../../../../../../../../pu/rtl/verilog/memory/pu_or1k_true_dpram_sclk.sv
-../../../../../../../../../../pu/rtl/verilog/pu/pu_or1k_ahb4.sv
+
+../../../../../../../../../../rtl/verilog/soc/standard/top/soc_or1k_ahb4.sv
