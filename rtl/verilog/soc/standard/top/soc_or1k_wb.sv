@@ -332,8 +332,10 @@ module soc_or1k_wb #(
   //////////////////////////////////////////////////////////////////////////////
   // GENERIC JTAG TAP
   //////////////////////////////////////////////////////////////////////////////
-  wire dbg_if_select;
+  wire dbg0_if_select;
   wire dbg0_if_tdo;
+
+  wire dbg1_if_select;
   wire dbg1_if_tdo;
 
   wire jtag_tap0_tdo;
@@ -367,7 +369,7 @@ module soc_or1k_wb #(
     .extest_select_o        (),
     .sample_preload_select_o(),
     .mbist_select_o         (),
-    .debug_select_o         (dbg_if_select),
+    .debug_select_o         (dbg0_if_select),
 
     .bs_chain_tdi_i(1'b0),
     .mbist_tdi_i   (1'b0),
@@ -393,7 +395,7 @@ module soc_or1k_wb #(
     .extest_select_o        (),
     .sample_preload_select_o(),
     .mbist_select_o         (),
-    .debug_select_o         (dbg_if_select),
+    .debug_select_o         (dbg1_if_select),
 
     .bs_chain_tdi_i(1'b0),
     .mbist_tdi_i   (1'b0),
@@ -456,7 +458,7 @@ module soc_or1k_wb #(
     .shift_dr_i    (jtag_tap0_shift_dr),
     .pause_dr_i    (jtag_tap0_pause_dr),
     .update_dr_i   (jtag_tap0_update_dr),
-    .debug_select_i(dbg_if_select),
+    .debug_select_i(dbg0_if_select),
 
     // Wishbone debug master
     .wb_clk_i(wb_clk),
@@ -491,14 +493,14 @@ module soc_or1k_wb #(
 
     // TAP interface
     .tck_i         (tck_pad_i),
-    .tdi_i         (jtag_tap0_tdo),
+    .tdi_i         (jtag_tap1_tdo),
     .tdo_o         (dbg1_if_tdo),
     .rst_i         (wb_rst),
-    .capture_dr_i  (jtag_tap0_capture_dr),
-    .shift_dr_i    (jtag_tap0_shift_dr),
-    .pause_dr_i    (jtag_tap0_pause_dr),
-    .update_dr_i   (jtag_tap0_update_dr),
-    .debug_select_i(dbg_if_select),
+    .capture_dr_i  (jtag_tap1_capture_dr),
+    .shift_dr_i    (jtag_tap1_shift_dr),
+    .pause_dr_i    (jtag_tap1_pause_dr),
+    .update_dr_i   (jtag_tap1_update_dr),
+    .debug_select_i(dbg1_if_select),
 
     // Wishbone debug master
     .wb_clk_i(wb_clk),
