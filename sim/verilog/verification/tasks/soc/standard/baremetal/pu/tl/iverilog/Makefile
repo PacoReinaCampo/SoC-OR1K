@@ -42,9 +42,9 @@
 ##                                                                               ##
 ###################################################################################
 
-TARGET               := pu_or1k_wb
+TARGET               := pu_or1k_tl
 VPI_MODULES          := elf-loader.vpi jtag_vpi.vpi
-TOPLEVEL             := pu_or1k_testbench_wb
+TOPLEVEL             := pu_or1k_testbench_tl
 IVERILOG_OPTIONS     := -DSIM
 HELLO_C              ?= +elf_load=../../../../../../../../../../software/baremetal/standard/hello/c/hello_c.elf
 HELLO_CPP            ?= +elf_load=../../../../../../../../../../software/baremetal/standard/hello/cpp/hello_cpp.elf
@@ -73,7 +73,7 @@ jtag_vpi_LIBS :=
 jtag_vpi_INCS := -I../../../../../../../../../../peripheral/dbg/software/or1k/debug/
 jtag_vpi_SRCS := ../../../../../../../../../../peripheral/dbg/software/or1k/debug/jtag_common.c \
                  ../../../../../../../../../../peripheral/dbg/software/or1k/debug/jtag_vpi.c \
-                 ../../../../../../../../../../peripheral/dbg/verification/tasks/pu/or1k/verilog/code/tests/wb/debug/jtag_vpi/jtag_vpi.sv
+                 ../../../../../../../../../../peripheral/dbg/verification/tasks/pu/or1k/verilog/code/tests/tl/debug/jtag_vpi/jtag_vpi.sv
 
 jtag_vpi.vpi: $(jtag_vpi_SRCS)
 	iverilog-vpi --name=jtag_vpi $(jtag_vpi_LIBS) $(jtag_vpi_INCS) $?

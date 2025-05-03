@@ -47,8 +47,8 @@
 -LDFLAGS -lelf
 +incdir+../../../../../../../../../../software/tool/standard/elf-loader
 -CFLAGS -I../../../../../../../../../../software/tool/standard/elf-loader
-+incdir+../../../../../../../../../../verification/tasks/library/cpp
--CFLAGS -I../../../../../../../../../../verification/tasks/library/cpp
++incdir+../../../../../../../../../../verification/tasks/library/cpp/standard/pu
+-CFLAGS -I../../../../../../../../../../verification/tasks/library/cpp/standard/pu
 
 +incdir+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/pkg/wb
 -CFLAGS -I../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/pkg/wb
@@ -131,11 +131,12 @@
 ../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_top.sv
 ../../../../../../../../../../pu/rtl/verilog/memory/pu_or1k_simple_dpram_sclk.sv
 ../../../../../../../../../../pu/rtl/verilog/memory/pu_or1k_true_dpram_sclk.sv
-../../../../../../../../../../pu/rtl/verilog/pu/pu_or1k_wb.sv
+
+../../../../../../../../../../rtl/verilog/soc/standard/pu/pu_or1k_wb.sv
 
 --top-module pu_or1k_wb
 --exe
 ../../../../../../../../../../software/tool/standard/elf-loader/elf-loader.c
-../../../../../../../../../../verification/tasks/library/cpp/verilator_tb_utils.cpp
-../../../../../../../../../../verification/tasks/library/cpp/jtagServer.cpp
-../../../../../../../../../../verification/tasks/library/cpp/or1k_testbench.cpp
+../../../../../../../../../../verification/tasks/library/cpp/standard/pu/verilator_tb_utils.cpp
+../../../../../../../../../../verification/tasks/library/cpp/standard/pu/jtagServer.cpp
+../../../../../../../../../../verification/tasks/library/cpp/standard/pu/or1k_testbench.cpp

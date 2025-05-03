@@ -89,6 +89,7 @@ module soc_or1k_testbench_wb;
       $display("Clearing RAM");
       for (i = 0; i < MEM_SIZE / 4; i = i + 1) begin
         soc_or1k_testbench_wb.dut.wb_bfm_memory0.ram0.mem[i] = 32'h00000000;
+        soc_or1k_testbench_wb.dut.wb_bfm_memory1.ram1.mem[i] = 32'h00000000;
       end
     end
     if ($value$plusargs("elf_load=%s", elf_file)) begin
@@ -98,6 +99,7 @@ module soc_or1k_testbench_wb;
       $display("Loading %d words", mem_words);
       for (i = 0; i < mem_words; i = i + 1) begin
         soc_or1k_testbench_wb.dut.wb_bfm_memory0.ram0.mem[i] = $elf_read_32(i * 4);
+        soc_or1k_testbench_wb.dut.wb_bfm_memory1.ram1.mem[i] = $elf_read_32(i * 4);
       end
     end else begin
       $display("No ELF file specified");

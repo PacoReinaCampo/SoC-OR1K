@@ -42,7 +42,7 @@
 ##                                                                               ##
 ###################################################################################
 
-+incdir+../../../../../../../../../../verification/tasks/library/verilog/standard
++incdir+../../../../../../../../../../verification/tasks/library/verilog/standard/pu
 
 +incdir+../../../../../../../../../../pu/peripheral/dbg/rtl/pu/or1k/verilog/code/pkg/wb
 
@@ -50,11 +50,11 @@
 
 +incdir+../../../../../../../../../../pu/rtl/verilog/pkg
 
-../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_functions.sv
-../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_monitor.sv
-../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_tap_generator.sv
-../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_testbench_utils.sv
-../../../../../../../../../../verification/tasks/library/verilog/standard/pu_or1k_testbench_bb.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/pu/pu_or1k_functions.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/pu/pu_or1k_monitor.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/pu/pu_or1k_tap_generator.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/pu/pu_or1k_testbench_utils.sv
+../../../../../../../../../../verification/tasks/library/verilog/standard/pu/pu_or1k_testbench_bb.sv
 
 ../../../../../../../../../../pu/peripheral/dbg/verification/tasks/pu/or1k/verilog/code/tests/bb/debug/jtag_tap/tap_top.sv
 ../../../../../../../../../../pu/peripheral/dbg/verification/tasks/pu/or1k/verilog/code/tests/bb/debug/jtag_vpi/jtag_vpi.sv
@@ -129,4 +129,5 @@
 ../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_top.sv
 ../../../../../../../../../../pu/rtl/verilog/memory/pu_or1k_simple_dpram_sclk.sv
 ../../../../../../../../../../pu/rtl/verilog/memory/pu_or1k_true_dpram_sclk.sv
-../../../../../../../../../../pu/rtl/verilog/pu/pu_or1k_bb.sv
+
+../../../../../../../../../../rtl/verilog/soc/standard/pu/pu_or1k_bb.sv
