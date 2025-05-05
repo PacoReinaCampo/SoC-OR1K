@@ -40,13 +40,13 @@
 
 // Configure these defines to point to the or1k instantiation
 `ifndef MOR1KX_INST
-`define MOR1KX_INST dut.core
+`define MOR1KX_INST dut.core0
 `endif
 
 // The rest of these shouldn't need changing if the wrapper hooks have been 
-// set up correctly in soc_or1k_cpu.
+// set up correctly in pu_or1k_cpu.
 `ifndef CPU_WRAPPER
-`define CPU_WRAPPER `MOR1KX_INST.soc_or1k_cpu
+`define CPU_WRAPPER `MOR1KX_INST.pu_or1k_cpu
 `endif
 `define EXECUTE_STAGE_INSN `CPU_WRAPPER.monitor_execute_insn
 `define EXECUTE_STAGE_ADV `CPU_WRAPPER.monitor_execute_advance
