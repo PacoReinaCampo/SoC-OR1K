@@ -44,7 +44,7 @@ verilog
     │   ├── main
     │   │   └── soc_or1k_tile.sv
     │   └── spram
-    │       ├── soc_sram_sp_impl_plain.sv
+    │       ├── soc_sram_sp_implemented_plain.sv
     │       ├── soc_sram_sp.sv
     │       ├── soc_sram_sp_wb.sv
     │       └── soc_wb2sram.sv

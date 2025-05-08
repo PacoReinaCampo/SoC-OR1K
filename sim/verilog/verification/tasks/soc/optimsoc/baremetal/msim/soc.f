@@ -165,7 +165,7 @@
 ../../../../../../../../rtl/verilog/soc/optimsoc/interconnection/decode/soc_decode_wb.sv
 ../../../../../../../../rtl/verilog/soc/optimsoc/interconnection/mux/soc_mux_wb.sv
 ../../../../../../../../rtl/verilog/soc/optimsoc/main/soc_or1k_tile.sv
-../../../../../../../../rtl/verilog/soc/optimsoc/spram/soc_sram_sp_impl_plain.sv
+../../../../../../../../rtl/verilog/soc/optimsoc/spram/soc_sram_sp_implemented_plain.sv
 ../../../../../../../../rtl/verilog/soc/optimsoc/spram/soc_sram_sp.sv
 ../../../../../../../../rtl/verilog/soc/optimsoc/spram/soc_sram_sp_wb.sv
 ../../../../../../../../rtl/verilog/soc/optimsoc/spram/soc_wb2sram.sv

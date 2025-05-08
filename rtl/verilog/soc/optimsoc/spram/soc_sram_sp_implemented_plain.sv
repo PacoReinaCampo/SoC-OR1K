@@ -40,95 +40,86 @@
 
 import soc_optimsoc_functions::*;
 
-module soc_sram_sp #(
-  parameter MEM_SIZE_BYTE = 'hx,
-
-  // address width
+module soc_sram_sp_implemented_plain #(
+  // byte address width
   parameter AW = 32,
-
-  // data width (word size)
-  // Valid values: 32, 16 and 8
+  // data width (must be multiple of 8 for byte selects to work)
   parameter DW = 32,
 
-  // type of the memory implementation
-  parameter MEM_IMPL_TYPE = "PLAIN",
-  // VMEM memory file to load in simulation
-  parameter MEM_FILE = "sram.vmem",
-
-  // byte select width (must be a power of two)
-  localparam SW = (DW == 32) ? 4 :
-                  (DW == 16) ? 2 :
-                  (DW ==  8) ? 1 : 'hx,
+  localparam SW = (DW == 32) ? 4 : (DW == 16) ? 2 : (DW == 8) ? 1 : 'hx,
 
   // word address width
-  parameter WORD_AW = AW - (SW >> 1)
-)
-  (
-    input                clk,   // Clock
-    input                rst,   // Reset
-    input                ce,    // Chip enable input
-    input                we,    // Write enable input
-    input                oe,    // Output enable input
-    input  [WORD_AW-1:0] waddr, // word address
-    input  [DW     -1:0] din,   // input data bus
-    input  [SW     -1:0] sel,   // select bytes
-    output [DW     -1:0] dout   // output data bus
-  );
+  parameter WORD_AW = AW - (SW >> 1),
+
+  // size of the memory in bytes
+  parameter MEM_SIZE_BYTE = 'hx,
+
+  localparam MEM_SIZE_WORDS = MEM_SIZE_BYTE / SW,
+
+  // VMEM file used to initialize the memory in simulation
+  parameter MEM_FILE = "sram.vmem"
+) (
+  input                    clk,    // Clock
+  input                    rst,    // Reset
+  input                    ce,     // Chip enable input
+  input                    we,     // Write enable input
+  input                    oe,     // Output enable input
+  input      [WORD_AW-1:0] waddr,  // word address
+  input      [DW     -1:0] din,    // input data bus
+  input      [SW     -1:0] sel,    // select bytes
+  output reg [DW     -1:0] dout    // output data bus
+);
 
   //////////////////////////////////////////////////////////////////////////////
   // Body
   //////////////////////////////////////////////////////////////////////////////
 
-  // ensure that parameters are set to allowed values
+  (* ram_style = "block" *) reg [DW-1:0] mem[MEM_SIZE_WORDS-1:0]  /*synthesis syn_ramstyle = "block_ram" */;
+
+  always_ff @(posedge clk) begin
+    if (we) begin
+      // memory write
+      for (int i = 0; i < SW; i = i + 1) begin
+        if (sel[i] == 1'b1) begin
+          mem[waddr][i*8 +: 8] <= din[i*8 +: 8];
+        end
+      end
+    end
+    // memory read
+    dout <= mem[waddr];
+  end
+
+`ifdef verilator
+  export "DPI-C" task do_readmemh;
+
+  task do_readmemh;
+    $readmemh(MEM_FILE, mem);
+  endtask
+
+  export "DPI-C" task do_readmemh_file;
+
+  task do_readmemh_file;
+    input string file;
+    $readmemh(file, mem);
+  endtask
+
+  // Function to access RAM (for use by Verilator).
+  function [DW-1:0] get_mem;
+    // verilator public
+    input [WORD_AW-1:0] waddr;  // word address
+    get_mem = mem[waddr];
+  endfunction
+
+  // Function to write RAM (for use by Verilator).
+  function set_mem;
+    // verilator public
+    input [WORD_AW-1:0] waddr;  // word address
+    input [DW-1:0] data;  // data to write
+    mem[waddr] = data;
+  endfunction
+`else
   initial begin
-    if (DW % 8 != 0) begin
-      $display("soc_sram_sp: the data port width (parameter DW) must be a multiple of 8");
-      $stop;
-    end
-
-    if ((1 << $clog2(SW)) != SW) begin
-      $display("soc_sram_sp: the byte select width (paramter SW = DW/8) must be a power of two");
-      $stop;
-    end
+    $readmemh(MEM_FILE, mem);
   end
-
-  // validate the memory address (check if it's inside the memory size bounds)
-  `ifdef OPTIMSOC_SRAM_VALIDATE_ADDRESS
-  logic [AW-1:0] addr;
-  assign addr = {waddr, (AW - WORD_AW)'{1'b0}};
-  always @(posedge clk) begin
-    if (addr > MEM_SIZE_BYTE) begin
-      $display("soc_sram_sp: access to out-of-bounds memory address detected! Trying to access byte address 0x%x, MEM_SIZE_BYTE is %d bytes.", addr, MEM_SIZE_BYTE);
-      $stop;
-    end
-  end
-  `endif
-
-  generate
-    if (MEM_IMPL_TYPE == "PLAIN") begin : gen_soc_sram_sp_implemented
-      soc_sram_sp_implemented_plain #(
-        .AW                       (AW),
-        .WORD_AW                  (WORD_AW),
-        .DW                       (DW),
-        .MEM_SIZE_BYTE            (MEM_SIZE_BYTE),
-        .MEM_FILE                 (MEM_FILE)
-      )
-      u_impl (
-        // Outputs
-        .dout                (dout[DW-1:0]),
-        // Inputs
-        .clk                 (clk),
-        .rst                 (rst),
-        .ce                  (ce),
-        .we                  (we),
-        .oe                  (oe),
-        .waddr               (waddr),
-        .din                 (din[DW-1:0]),
-        .sel                 (sel[SW-1:0])
-      );
-    end else begin
-      // $display("Unsupported memory type: ", MEM_IMPL_TYPE);
-      // $stop;
-    end
-  endgenerate
+`endif
 endmodule
