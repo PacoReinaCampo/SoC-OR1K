@@ -120,13 +120,13 @@
 ../../../../../../../../../../pu/rtl/verilog/core/memory/pu_or1k_dmmu.sv
 ../../../../../../../../../../pu/rtl/verilog/core/memory/pu_or1k_lsu_cappuccino.sv
 ../../../../../../../../../../pu/rtl/verilog/core/memory/pu_or1k_store_buffer.sv
-../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_addsub.sv
-../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_cmp.sv
-../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_f2i.sv
-../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_i2f.sv
-../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_muldiv.sv
-../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_rnd.sv
-../../../../../../../../../../pu/rtl/verilog/core/pfpu32/pu_or1k_pfpu32_top.sv
+../../../../../../../../../../pu/rtl/verilog/peripheral/pfpu32/pu_or1k_pfpu32_addsub.sv
+../../../../../../../../../../pu/rtl/verilog/peripheral/pfpu32/pu_or1k_pfpu32_cmp.sv
+../../../../../../../../../../pu/rtl/verilog/peripheral/pfpu32/pu_or1k_pfpu32_f2i.sv
+../../../../../../../../../../pu/rtl/verilog/peripheral/pfpu32/pu_or1k_pfpu32_i2f.sv
+../../../../../../../../../../pu/rtl/verilog/peripheral/pfpu32/pu_or1k_pfpu32_muldiv.sv
+../../../../../../../../../../pu/rtl/verilog/peripheral/pfpu32/pu_or1k_pfpu32_rnd.sv
+../../../../../../../../../../pu/rtl/verilog/peripheral/pfpu32/pu_or1k_pfpu32_top.sv
 ../../../../../../../../../../pu/rtl/verilog/memory/pu_or1k_simple_dpram_sclk.sv
 ../../../../../../../../../../pu/rtl/verilog/memory/pu_or1k_true_dpram_sclk.sv
 
