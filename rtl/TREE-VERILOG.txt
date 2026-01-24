@@ -45,6 +45,7 @@ verilog
     │   │   └── soc_or1k_tile.sv
     │   └── spram
     │       ├── soc_sram_sp_implemented_plain.sv
+    │       ├── soc_sram_sp_impl_plain.sv
     │       ├── soc_sram_sp.sv
     │       ├── soc_sram_sp_wb.sv
     │       └── soc_wb2sram.sv
@@ -64,4 +65,4 @@ verilog
             ├── soc_or1k_tl.sv
             └── soc_or1k_wb.sv
 
-27 directories, 37 files
+27 directories, 38 files
